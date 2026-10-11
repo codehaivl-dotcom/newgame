@@ -16,6 +16,8 @@
 - [14 — Playable acceptance and deterministic rules test gates](docs/14_PLAYABLE_SPEC_AND_TEST_GATES.md)
 - [15 — Agent production runbook](docs/15_PRODUCTION_RUNBOOK.md)
 - [Production structural validator](scripts/validate_production.mjs)
+- [Production V1 audit and actual status](docs/16_PRODUCTION_STATUS_V1.md)
+- [Checksum/ingestion instructions for 3 approved visual references](assets/references/README.md)
 
 Run locally after checkout: node scripts/validate_production.mjs. Passing this structural validator does not mean playable games or rendered assets pass QA.
 
