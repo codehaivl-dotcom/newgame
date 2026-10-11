@@ -18,6 +18,12 @@ One row per asset revision event. When multiple assets come from one sheet, **ea
 |---|---|---|---|---|---|---|---:|---|
 | 2026-10-11 | ALL | — | PLANNED | — | — | — | 0 | Initialized 100-item master list |
 
+## Production Design V1.0 audit
+- Production design docs committed; **no asset image approval was performed**.
+- Manifest scope snapshot: 18 CORE_AI / 16 SECONDARY_AI / 19 HOLD_AI / 16 CORE_CODE / 23 SECONDARY_CODE / 8 VFX_RUNTIME. Prior P0 labels are not current render permission.
+- Actual provider credit balance/expiry **not yet independently verified**; zero recorded external generation jobs in this audit is not a statement about global account balance.
+- [Audit scorecard](PRODUCTION_AUDIT_SCORE_V1.md): 80/100 document readiness only.
+
 ## Wave plan (not authorization to generate)
 - Wave 0: style/rig validation (CHR-01, CHR-02, OBJ-04, INT-01).
 - Wave 1: six hero models and corresponding signature weapons.
