@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "project": "newgame-mini-arena-moba",
   "date": "2026-10-11",
   "budget_note": "~8535 credits expiring soon; no credits consumed by creating this catalog. Actual cost must be measured; do not assume 100 items = 100 3D generations.",
@@ -59,7 +59,15 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Replace old A-pose source with strict empty-handed frontal T-pose; verify joints and rig/visual distinction before first render.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      },
+      "character_source_pose": "STRICT_T_POSE",
+      "item_in_hands_allowed": false
     },
     {
       "id": "CHR-02",
@@ -83,7 +91,15 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Replace old A-pose source with strict empty-handed frontal T-pose; verify joints and rig/visual distinction before first render.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      },
+      "character_source_pose": "STRICT_T_POSE",
+      "item_in_hands_allowed": false
     },
     {
       "id": "CHR-03",
@@ -107,7 +123,15 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Replace old A-pose source with strict empty-handed frontal T-pose; verify joints and rig/visual distinction before first render.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      },
+      "character_source_pose": "STRICT_T_POSE",
+      "item_in_hands_allowed": false
     },
     {
       "id": "CHR-04",
@@ -131,7 +155,15 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Replace old A-pose source with strict empty-handed frontal T-pose; verify joints and rig/visual distinction before first render.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      },
+      "character_source_pose": "STRICT_T_POSE",
+      "item_in_hands_allowed": false
     },
     {
       "id": "CHR-05",
@@ -155,7 +187,15 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Replace old A-pose source with strict empty-handed frontal T-pose; verify joints and rig/visual distinction before first render.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      },
+      "character_source_pose": "STRICT_T_POSE",
+      "item_in_hands_allowed": false
     },
     {
       "id": "CHR-06",
@@ -179,7 +219,15 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Replace old A-pose source with strict empty-handed frontal T-pose; verify joints and rig/visual distinction before first render.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      },
+      "character_source_pose": "STRICT_T_POSE",
+      "item_in_hands_allowed": false
     },
     {
       "id": "WPN-01",
@@ -203,7 +251,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Independent weapon with clean attachment grip; no wielder or effects; core selected pieces may enter image review.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-02",
@@ -227,7 +281,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Non-core/alternative equipment; keep separate with grip sockets, no attached hand/VFX. Not in V1 first wave.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-03",
@@ -251,7 +311,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Independent weapon with clean attachment grip; no wielder or effects; core selected pieces may enter image review.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-04",
@@ -275,7 +341,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Non-core/alternative equipment; keep separate with grip sockets, no attached hand/VFX. Not in V1 first wave.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-05",
@@ -299,7 +371,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Independent weapon with clean attachment grip; no wielder or effects; core selected pieces may enter image review.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-06",
@@ -323,7 +401,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Non-core/alternative equipment; keep separate with grip sockets, no attached hand/VFX. Not in V1 first wave.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-07",
@@ -347,7 +431,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Independent weapon with clean attachment grip; no wielder or effects; core selected pieces may enter image review.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-08",
@@ -371,7 +461,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Non-core/alternative equipment; keep separate with grip sockets, no attached hand/VFX. Not in V1 first wave.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-09",
@@ -395,7 +491,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Independent weapon with clean attachment grip; no wielder or effects; core selected pieces may enter image review.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-10",
@@ -419,7 +521,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Independent weapon with clean attachment grip; no wielder or effects; core selected pieces may enter image review.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-11",
@@ -443,7 +551,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Independent weapon with clean attachment grip; no wielder or effects; core selected pieces may enter image review.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "WPN-12",
@@ -467,7 +581,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Non-core/alternative equipment; keep separate with grip sockets, no attached hand/VFX. Not in V1 first wave.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-01",
@@ -491,7 +611,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-02",
@@ -515,7 +641,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-03",
@@ -539,7 +671,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-04",
@@ -563,7 +701,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-05",
@@ -587,7 +731,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-06",
@@ -611,7 +761,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-07",
@@ -635,7 +791,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-08",
@@ -659,7 +821,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-09",
@@ -683,7 +851,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-10",
@@ -707,7 +881,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-11",
@@ -731,7 +911,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-12",
@@ -755,7 +941,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-13",
@@ -779,7 +971,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-14",
@@ -803,7 +1001,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Concept art permitted, but mesh must be rebuilt to exact 2m sockets and collision; not a direct image-to-3D production mesh.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-15",
@@ -827,7 +1031,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Concept art permitted, but mesh must be rebuilt to exact 2m sockets and collision; not a direct image-to-3D production mesh.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-16",
@@ -851,7 +1061,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "Concept art permitted, but mesh must be rebuilt to exact 2m sockets and collision; not a direct image-to-3D production mesh.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-17",
@@ -875,7 +1091,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Exact 2m modular geometry, pivot and collision first; never use Image-to-3D as final joinable piece.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-18",
@@ -899,7 +1121,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-19",
@@ -923,7 +1151,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-20",
@@ -947,7 +1181,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-21",
@@ -971,7 +1211,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-22",
@@ -995,7 +1241,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-23",
@@ -1019,7 +1271,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "MAP-24",
@@ -1043,7 +1301,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Decorative/vertical/non-core module; game V1 stays flat; retain code-first model and no new traversal rules.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-01",
@@ -1067,7 +1331,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Single functional prop; explicit collision/cover/destruction and clean crop; cluster only if deliberately one gameplay prop.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-02",
@@ -1091,7 +1361,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Single functional prop; explicit collision/cover/destruction and clean crop; cluster only if deliberately one gameplay prop.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-03",
@@ -1115,7 +1391,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Single functional prop; explicit collision/cover/destruction and clean crop; cluster only if deliberately one gameplay prop.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-04",
@@ -1139,7 +1421,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Single functional prop; explicit collision/cover/destruction and clean crop; cluster only if deliberately one gameplay prop.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-05",
@@ -1163,7 +1451,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-06",
@@ -1187,7 +1481,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Single functional prop; explicit collision/cover/destruction and clean crop; cluster only if deliberately one gameplay prop.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-07",
@@ -1211,7 +1511,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-08",
@@ -1235,7 +1541,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-09",
@@ -1259,7 +1571,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Single functional prop; explicit collision/cover/destruction and clean crop; cluster only if deliberately one gameplay prop.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-10",
@@ -1283,7 +1601,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-11",
@@ -1307,7 +1631,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-12",
@@ -1331,7 +1661,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Single functional prop; explicit collision/cover/destruction and clean crop; cluster only if deliberately one gameplay prop.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-13",
@@ -1355,7 +1691,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "ONE standalone bush only; no rock, terrain slab or second plant; concealment trigger authored separately.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-14",
@@ -1379,7 +1721,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "REVISE",
+        "reason": "ONE standalone bush only; no rock, terrain slab or second plant; concealment trigger authored separately.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-15",
@@ -1403,7 +1751,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-16",
@@ -1427,7 +1781,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-17",
@@ -1451,7 +1811,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "OBJ-18",
@@ -1475,7 +1841,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Environment enrichment; do not render until core gameplay props and silhouettes approved.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-01",
@@ -1499,7 +1871,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Core match fixture; model separate from capture ring/respawn VFX; runtime changes color by team.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-02",
@@ -1523,7 +1901,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "PASS_SPEC",
+        "reason": "Core match fixture; model separate from capture ring/respawn VFX; runtime changes color by team.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-03",
@@ -1547,7 +1931,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-04",
@@ -1571,7 +1961,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-05",
@@ -1595,7 +1991,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-06",
@@ -1619,7 +2021,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-07",
@@ -1643,7 +2051,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-08",
@@ -1667,7 +2081,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-09",
@@ -1691,7 +2111,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-10",
@@ -1715,7 +2141,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-11",
@@ -1739,7 +2171,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "INT-12",
@@ -1763,7 +2201,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No gameplay authorization for extra fixtures, buffs or machines in V1. No baked VFX in model.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-01",
@@ -1787,7 +2231,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-02",
@@ -1811,7 +2261,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-03",
@@ -1835,7 +2291,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-04",
@@ -1859,7 +2321,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-05",
@@ -1883,7 +2351,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-06",
@@ -1907,7 +2381,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-07",
@@ -1931,7 +2411,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-08",
@@ -1955,7 +2441,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-09",
@@ -1979,7 +2471,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-10",
@@ -2003,7 +2501,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-11",
@@ -2027,7 +2531,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "ENV-12",
@@ -2051,7 +2561,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Nice-to-have decoration only; avoid occluding fighters/LOS, do not burn expiring credits before core items.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-01",
@@ -2075,7 +2591,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-02",
@@ -2099,7 +2621,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-03",
@@ -2123,7 +2651,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-04",
@@ -2147,7 +2681,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-05",
@@ -2171,7 +2711,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-06",
@@ -2195,7 +2741,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-07",
@@ -2219,7 +2771,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "PKU-08",
@@ -2243,7 +2801,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "No random pickup system in V1; exact procedural/icon geometry later if mode requires it.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-01",
@@ -2267,7 +2831,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-02",
@@ -2291,7 +2861,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-03",
@@ -2315,7 +2891,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-04",
@@ -2339,7 +2921,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-05",
@@ -2363,7 +2951,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-06",
@@ -2387,7 +2981,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-07",
@@ -2411,7 +3011,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     },
     {
       "id": "VFX-08",
@@ -2435,7 +3041,13 @@
       "model_gate": "NOT_TESTED",
       "last_job_id": null,
       "cost_credits_actual": null,
-      "approval_date": null
+      "approval_date": null,
+      "design_audit_v2": {
+        "status": "HOLD",
+        "reason": "Runtime shader/sprite/particle; wait until attack tell, frame timing and hitbox finalized, never Image-to-3D.",
+        "date": "2026-10-11",
+        "kind": "SPEC_ONLY_NOT_ASSET_QA"
+      }
     }
   ],
   "production_design_version": "V1.0",
@@ -2446,5 +3058,6 @@
     "CORE_CODE": 16,
     "SECONDARY_CODE": 23,
     "VFX_RUNTIME": 8
-  }
+  },
+  "production_audit_version": "V2-TPOSE-2026-10-11"
 }
