@@ -19,6 +19,9 @@ Clients submit ordered actions, mode/rules version and challenge id, NOT trusted
 
 Casual scores stored local and optionally synced, explicitly UNVERIFIED. Offline prepared ranked pack can save and replay after reconnection inside grace period; display pending verification, not a fake rank. An official attempt begins only on explicit user tap. Backgrounding never consumes an attempt; abandoning/resetting requires confirmation.
 
+## Limitations of fair global ranking
+Server replay proves a move log is LEGAL and score is real under the published rules; it does **not** prove a human, rather than an external solver or scripted client, chose those legal moves. Shared deterministic seed and unlimited practice also mean many advanced players may reach tied optimal scores. Do not promise cheat-proof competitive sport or offer cash-value prizes. Use casual family competition, tie-sharing ranks, more varied *verified* strategic packs, basic rate limiting and abuse monitoring. Exact opponent identity/age cannot be verified from an anonymous pseudonym; never advertise strict age brackets as verified. A scoreboard is motivational, not proof of human skill.
+
 ## Minimum API contract (design only, no backend yet)
 GET /v1/challenges?mode=link|bubble|sort|jewel&scope=daily|weekly
 POST /v1/runs/start : challenge_id -> run_id, attempt index, token
