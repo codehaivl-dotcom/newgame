@@ -12,12 +12,13 @@
 | CHR-06 | SKIRMISHER / Cơ động | melee flanker | 90 | 4.65 | narrow frontal blades 1.35m, 11 dmg, 0.53s | **Line Dash:** travel 3.2m, frontal hit 15 dmg, 0.23s tell, CD 8s | **Mark Dart:** linear projectile speed 12m/s, range 6m, deals 8 dmg, places visible 4s mark; next basic on target deals +6 once, CD 10s |
 
 ## Art-to-rig expectations
-- **CHR-01:** compact red silhouette, short split scarf not trailing into legs, one sword socket at dominant hand. Source in neutral A-pose; no attached weapon or strike trail.
+- **CHR-01:** compact red silhouette, short fitted collar not trailing into limbs, one sword socket added after rig at dominant hand. Source STRICT T-pose with both arms horizontal and empty hands; no attached weapon or strike trail.
 - **CHR-02:** clearly larger torso and shield, armor plates allow upper-arm/knee joints; must not be transformed into nonriggable solid knight statue. Weapon/shield independent.
 - **CHR-03:** blue ranger with recognizable shoulder silhouette and compact hair; rifle separate; keep barrel free of body; no glowing bullets attached.
-- **CHR-04:** green medic with practical short backpack; do not over-detail flexible straps; staff separate; heal field shader at runtime.
-- **CHR-05:** amber trap technician: distinguish headwear, torso, goggles from medic; launcher as independent weapon, deployable mine is OBJ/WPN-10.
+- **CHR-04:** green medic with no backpack integrated into body; backpack is a separate optional WPN-08 model/socket if ever used; staff separate; heal field shader at runtime.
+- **CHR-05:** amber trap technician: distinct helmet/torso from medic, no visible detachable gear in T-pose source; launcher and mine WPN-09/10 independent models.
 - **CHR-06:** violet flanker: **silhouette must be clearly distinct from CHR-01** (e.g. compact masked helmet and twin small blades, no same white hair/red scarf), no dangling ribbons blocking legs.
+- Six character source images MUST be full-body frontal T-pose, both arms horizontal (90° ±5°), empty hands and no items/VFX; strictly reject all A-pose or combat-pose images.
 - Shared simple humanoid rig: root, pelvis/spine/head, upper/lower arms, legs, minimal hands. 4 core animations targeted: idle, locomotion, attack swing/fire pose, hit/KO reaction; casting uses variants/upper-body aim/rotation where feasible.
 - Separate rigid-body weapon and shields with attachment pivots; projectiles and VFX created by code. No physically simulated cloth/hair.
 - Model proportion guide: head 30–35% character height, hands visible; minimum recognizable body shape at game camera (target 80–130 screen pixels hero high at reference 1080p, verify with actual viewport).
