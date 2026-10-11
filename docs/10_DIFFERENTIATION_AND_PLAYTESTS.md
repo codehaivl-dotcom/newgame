@@ -8,8 +8,7 @@ These are positioning hypotheses, not proof of market traction. Do not fabricate
 ## Proposed OPTIONAL small twists to AB-test, none in core V1
 1. LINK — "Garden Routes": clearing a selected pattern reveals a plant's path under the board; the path is a cosmetic goal and must not interfere with normal 2-turn matching. Need user playtest to see whether it adds motivation or clutter. If unclear, remove.
 2. BUBBLE — "Orchard Branch": marked fruit is attached to bubbles; freeing it by detaching its supporting cluster yields a visible reward. No extra tap button, no clock, uses same flood-fill. Add only after ordinary bubble rule feels excellent.
-3. SORT — "Glass Mosaic": completing a perfect color bottle fills a piece of a stained-glass picture. Cosmetic and encourages board completion, does not add storage limits. Build just one optional mural theme before spending many image credits.
-4. JEWEL — "Flower Trails": matching jewels adjacent to seeded trail squares advances bloom cosmetic meter; does not change match calculation/seed fairness in Classic ranked. Experiment with alternate challenge pack and own score version; never silently modify active ranked ruleset.
+3. JEWEL — "Flower Trails": matching jewels adjacent to seeded trail squares advances bloom cosmetic meter; does not change match calculation/seed fairness in Classic ranked. Experiment with alternate challenge pack and own score version; never silently modify active ranked ruleset.
 
 ## Experiment design before content explosion
 Baseline and twist tested on same skilled/unskilled players, same device constraints, counterbalanced order. Observe 10-minute and voluntary return behavior, understandability without tutorial, accidental taps, frustration, visibility and subjective enjoyment. At least 12 adults including players 60–75 in early study, more if outcomes ambiguous. A/B is exploratory, not statistically conclusive.
@@ -27,5 +26,5 @@ Reject any optional twist that:
 - Players regularly fail to explain after two examples.
 
 ## Early release strategy
-Build and test **Link + Color** first due simplest implementation and easiest pause/solver. Bubble second because aim trajectory consistency is harder. Jewel last because true cascade balance and competition fairness are hardest, though audience demand may be large.
-A shared codebase costs less than 4 separate backend/accounts; ship first as 4-in-1, retain option to separate apps if analytics/feedback justify. Existing credit pool may be 3D-model-specific and thus unusable for 2D illustration; verify provider before asset spending.
+Build **Link** first because the path solver and pause/save are relatively simple. Bubble next because aiming and projectile grid rules require cross-device tests. Jewel third because cascades, specials, deterministic refills and ranking fairness need more validation.
+A shared codebase costs less than 3 separate backend/accounts; ship first as 3-in-1, retain option to separate apps if analytics/feedback justify. Existing credit pool may be 3D-model-specific and thus unusable for 2D illustration; verify provider before asset spending.
