@@ -18,6 +18,11 @@ One row per asset revision event. When multiple assets come from one sheet, **ea
 |---|---|---|---|---|---|---|---:|---|
 | 2026-10-11 | ALL | — | PLANNED | — | — | — | 0 | Initialized 100-item master list |
 
+## T-pose production audit correction (2026-10-11)
+- `ASSET_AUDIT_V2_TPOSE.md` committed with 100 per-ID spec decisions. Six characters require exact empty-handed T-pose.
+- All 100 assets remain PLANNED and unreviewed as imagery; **no source images, GLBs or user PASS created by this correction**.
+- Old A-pose asset production prompts are superseded; current core prompt cards must be used only after selecting IDs.
+
 ## Production Design V1.0 audit
 - Production design docs committed; **no asset image approval was performed**.
 - Manifest scope snapshot: 18 CORE_AI / 16 SECONDARY_AI / 19 HOLD_AI / 16 CORE_CODE / 23 SECONDARY_CODE / 8 VFX_RUNTIME. Prior P0 labels are not current render permission.
