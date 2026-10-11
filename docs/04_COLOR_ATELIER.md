@@ -5,7 +5,7 @@ Status: DESIGN V1, NOT IMPLEMENTED.
 Tap a bottle containing colored layers, then an allowed destination bottle; contiguous identical top layers automatically pour until either source top changes or destination is full. A destination is legal iff empty or its top liquid color matches the source top color. Capacity 4 units per bottle. Goal: every nonempty bottle contains 4 units of the SAME color (empty bottles allowed). Each physical tap action is not scored as a puzzle move: one successful POUR is one move. Unlimited time to think.
 
 ## Input
-Large rounded bottles, numeric/shape icon associated with every color (not color alone), high-contrast levels, selecting bottle highlights legal destinations. One tap to select, another tap to pour. Undo in Casual indefinitely via compact prior-state journal; Restart this board, Hint show a single suggested pour. No countdown, no falling fill line, no arbitrary punishment for pausing.
+Large rounded bottles arranged in one or two visible rows (up to four per row on small phones; never force eight narrow 40px bottles into a single row), numeric/shape icon associated with every color (not color alone), high-contrast levels, selecting bottle highlights legal destinations. One tap to select, another tap to pour. Undo in Casual indefinitely via compact prior-state journal; Restart this board, Hint show a single suggested pour. No countdown, no falling fill line, no arbitrary punishment for pausing.
 No liquid fluid simulation necessary: layer rectangles/shapes + a short lightweight interpolation; logical state commits instantly after completion.
 
 ## Casual infinite ladder
