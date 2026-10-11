@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "project": "newgame-mini-arena-moba",
   "date": "2026-10-11",
   "budget_note": "~8535 credits expiring soon; no credits consumed by creating this catalog. Actual cost must be measured; do not assume 100 items = 100 3D generations.",
@@ -54,7 +54,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "CHR-02",
@@ -73,7 +78,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "CHR-03",
@@ -92,7 +102,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "CHR-04",
@@ -111,7 +126,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "CHR-05",
@@ -130,7 +150,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "CHR-06",
@@ -149,7 +174,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-01",
@@ -168,7 +198,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-02",
@@ -187,7 +222,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-03",
@@ -206,7 +246,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-04",
@@ -225,7 +270,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-05",
@@ -244,7 +294,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-06",
@@ -263,7 +318,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-07",
@@ -282,7 +342,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-08",
@@ -301,7 +366,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-09",
@@ -320,7 +390,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-10",
@@ -339,7 +414,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-11",
@@ -358,7 +438,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "WPN-12",
@@ -377,7 +462,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-01",
@@ -396,7 +486,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-02",
@@ -415,7 +510,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-03",
@@ -434,7 +534,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-04",
@@ -453,7 +558,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-05",
@@ -472,7 +582,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-06",
@@ -491,7 +606,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-07",
@@ -510,7 +630,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-08",
@@ -529,7 +654,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-09",
@@ -548,7 +678,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-10",
@@ -567,7 +702,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-11",
@@ -586,7 +726,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-12",
@@ -605,7 +750,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-13",
@@ -624,7 +774,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-14",
@@ -643,7 +798,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-15",
@@ -662,7 +822,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-16",
@@ -681,7 +846,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-17",
@@ -700,7 +870,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-18",
@@ -719,7 +894,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-19",
@@ -738,7 +918,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-20",
@@ -757,7 +942,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-21",
@@ -776,7 +966,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-22",
@@ -795,7 +990,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-23",
@@ -814,7 +1014,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "MAP-24",
@@ -833,7 +1038,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-01",
@@ -852,7 +1062,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-02",
@@ -871,7 +1086,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-03",
@@ -890,7 +1110,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-04",
@@ -909,7 +1134,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-05",
@@ -928,7 +1158,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-06",
@@ -947,7 +1182,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-07",
@@ -966,7 +1206,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-08",
@@ -985,7 +1230,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-09",
@@ -1004,7 +1254,12 @@
       "comments": "",
       "production_scope": "CORE_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-10",
@@ -1023,7 +1278,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-11",
@@ -1042,7 +1302,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-12",
@@ -1061,7 +1326,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-13",
@@ -1080,7 +1350,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-14",
@@ -1099,7 +1374,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-15",
@@ -1118,7 +1398,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-16",
@@ -1137,7 +1422,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-17",
@@ -1156,7 +1446,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "OBJ-18",
@@ -1175,7 +1470,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-01",
@@ -1194,7 +1494,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-02",
@@ -1213,7 +1518,12 @@
       "comments": "",
       "production_scope": "CORE_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-03",
@@ -1232,7 +1542,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-04",
@@ -1251,7 +1566,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-05",
@@ -1270,7 +1590,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-06",
@@ -1289,7 +1614,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-07",
@@ -1308,7 +1638,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-08",
@@ -1327,7 +1662,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-09",
@@ -1346,7 +1686,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-10",
@@ -1365,7 +1710,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-11",
@@ -1384,7 +1734,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "INT-12",
@@ -1403,7 +1758,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-01",
@@ -1422,7 +1782,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-02",
@@ -1441,7 +1806,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-03",
@@ -1460,7 +1830,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-04",
@@ -1479,7 +1854,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-05",
@@ -1498,7 +1878,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-06",
@@ -1517,7 +1902,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-07",
@@ -1536,7 +1926,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-08",
@@ -1555,7 +1950,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-09",
@@ -1574,7 +1974,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-10",
@@ -1593,7 +1998,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-11",
@@ -1612,7 +2022,12 @@
       "comments": "",
       "production_scope": "SECONDARY_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "ENV-12",
@@ -1631,7 +2046,12 @@
       "comments": "",
       "production_scope": "HOLD_AI",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-01",
@@ -1650,7 +2070,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-02",
@@ -1669,7 +2094,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-03",
@@ -1688,7 +2118,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-04",
@@ -1707,7 +2142,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-05",
@@ -1726,7 +2166,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-06",
@@ -1745,7 +2190,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-07",
@@ -1764,7 +2214,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "PKU-08",
@@ -1783,7 +2238,12 @@
       "comments": "",
       "production_scope": "SECONDARY_CODE",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-01",
@@ -1802,7 +2262,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-02",
@@ -1821,7 +2286,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-03",
@@ -1840,7 +2310,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-04",
@@ -1859,7 +2334,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-05",
@@ -1878,7 +2358,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-06",
@@ -1897,7 +2382,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-07",
@@ -1916,7 +2406,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     },
     {
       "id": "VFX-08",
@@ -1935,7 +2430,12 @@
       "comments": "",
       "production_scope": "VFX_RUNTIME",
       "production_spec_path": "assets/asset_build_specs_v1.json",
-      "render_authorized": false
+      "render_authorized": false,
+      "source_image": null,
+      "model_gate": "NOT_TESTED",
+      "last_job_id": null,
+      "cost_credits_actual": null,
+      "approval_date": null
     }
   ],
   "production_design_version": "V1.0",
