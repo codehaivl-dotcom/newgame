@@ -3,12 +3,11 @@
 ## Never confuse 10,000 data rows with 10,000 good puzzles
 Every mode implements: generate(seed, difficulty_band) -> board + witness/solver metadata -> deterministic validation -> playable visual preview -> feedback-based acceptance. Rejected seeds logged and never published. Difficulty is NOT player speed. Daily/weekly packs must freeze immutable before publication.
 
-## Four factories
+## Three approved factories
 | Game | Generator | Solver / acceptance | Reject reasons |
 | Link | Construct a reversible known-valid pair removal order then insert pairs backward | Forward witness replay PLUS search of alternative move orders where feasible | no legal first pair, illegal >2 bend route, accidental duplicate matching ambiguity, no recoverable state, tiny icons |
 | Bubble | Seed staggered hex cluster patterns and shot colors; constrain wall-reflection angles | Beam search discrete candidate shot angles vs finite shot queue with exact simulator (ranked boards) | no viable path in 60 shots, blind angle shots, too many unplayable colors, instant forced danger |
-| Sort | Start solved tubes and scramble / sample candidate states | BFS/A* normalized tube state, measure shortest solution in legal POUR moves | cannot be solved, solver timed out, excessive depth spike, too many visually indistinguishable layers |
-| Jewel | Rejection-sample seeded initial 8x8 with >=1 valid swap, no immediate combo | Enumerate swaps, deterministic cascades and reshuffle; multi-heuristic rollout scores | initial no move, endless automatic refill loop, massive random score variance, unreadable effect |
+| Jewel | Rejection-sample seeded initial 7x7 with >=1 valid swap, no immediate combo | Enumerate swaps, deterministic cascades and reshuffle; multi-heuristic rollout scores | initial no move, endless automatic refill loop, massive random score variance, unreadable effect |
 
 ## Difficulty bands, not rigid authored 1,000 levels
 D0 introduction, D1 calming, D2 normal, D3 strategic, D4 expert; each defines measurable per-mode bounds (legal move count, solver depth, branching, expected mistakes, scoring variance). Do not increase every rung indefinitely; use gentle waves D1→D2→D3→D1 across seasons for Casual so the game remains relaxing. Expert optional, not forced. Infinite rungs produced as needed via seed; record generator version/seed and cache accepted outputs. Benchmarks set only AFTER human samples, not arbitrary threshold claims.
@@ -28,7 +27,7 @@ Run at least 12 observation sessions across people with differing game familiari
 ## Automated acceptance gates
 A. Deterministic: same ruleset+seed+action sequence -> byte-equivalent logical state/score and hashes in browser/server.
 B. Save: forced kill after each core action on each mode; resume no duplicate scores.
-C. Solver: 100% accepted ranked puzzle initial boards have verified witness; Sort optimal_pours verified within published complexity bound. Onet only guarantees at least one solution from start, not that all move orders succeed.
+C. Solver: 100% accepted ranked puzzle initial boards have verified witness; Onet only guarantees at least one solution from start, not that all move orders succeed.
 D. Accessibility: targets, zoom, no timer, reduced motion, color alternatives and one-hand mode.
 E. Anti-cheat: replay fabricated score/illegal action rejected, parallel duplicate submission idempotent.
 F. Ranked: exactly 3 starts max, disconnection not consumed as loss, ties no time tiebreak.
