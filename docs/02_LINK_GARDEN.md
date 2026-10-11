@@ -9,7 +9,7 @@ Board default 6 columns x 8 rows (24 pairs), with one invisible logical-cell out
 
 ## Casual infinite ladder
 Rung 1–10: obvious pairs, many 0/1-turn paths. Rungs 11–30: moderate mixed layouts, more 2-turn paths. 31+: pattern variation and obstacle silhouette (unoccupied cells; no new movement rules) with adjustable difficulty ceiling; a 70-year-old who stops for a week resumes the exact unsolved board.
-Each clear +1 rung; award simple flower illustration to album every 5 or 10 rung clears, cosmetics only. If no available pair after suboptimal choices, show "Rearrange" with **no loss and no timer**; can use hint and undo. Never generate a board with no initially valid path. Keep casual shuffle free.
+Each clear +1 rung; award simple flower illustration to album every 5 or 10 rung clears, cosmetics only. IMPORTANT: owning 24 CORE icon artworks does NOT mean display 24 different symbol types in every 6x8 board. Early calm boards use 8–12 distinct symbols repeated in even counts; harder boards may use 12–16 distinctive symbols. Always 48 filled cells = 24 pairs, with pair counts divisible by two. Choose recognizability over color variety. If no available pair after suboptimal choices, show "Rearrange" with **no loss and no timer**; can use hint and undo. Never generate a board with no initially valid path. Keep casual shuffle free.
 
 ## Ranked weekly/daily
 5 server-seeded fixed boards, 6x8, same image symbol IDs and starting placements. After clearing each, proceed. Goal: efficient CONNECTIONS, not speed.
@@ -18,7 +18,7 @@ One optional future variant: a single visible botanical wildcard tile after basi
 
 ## Generator & solver
 Guarantee at least one complete solution via reverse construction:
-1. Start empty layout and pick 24 icon pairs from seeded tile pool.
+1. Start empty layout and pick 24 matching tile pairs from a seed-selected pool of 8–16 distinctive icon types; repeated types are allowed, but final per-type counts must remain even.
 2. Insert pair positions in reverse order of a legal path-removal sequence, ensuring those two slots are connectable with <=2 bends at reverse construction time.
 3. Finish placement, then forward-play the recorded planned removal order to prove solvability; compute candidate-move counts, branching and density.
 4. Solving from initial state requires a full backtracking/memoized solver, because player may deviate from the witness sequence; if deadlocked midgame, casual rearrange and ranked deterministic rearrange with disclosed deduction.
