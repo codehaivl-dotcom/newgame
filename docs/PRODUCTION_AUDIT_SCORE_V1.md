@@ -50,3 +50,6 @@ P2: external originality check, latency tests, ranked/meta balancing and usabili
 
 ## Audit integrity
 These docs contain **hypotheses and numeric baselines**, not claims of playtesting or proof a concept will be fun. No assets were rendered for this audit. No model or screenshot was accepted to the production repository. Recorded credit consumption for this audit is not verified from provider; documentation actions by themselves do not spend external 3D generation credits.
+
+## Amendment — Asset audit V2, strict T-pose (2026-10-11)
+Production analysis identified the previous A-pose in prompt sources as a **hard production blocker**. The user requires strict frontal T-pose and empty hands. Updated the visual bible, image spec, character briefs, core prompt cards, QA, and agent rules; saved all 100 per-ID audit verdicts in `ASSET_AUDIT_V2_TPOSE.md`. Other group review scores: CHR 6.0, WPN 9.0, MAP 8.5, OBJ 8.5, INT 8.0, ENV 7.0, PKU 6.5, VFX 8.0; overall 7.9/10 subjective asset-spec utility. These are **not measured game or 3D scores**. 80/100 design documentation readiness is unchanged pending actual image-to-3D, rig and gameplay QA.
