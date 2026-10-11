@@ -3,7 +3,7 @@
 
 ## Order
 1. Read docs/00_PRODUCT_AND_RULES.md and 01_SHARED_ONLINE_RANKINGS.md.
-2. Read mode docs 02..05; 06_LEVEL_FACTORY_AND_QA.md for generator/solver; 07_AGENT_BUILD_ORDER.md for phases. Then 09_SCREENS_TOP_AND_PROGRESS.md for touch UX and 10_DIFFERENTIATION_AND_PLAYTESTS.md for optional variant experiments.
+2. Read approved modes 02_LINK_GARDEN.md, 03_BUBBLE_ORCHARD.md, and 04_JEWEL_GARDEN.md; 06_LEVEL_FACTORY_AND_QA.md for generator/solver; 07_AGENT_BUILD_ORDER.md for phases. Then 09_SCREENS_TOP_AND_PROGRESS.md for touch UX and 10_DIFFERENTIATION_AND_PLAYTESTS.md for optional variant experiments.
 3. Build one end-to-end PLAYABLE game at a time; start Link Garden + shared save. NO game engine/3D assets required to begin.
 4. No actual release, leaderboard service, render or QA completion claim without verified evidence.
 5. No 100-asset cap, no requirement to use 3D credit. If 2D image credit availability is unconfirmed, do not burn unrelated 3D credits.
@@ -15,11 +15,14 @@
 11. Always show meaningful test evidence: real preview path, stable rule fixture seed, save/replay checks, exact commit ID; no fake PASS.
 12. If game mechanic is unresolved, record it as TUNABLE, not LOCKED. Do not silently invent additional score boosters, IAP items, levels or failure timers.
 
+## REJECTED GAME — HARD SCOPE RULE
+Color Atelier / Water Sort / Phân loại màu is REJECTED by user on 2026-10-12. No bottles/pouring logic, sorting generator, menu tile, scoreboard, promotional art or background jobs. Historical commits remain accessible but must not be brought into main without explicit new decision. Three concept designs were approved, not production-ready PNG sprite packs or implemented gameplay.
+
 ## Commit gate for each engine
 PASS: one full playable match/board to clear or lose through legal moves, undo as permitted, restart and pause after every action, invariant tests, finite deterministic ranking pack with exact score replay. Before bulk assets/levels, actual adult tester tries without explanation.
 
 ## Product navigation
-Home Continue + four game icons + Top/Records + Settings. Never flood board screen with all tasks/monetization buttons.
+Home Continue + THREE game icons (Link, Bubble, Jewel) + Top/Records + Settings. Never flood board screen with all tasks/monetization buttons.
 
 ## Repo
 main = active puzzle production. archive/arena-moba-2026-10-12 = previous cancelled design, read-only historical reference.
