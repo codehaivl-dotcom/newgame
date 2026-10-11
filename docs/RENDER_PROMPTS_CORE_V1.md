@@ -1,7 +1,9 @@
 # CORE AI IMAGE PROMPT CARDS V1 — 18 CANDIDATES
 **NOT render authorization.** To spend credits the user selects the ID(s) and approves review. One complex asset per source image; no labels or separate decoration in pixels.
 
-See `VISUAL_BIBLE_V1.md` and `IMAGE_RENDER_SPEC_V1.md`. Each prompt block appends the style/template plus one individual asset brief. Every one must be visually checked at actual crop resolution and not passed blindly to Image-to-3D.
+See `VISUAL_BIBLE_V1.md`, `IMAGE_RENDER_SPEC_V1.md`, and `ASSET_AUDIT_V2_TPOSE.md`. Each prompt block appends the style/template plus one individual asset brief. Every one must be visually checked at actual crop resolution and not passed blindly to Image-to-3D.
+
+**HARD RULE:** Every CHR source must be EMPTY-HANDED STRICT T-POSE. An A-pose or weapon-bearing image is an immediate FAIL and must never enter Image-to-3D.
 
 ## CHR-01 — Đấu sĩ
 - Intended usage: Nhân vật: Đấu sĩ. V1 role visual or physical identity.
@@ -9,9 +11,9 @@ See `VISUAL_BIBLE_V1.md` and `IMAGE_RENDER_SPEC_V1.md`. Each prompt block append
 - Output: isolated standalone `PNG`, no filename until saved and verified; neutral background, >=20% free margin.
 
 ```text
-One full body standalone chibi 3D original game character, neutral front A-pose; hands and legs clearly separated, 30-35% head/body height, no held item or VFX.
+ONE full body original chibi 3D hero, strict symmetrical frontal T-POSE (NOT A-pose), both arms straight and horizontal at shoulder height 90° ±5°, elbows/wrists extended, palms down, hands completely EMPTY, legs hip-width and separated; 30-35% head/body height, no held/worn items or VFX.
 Matte hand-painted beveled game geometry, warm restrained lighting, cohesive miniature arena MOBA art direction.
-Red melee duelist; compact angular armor, distinct forward sword arm socket, short split shoulder scarf, short controlled hair, visible elbow/knee seams, small boots; no weapon, no attack pose, no capes.
+Red melee duelist; compact angular armor, clear dominant-hand weapon socket to add later in engine, short fitted high collar, short controlled hair, visible elbow/knee seams, small boots; no weapon, no attack pose, no capes.
 No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette, 20% blank margins all around.
 ```
 
@@ -21,7 +23,7 @@ No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette,
 - Output: isolated standalone `PNG`, no filename until saved and verified; neutral background, >=20% free margin.
 
 ```text
-One full body standalone chibi 3D original game character, neutral front A-pose; hands and legs clearly separated, 30-35% head/body height, no held item or VFX.
+ONE full body original chibi 3D hero, strict symmetrical frontal T-POSE (NOT A-pose), both arms straight and horizontal at shoulder height 90° ±5°, elbows/wrists extended, palms down, hands completely EMPTY, legs hip-width and separated; 30-35% head/body height, no held/worn items or VFX.
 Matte hand-painted beveled game geometry, warm restrained lighting, cohesive miniature arena MOBA art direction.
 Amber-gray heavy guardian; shield-side shoulder pad, visibly bulky torso and short sturdy limbs with free elbow/knee joints, front-facing readable head; no shield, no weapon, no hard armor shell fusing arms.
 No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette, 20% blank margins all around.
@@ -33,9 +35,9 @@ No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette,
 - Output: isolated standalone `PNG`, no filename until saved and verified; neutral background, >=20% free margin.
 
 ```text
-One full body standalone chibi 3D original game character, neutral front A-pose; hands and legs clearly separated, 30-35% head/body height, no held item or VFX.
+ONE full body original chibi 3D hero, strict symmetrical frontal T-POSE (NOT A-pose), both arms straight and horizontal at shoulder height 90° ±5°, elbows/wrists extended, palms down, hands completely EMPTY, legs hip-width and separated; 30-35% head/body height, no held/worn items or VFX.
 Matte hand-painted beveled game geometry, warm restrained lighting, cohesive miniature arena MOBA art direction.
-Blue rifle ranger; compact blue ponytail kept off shoulder joints, clear forearms and rifle-grip socket, lightweight armor; no held gun, no floating projectiles.
+Blue rifle ranger; compact blue ponytail kept off shoulder joints, clear forearms and rifle-grip socket, lightweight armor; hands empty, no held gun, no floating projectiles.
 No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette, 20% blank margins all around.
 ```
 
@@ -45,9 +47,9 @@ No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette,
 - Output: isolated standalone `PNG`, no filename until saved and verified; neutral background, >=20% free margin.
 
 ```text
-One full body standalone chibi 3D original game character, neutral front A-pose; hands and legs clearly separated, 30-35% head/body height, no held item or VFX.
+ONE full body original chibi 3D hero, strict symmetrical frontal T-POSE (NOT A-pose), both arms straight and horizontal at shoulder height 90° ±5°, elbows/wrists extended, palms down, hands completely EMPTY, legs hip-width and separated; 30-35% head/body height, no held/worn items or VFX.
 Matte hand-painted beveled game geometry, warm restrained lighting, cohesive miniature arena MOBA art direction.
-Green field medic; round practical helmet with goggles, short fitted pack silhouette, distinct medical motif but no floating plus sign, arm joint clearance; no staff or particles.
+Green field medic; round practical helmet with goggles, simple fitted torso silhouette, distinct medical costume motif, no backpack or floating plus sign, arm joint clearance; no staff or particles.
 No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette, 20% blank margins all around.
 ```
 
@@ -57,9 +59,9 @@ No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette,
 - Output: isolated standalone `PNG`, no filename until saved and verified; neutral background, >=20% free margin.
 
 ```text
-One full body standalone chibi 3D original game character, neutral front A-pose; hands and legs clearly separated, 30-35% head/body height, no held item or VFX.
+ONE full body original chibi 3D hero, strict symmetrical frontal T-POSE (NOT A-pose), both arms straight and horizontal at shoulder height 90° ±5°, elbows/wrists extended, palms down, hands completely EMPTY, legs hip-width and separated; 30-35% head/body height, no held/worn items or VFX.
 Matte hand-painted beveled game geometry, warm restrained lighting, cohesive miniature arena MOBA art direction.
-Orange trap specialist; orange helmet with horizontal visor, compact tool belt and strong rectangular backpack silhouette, visibly different from CHR-04; no attached launcher, mine, spark or wires joining limbs.
+Orange trap specialist; orange helmet with horizontal visor, clean squared chest armor and distinct rectangular helmet silhouette, visibly different from CHR-04, no tool belt items or backpack; no launcher, mine, backpack, spark or wires joining limbs.
 No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette, 20% blank margins all around.
 ```
 
@@ -69,9 +71,9 @@ No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette,
 - Output: isolated standalone `PNG`, no filename until saved and verified; neutral background, >=20% free margin.
 
 ```text
-One full body standalone chibi 3D original game character, neutral front A-pose; hands and legs clearly separated, 30-35% head/body height, no held item or VFX.
+ONE full body original chibi 3D hero, strict symmetrical frontal T-POSE (NOT A-pose), both arms straight and horizontal at shoulder height 90° ±5°, elbows/wrists extended, palms down, hands completely EMPTY, legs hip-width and separated; 30-35% head/body height, no held/worn items or VFX.
 Matte hand-painted beveled game geometry, warm restrained lighting, cohesive miniature arena MOBA art direction.
-Violet rapid flanker; **NOT a recolor of CHR-01**. Compact masked helmet or sleek asymmetric head silhouette, minimalist twin-hand socket outfit, small angular shoulder plates, no long white hair/red scarf; no daggers or attack VFX.
+Violet rapid flanker; NOT a recolor of CHR-01. Compact masked helmet or sleek asymmetric head silhouette, minimalist twin-hand socket outfit, small angular shoulder plates, no long white hair/red scarf; no daggers, gear or attack VFX.
 No text, no collage, no UI, no scenic base, no duplicate, no cropped silhouette, 20% blank margins all around.
 ```
 
