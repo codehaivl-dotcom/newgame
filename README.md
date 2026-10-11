@@ -1,3 +1,5 @@
+> **DESIGN RESET 2026-10-12:** The original 100-ID inventory is **not a limit or mandate**. The final game may require 300–400 assets. Gameplay fun, agent feasibility, modular-map assembly, rig simplicity and tested counterplay determine scope. **Current 1v1/3v3 control and two-lane siege mechanics are candidate directions, not approved final game design.** Read [GAME DIRECTION RESEARCH V3](docs/GAME_DIRECTION_RESEARCH_V3.md) when it is available. The 100-item manifest remains a historical candidate snapshot; no art is approved.
+
 # NEWGAME — MINI ARENA MOBA (working title)
 **Status: PRODUCTION DESIGN V1.0 documented; visual production not yet approved.** Original small-scope 1v1 / 3v3 arena, simple inputs, melee/ranged/buff/trap roles, map cover and outplay. **No remakes of existing games.**
 
