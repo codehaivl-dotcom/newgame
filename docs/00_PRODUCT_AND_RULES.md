@@ -1,6 +1,6 @@
 # NEWGAME — QUIET PUZZLE CLUB | PRODUCT AUTHORITY V1
 Date: 2026-10-12. DECISION: Retire arena/MOBA on main. Snapshot is retained at branch archive/arena-moba-2026-10-12.
-Build ONE four-in-one puzzle app: Link Garden (Onet), Bubble Orchard (Bubble Shooter), Color Atelier (Water Sort), Jewel Garden (Match-3). Future standalone apps possible. The former 100-asset catalog is not active authority.
+Build ONE three-in-one puzzle app: Link Garden (Onet), Bubble Orchard (Bubble Shooter), Jewel Garden (Match-3). Color Atelier / Water Sort is REJECTED and must not be produced. Future standalone apps possible. The former 100-asset catalog is not active authority.
 
 ## Promise
 "A quiet place to play for 2 minutes or 2 hours. Stop whenever, return to precisely the same board, beat your own records or join friendly online competition."
@@ -12,10 +12,10 @@ Primary initial audience: adults 50–80, no exclusive age gate and no assumptio
 3. Free Play fully offline without login; Top requires server-backed identity and replay verification. Do not falsely say a client-side score is verified.
 4. Big touch targets (>=48 dp, prefer 56); readable labels, distinctive shapes as well as colors, optional low-motion setting, hints and unlimited undo in Casual.
 5. "Continue" is the main button upon return. Allow one paused Casual game in EACH mode plus independent paused Ranked games.
-6. Failure only results from a board choice: in Bubble a ceiling may fill *after a shot*, not while idle; Onet cannot time out; Sort may be restarted or undone; Jewel deadlocks trigger auto-reshuffle.
+6. Failure only results from a board choice: in Bubble a ceiling may fill *after a shot*, not while idle; Onet cannot time out; Jewel deadlocks trigger auto-reshuffle.
 7. No pay-to-win ranked boosters, energy wall, forced ads, compulsory social chat, unwinnable levels without clear recovery.
 
-## Two modes in all four games
+## Two modes in all three approved games
 **Free Play:** unlimited progression rungs, self-paced, self-best records, personal albums, practice, hints, undo; no overall final level. A rung is a milestone, not an imposed session deadline.
 **Ranked Challenges:** separately scored per game. All players get same deterministic seed, same board/rules and same supply; rank by strategic efficiency/points only, NEVER elapsed time. Daily pack and Weekly pack plus Friends/Family group. A fixed-length challenge (e.g. five boards or 40 moves) is not a timer and does not cap Casual play.
 - Up to 3 official attempts per challenge, best result wins; practice unlimited; confirmed restart is a new attempt.
@@ -25,9 +25,14 @@ Primary initial audience: adults 50–80, no exclusive age gate and no assumptio
 
 ## Shared experience, original identity
 Design "quiet botanical puzzle club": botanical glass, ceramic tiles, flowers, warm wood, travel/postcard album. Not copied UI, art, or branded naming from any existing publisher.
-Home: CONTINUE (big), four game tiles, Records/Top, Settings. Each board fills screen, a slim score strip and unobtrusive Hint/Undo/Pause.
+Home: CONTINUE (big), three game tiles, Records/Top, Settings. Each board fills screen, a slim score strip and unobtrusive Hint/Undo/Pause.
 No game-specific economy or powers transferred across modes. Cosmetic Garden Album can record milestones without affecting rankings.
 Art volume determined by gameplay and visual variety (can exceed 400 images); ZERO rig or real-time networking required.
 
+## Concept approval on 2026-10-12
+- APPROVED CONCEPTS: Link Garden (Nối thú), Bubble Orchard (Bắn bóng), Jewel Garden (Xếp kim cương).
+- REJECTED: Color Atelier / Phân màu. No fourth game or substitute without a new decision.
+- Concept visuals approved as art direction only. No PNG sprite pack, working prototypes, online Top or production files are thereby certified.
+
 ## State of truth
-Four game engines and backend are NOT implemented. No level generation/solvers, accepted assets, online leaderboard or user-test data has been confirmed. Numerical defaults in mode specs are hypotheses.
+Three game engines and backend are NOT implemented. No level generation/solvers, accepted assets, online leaderboard or user-test data has been confirmed. Numerical defaults in mode specs are hypotheses.
