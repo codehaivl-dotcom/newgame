@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "active_project": "QUIET_PUZZLE_CLUB",
   "pivotted_on": "2026-10-12",
   "legacy_archive_branch": "archive/arena-moba-2026-10-12",
@@ -16,7 +16,8 @@
       "gameplay_implemented": false,
       "online_ranked_implemented": false,
       "approved_levels": 0,
-      "approved_assets": 0
+      "approved_assets": 0,
+      "concept_visual_approved": true
     },
     {
       "id": "BUBBLE",
@@ -27,29 +28,20 @@
       "gameplay_implemented": false,
       "online_ranked_implemented": false,
       "approved_levels": 0,
-      "approved_assets": 0
-    },
-    {
-      "id": "SORT",
-      "display_vi": "Phân loại màu",
-      "display_en": "Color Atelier",
-      "doc": "docs/04_COLOR_ATELIER.md",
-      "difficulty": "optimal-solver-verified",
-      "gameplay_implemented": false,
-      "online_ranked_implemented": false,
-      "approved_levels": 0,
-      "approved_assets": 0
+      "approved_assets": 0,
+      "concept_visual_approved": true
     },
     {
       "id": "JEWEL",
       "display_vi": "Xếp kim cương",
       "display_en": "Jewel Garden",
-      "doc": "docs/05_JEWEL_GARDEN.md",
+      "doc": "docs/04_JEWEL_GARDEN.md",
       "difficulty": "seeded-match3",
       "gameplay_implemented": false,
       "online_ranked_implemented": false,
       "approved_levels": 0,
-      "approved_assets": 0
+      "approved_assets": 0,
+      "concept_visual_approved": true
     }
   ],
   "common_policies": {
@@ -65,5 +57,29 @@
   },
   "online_ranked_status": "NOT_BUILT",
   "art_render_provider_verified": false,
-  "render_credits_remaining_verified": null
+  "render_credits_remaining_verified": null,
+  "scope_decision_date": "2026-10-12",
+  "concept_review": {
+    "approved": [
+      "LINK",
+      "BUBBLE",
+      "JEWEL"
+    ],
+    "rejected": [
+      "SORT"
+    ],
+    "review_kind": "CONCEPT_VISUAL_DIRECTION_ONLY",
+    "production_images_committed": false
+  },
+  "rejected_modes": [
+    {
+      "id": "SORT",
+      "display_vi": "Phân màu",
+      "previous_title": "Color Atelier",
+      "status": "REJECTED_BY_USER",
+      "no_implementation": true,
+      "no_asset_production": true,
+      "removed_from_active_docs": true
+    }
+  ]
 }
