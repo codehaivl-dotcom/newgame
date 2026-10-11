@@ -8,7 +8,18 @@
 
 **No real-time clock.** Pause or close anytime, resume same board/action, large touch targets, offline Free Play. Optional weekly/daily **same-seed, no-speed** Top online, plus Family rankings. Endless casual progress, finite standardized actions/boards in official ranked comparisons. No forced ads or rig/3D required.
 
-## Design docs — READ IN THIS ORDER
+## PRODUCTION V1 — REQUIRED
+- [12 — LOCKED production scope + art and screen contract](docs/12_PRODUCTION_LOCK_V1.md)
+- [64 asset catalog / full standalone prompts / render waves](assets/render_manifest_v1.json)
+- [Readable 64 render prompt cards](assets/RENDER_PROMPT_DECK_V1.md)
+- [13 — Render pipeline, source crop, alpha, user review and import QA](docs/13_ASSET_PIPELINE_AND_QA.md)
+- [14 — Playable acceptance and deterministic rules test gates](docs/14_PLAYABLE_SPEC_AND_TEST_GATES.md)
+- [15 — Agent production runbook](docs/15_PRODUCTION_RUNBOOK.md)
+- [Production structural validator](scripts/validate_production.mjs)
+
+Run locally after checkout: node scripts/validate_production.mjs. Passing this structural validator does not mean playable games or rendered assets pass QA.
+
+## Earlier design docs — supporting reference
 - [00 — Product authority & two play modes](docs/00_PRODUCT_AND_RULES.md)
 - [01 — Online verified Top, anti-cheat, saved progress](docs/01_SHARED_ONLINE_RANKINGS.md)
 - [02 — Link Garden rules](docs/02_LINK_GARDEN.md)
@@ -26,7 +37,7 @@
 **APPROVED CONCEPT DIRECTION:** Link Garden, Bubble Orchard, Jewel Garden. **REJECTED:** Color Atelier (pouring/sorting colors). Do not build or render Color Atelier. Concept approval does NOT imply final game assets or implementation.
 
 ## What is NOT complete
-No released application, ranked backend, saved playable browser preview, approved art pack or 1,000 verified levels exists at this stage. Docs are **implementation contracts and tunable baselines**, not playtesting proof.
+No released application, ranked backend, saved playable browser preview, approved art pack or 1,000 verified levels exists at this stage. Docs and image prompts are **production contracts / tunable starting values**, not playtesting proof. Render catalog: 44 CORE + 20 OPTIONAL, no actual completed image job/approved sprite. Three approved poster visuals currently in this conversation, not yet GitHub-committed as binary reference files.
 
 ## Game pivot / legacy
 Old arena-MOBA design is **cancelled** and kept only in Git history / branch [archive/arena-moba-2026-10-12](https://github.com/codehaivl-dotcom/newgame/tree/archive/arena-moba-2026-10-12). The former 100 asset list is retired. Do not implement MOBA characters, combat, maps, networking or old GLBs from the archive.
