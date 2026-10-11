@@ -18,6 +18,12 @@ The user reviewed and approved illustrative concept posters for LINK, BUBBLE and
 The posters include decorative smartphones, large titles, tea cups, tutorials and leaderboards; these are ADVERTISING compositions, NEVER gameplay source sprites. Generate clean isolated game objects with render manifest and draw all numeric labels, boards, leaderboards, control buttons by actual UI/code.
 The approved poster files are not yet verified as GitHub-committed production art; never invent ref paths.
 
+## Visual tokens (starting production palette, test on real devices)
+- Ivory surface #FFF7E8, pale garden green #E5F0DA, dark text #384637, leafy primary #548448, warm wood #A46D43, soft outline #C2AD8D.
+- Gameplay object accents: rose #EA6279, blue #509FDC, golden yellow #F3BE46, emerald #59B870, violet #AB77CC. These are reference palette targets, NOT exact hex pixels required from generated source art.
+- Body text at least 16 CSS px, critical counters ~22–28px, buttons >=48px hit target; never bake labels into images.
+- Reduce-motion setting cancels decorative camera movement and long sparkle animations. Board must retain contrast over background.
+
 ## Screen/UI contract
 - First test viewport: 360x800 CSS px portrait, then 390x844 and tablet; safe-area compliant.
 - Board receives >=65% of useful gameplay viewport; top slim score/title/pause, bottom only needed Hint/Undo/Shoot buttons.
