@@ -7,7 +7,7 @@
 - 38 previously tagged P0 across methods does **not** mean 38 AI generations. Distinguish inventory priority vs actual render order.
 
 ## First wave: 18 high-leverage AI sources (approval still required)
-- CHR-01..06 (6 hero A-pose sources; ~same simplified shared rig; silhouette-first, no weapons, no VFX).
+- CHR-01..06 (6 **strict frontal T-pose** empty-handed sources; common simplified rig, shoulder/arm clearance; **no held/worn item or VFX**).
 - WPN-01,03,05,07,09,11 (6 primary detachable weapons).
 - OBJ-04,12,13,14 (4 distinct combat affordances: explosive barrel, large rock cover, low/tall bushes).
 - INT-01,02 (capture point and spawn pedestal).
@@ -29,7 +29,7 @@
 
 ## Decision ladder, hours not days
 **Hour 0: lock:** Copy/inspect source manifest, review model-generation provider balance, expiry timestamp, per-asset generation cost and export rights (unknown until provided).
-**Small art validation:** CHR-01 source, CHR-02 source, WPN-01 detached, OBJ-04 standalone. Review full-body, crop/isolation, color and manufacturability immediately. 2 attempts max per problematic ID before reclassify to manual cleanup; do not burn a whole day.
+**Small art validation:** CHR-01 strict T-pose source, CHR-02 strict T-pose source, WPN-01 detached, OBJ-04 standalone. Review full-body, crop/isolation, color and manufacturability immediately. 2 attempts max per problematic ID before reclassify to manual cleanup; do not burn a whole day.
 **Then batch:** Group by asset category and prompt style. Image output always tracked to ID and variant `v01/v02`. Use provider batch **only** if supported and if every output has stable unique job ID.
 **Image approval and 3D:** User review can run alongside asset generation. Only approved image revisions may enter image-to-3D. Store complete exports first; 3D model rig/collision tests are a separate later gate.
 **Last hour:** Halt expensive retries; export/unpack every finished file; checksum/list status; log pending/failed jobs and unused credits truthfully. Do not claim a 3D model exists when only its image does.
@@ -40,6 +40,11 @@ For each job store: `provider`, `model`, `job_id`, `source_id`, `cost_credits_ac
 - Keep PNG (lossless), alpha if available, any necessary texture outputs, GLB or preferred 3D format with usage rights. Prefer manifest-indexed files over collage PSD.
 - If upload path is not verified, record `NOT_COMMITTED`, save local export and report blocker; never mark repo-committed.
 - GitHub file limits/versioning may make full GLB storage unsuitable; use Git LFS or artifact storage where supported, with manifest verified external storage URIs (not invented). Do not commit massive binaries through connector without confirmation.
+
+## Asset audit authority
+- `ASSET_AUDIT_V2_TPOSE.md` records per-ID PASS_SPEC/REVISE/HOLD. This is only **written-spec readiness** and never bypasses user image approval.
+- Preserve **18 CORE_AI** scope candidates; six CHR are REVISE until an individual strict-T-pose source passes. Other GEN candidates are not implicitly approved by being listed.
+- INT-03..12, all PKU and nonessential ENV are HOLD for V1. Avoid adding gameplay to justify already-listed model IDs.
 
 ## Cutoff safety
 - Stop spending before credit expiry with sufficient time for downloading and checking outputs.
