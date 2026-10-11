@@ -1,7 +1,7 @@
 # PRODUCTION V1 AUTHORITY — 2026-10-12
 Read docs/12_PRODUCTION_LOCK_V1.md, assets/render_manifest_v1.json, assets/RENDER_PROMPT_DECK_V1.md, docs/13_ASSET_PIPELINE_AND_QA.md, docs/14_PLAYABLE_SPEC_AND_TEST_GATES.md, docs/15_PRODUCTION_RUNBOOK.md BEFORE initiating image batches or coding additional game systems.
 There are 64 first-wave render candidates (44 CORE, 20 OPTIONAL). This is NOT blanket render permission. First FOUR calibration items only when provider credits are verified and user authorizes generation: LNK-ICON-001, LNK-ICON-005, BUB-BALL-001, JWL-GEM-001. No fake art status, no text baked in sprites, no crowded asset collage. User-approved concept posters are NOT equivalent to approved isolated runtime sprites. All three games must function with code placeholders before images are approved.
-Validate catalog in checked-out repo using: node scripts/validate_production.mjs. Read docs/16_PRODUCTION_STATUS_V1.md for exact verified state and unfinished runtime/render gates. This validates structure, NOT rendered quality or playable games.
+Validate catalog in checked-out repo using: node scripts/validate_production.mjs. Read docs/16_PRODUCTION_STATUS_V1.md for exact verified state and unfinished runtime/render gates. Read docs/17_INDIE_STUDIO_GREENLIGHT_AUDIT.md for mandatory risk review and unresolved design questions (advisory: do not silently amend locked rules). This validates structure, NOT rendered quality or playable games.
 
 ---
 
@@ -24,6 +24,9 @@ Validate catalog in checked-out repo using: node scripts/validate_production.mjs
 
 ## REJECTED GAME — HARD SCOPE RULE
 Color Atelier / Water Sort / Phân loại màu is REJECTED by user on 2026-10-12. No bottles/pouring logic, sorting generator, menu tile, scoreboard, promotional art or background jobs. Historical commits remain accessible but must not be brought into main without explicit new decision. Three concept designs were approved, not production-ready PNG sprite packs or implemented gameplay.
+
+## Studio Greenlight hard gate
+A documentation-ready game is not a tested game. Approved now: ONE small Link Garden vertical slice with placeholder art and deterministic state/action test fixtures. Not approved yet: auto-bulk render 64 assets, 1,000 production levels, working public Top or store publishing. Escalate unresolved mechanic/tie-break questions instead of guessing. Audit details: docs/17_INDIE_STUDIO_GREENLIGHT_AUDIT.md.
 
 ## Commit gate for each engine
 PASS: one full playable match/board to clear or lose through legal moves, undo as permitted, restart and pause after every action, invariant tests, finite deterministic ranking pack with exact score replay. Before bulk assets/levels, actual adult tester tries without explanation.
