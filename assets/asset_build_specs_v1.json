@@ -1,0 +1,1716 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-11",
+  "source_count": 100,
+  "counts_by_scope": {
+    "CORE_AI": 18,
+    "HOLD_AI": 19,
+    "SECONDARY_AI": 16,
+    "CORE_CODE": 16,
+    "SECONDARY_CODE": 23,
+    "VFX_RUNTIME": 8
+  },
+  "source_note": "Only art/asset build guidance; all assets remain PLANNED until user-reviewed generation and verified commit.",
+  "assets": [
+    {
+      "id": "CHR-01",
+      "name_vi": "Đấu sĩ",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Nhân vật: Đấu sĩ. V1 role visual or physical identity.",
+      "source_brief_en": "Red melee duelist; compact angular armor, distinct forward sword arm socket, short split shoulder scarf, short controlled hair, visible elbow/knee seams, small boots; no weapon, no attack pose, no capes.",
+      "required_dimensions": "1.65m height with common capsule radius .36m",
+      "source_view": "single neutral front A-pose, full body, no weapon or VFX",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/HERO_BALANCE_V1.md"
+      ]
+    },
+    {
+      "id": "CHR-02",
+      "name_vi": "Hộ vệ",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Nhân vật: Hộ vệ. V1 role visual or physical identity.",
+      "source_brief_en": "Amber-gray heavy guardian; shield-side shoulder pad, visibly bulky torso and short sturdy limbs with free elbow/knee joints, front-facing readable head; no shield, no weapon, no hard armor shell fusing arms.",
+      "required_dimensions": "1.65m height with common capsule radius .36m",
+      "source_view": "single neutral front A-pose, full body, no weapon or VFX",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/HERO_BALANCE_V1.md"
+      ]
+    },
+    {
+      "id": "CHR-03",
+      "name_vi": "Xạ thủ",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Nhân vật: Xạ thủ. V1 role visual or physical identity.",
+      "source_brief_en": "Blue rifle ranger; compact blue ponytail kept off shoulder joints, clear forearms and rifle-grip socket, lightweight armor; no held gun, no floating projectiles.",
+      "required_dimensions": "1.65m height with common capsule radius .36m",
+      "source_view": "single neutral front A-pose, full body, no weapon or VFX",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/HERO_BALANCE_V1.md"
+      ]
+    },
+    {
+      "id": "CHR-04",
+      "name_vi": "Hỗ trợ",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Nhân vật: Hỗ trợ. V1 role visual or physical identity.",
+      "source_brief_en": "Green field medic; round practical helmet with goggles, short fitted pack silhouette, distinct medical motif but no floating plus sign, arm joint clearance; no staff or particles.",
+      "required_dimensions": "1.65m height with common capsule radius .36m",
+      "source_view": "single neutral front A-pose, full body, no weapon or VFX",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/HERO_BALANCE_V1.md"
+      ]
+    },
+    {
+      "id": "CHR-05",
+      "name_vi": "Đặt bẫy",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Nhân vật: Đặt bẫy. V1 role visual or physical identity.",
+      "source_brief_en": "Orange trap specialist; orange helmet with horizontal visor, compact tool belt and strong rectangular backpack silhouette, visibly different from CHR-04; no attached launcher, mine, spark or wires joining limbs.",
+      "required_dimensions": "1.65m height with common capsule radius .36m",
+      "source_view": "single neutral front A-pose, full body, no weapon or VFX",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/HERO_BALANCE_V1.md"
+      ]
+    },
+    {
+      "id": "CHR-06",
+      "name_vi": "Cơ động",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Nhân vật: Cơ động. V1 role visual or physical identity.",
+      "source_brief_en": "Violet rapid flanker; **NOT a recolor of CHR-01**. Compact masked helmet or sleek asymmetric head silhouette, minimalist twin-hand socket outfit, small angular shoulder plates, no long white hair/red scarf; no daggers or attack VFX.",
+      "required_dimensions": "1.65m height with common capsule radius .36m",
+      "source_view": "single neutral front A-pose, full body, no weapon or VFX",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/HERO_BALANCE_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-01",
+      "name_vi": "Kiếm cong Đấu sĩ",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Vũ khí và trang bị: Kiếm cong Đấu sĩ. V1 role visual or physical identity.",
+      "source_brief_en": "Single stylized curved blade with thick readable bevel and short grip; red metal accents in material only; neutral pose, no slash effect.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-02",
+      "name_vi": "Đoản kiếm phụ",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Vũ khí và trang bị: Đoản kiếm phụ. Not included in V1 gameplay.",
+      "source_brief_en": "Short straight one-handed steel sword, broad edge readable from game camera, isolated from any character.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-03",
+      "name_vi": "Khiên lớn Hộ vệ",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Vũ khí và trang bị: Khiên lớn Hộ vệ. V1 role visual or physical identity.",
+      "source_brief_en": "Single thick golden guardian shield with visible inner wrist grip/socket and flat frontal readability; no hero carrying it.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-04",
+      "name_vi": "Búa chiến một tay",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Vũ khí và trang bị: Búa chiến một tay. Not included in V1 gameplay.",
+      "source_brief_en": "Compact one-handed mallet with square metal head, single clean wooden/metal handle, separate from hero.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-05",
+      "name_vi": "Súng trường năng lượng",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Vũ khí và trang bị: Súng trường năng lượng. V1 role visual or physical identity.",
+      "source_brief_en": "Compact blue sci-fi energy rifle, short thick barrel, two clean hands grip areas, no muzzle flash or hovering energy projectile.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-06",
+      "name_vi": "Súng ngắn năng lượng",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Vũ khí và trang bị: Súng ngắn năng lượng. Not included in V1 gameplay.",
+      "source_brief_en": "Compact blue sidearm with broad simple silhouette, no thin dangling sights, neutral matte materials.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-07",
+      "name_vi": "Gậy hồi phục",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Vũ khí và trang bị: Gậy hồi phục. V1 role visual or physical identity.",
+      "source_brief_en": "Short green medic staff with mechanical core and solid tip, no glow halo, no hovering cross glyph.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-08",
+      "name_vi": "Ba lô thiết bị y tế",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Vũ khí và trang bị: Ba lô thiết bị y tế. Not included in V1 gameplay.",
+      "source_brief_en": "Independent squat field-medic backpack with two simple straps and mounting panel; no tubes snaking away from item.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-09",
+      "name_vi": "Súng phóng mìn",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Vũ khí và trang bị: Súng phóng mìn. V1 role visual or physical identity.",
+      "source_brief_en": "Compact orange-gray mine launcher with stubby smooth barrel, easy attachment grip; no mine in flight.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-10",
+      "name_vi": "Đĩa mìn đặt đất",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Vũ khí và trang bị: Đĩa mìn đặt đất. Optional illustration / extended set.",
+      "source_brief_en": "Small round visible ground mine puck, robust beveled body and simple hazard mark; no explosion, no massive sparks, can also be made from primitives if credit-limited.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-11",
+      "name_vi": "Dao găm năng lượng tím",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "Vũ khí và trang bị: Dao găm năng lượng tím. V1 role visual or physical identity.",
+      "source_brief_en": "A SINGLE violet flanker dagger with strong angled blade and thick handle; render one asset only, duplicate/mirror in game if using pair.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "WPN-12",
+      "name_vi": "Súng móc kéo cơ động",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Vũ khí và trang bị: Súng móc kéo cơ động. Not included in V1 gameplay.",
+      "source_brief_en": "Compact chunky grappling tool gun; no rope, no hook in flight, no cable coiled in space.",
+      "required_dimensions": "socket-mounted 0.4–1.4m extent",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-01",
+      "name_vi": "Sàn đá nguyên",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "walkable neutral floor",
+      "source_brief_en": "Author exact procedural/Blender geometry for Sàn đá nguyên; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m floor",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-02",
+      "name_vi": "Sàn đá nứt",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "walkable alternate floor, collision same as MAP-01",
+      "source_brief_en": "Author exact procedural/Blender geometry for Sàn đá nứt; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m floor",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-03",
+      "name_vi": "Sàn đá phủ rêu",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "cosmetic moss floor",
+      "source_brief_en": "Author exact procedural/Blender geometry for Sàn đá phủ rêu; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m floor",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-04",
+      "name_vi": "Nền đất",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "walkable brown terrain",
+      "source_brief_en": "Author exact procedural/Blender geometry for Nền đất; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m floor",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-05",
+      "name_vi": "Nền cỏ",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "walkable grass terrain",
+      "source_brief_en": "Author exact procedural/Blender geometry for Nền cỏ; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m floor",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-06",
+      "name_vi": "Sàn chuyển tiếp bờ nước",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "cosmetic water transition, walkable in V1",
+      "source_brief_en": "Author exact procedural/Blender geometry for Sàn chuyển tiếp bờ nước; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m floor",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-07",
+      "name_vi": "Ô nước",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "cosmetic water floor, walkable in V1",
+      "source_brief_en": "Author exact procedural/Blender geometry for Ô nước; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m floor",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-08",
+      "name_vi": "Tường cao thẳng",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "solid wall blocks traversal, bullets, line of sight",
+      "source_brief_en": "Author exact procedural/Blender geometry for Tường cao thẳng; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m length x 0.4m thick x 2.6m high",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-09",
+      "name_vi": "Góc tường cao ngoài",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "solid outer wall corner",
+      "source_brief_en": "Author exact procedural/Blender geometry for Góc tường cao ngoài; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m corner socket x 0.4m thick x 2.6m high",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-10",
+      "name_vi": "Góc tường cao trong",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "solid inner wall corner",
+      "source_brief_en": "Author exact procedural/Blender geometry for Góc tường cao trong; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m corner socket x 0.4m thick x 2.6m high",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-11",
+      "name_vi": "Đầu kết thúc tường cao",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "solid wall termination",
+      "source_brief_en": "Author exact procedural/Blender geometry for Đầu kết thúc tường cao; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m wall end",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-12",
+      "name_vi": "Tường thấp thẳng",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "low wall blocks bullets/movement but not vision",
+      "source_brief_en": "Author exact procedural/Blender geometry for Tường thấp thẳng; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m length x 0.35m thick x 1m high",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-13",
+      "name_vi": "Góc tường thấp",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "low wall corner same rules",
+      "source_brief_en": "Author exact procedural/Blender geometry for Góc tường thấp; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m corner socket x 0.35m thick x 1m high",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-14",
+      "name_vi": "Tường đổ",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "damaged wall art; movement/ballistic rule must be explicitly chosen before placement",
+      "source_brief_en": "Single collapsed wall ruin segment with no ground slab, warm stone broken blocks in controlled silhouette; built to meet one 2m-grid wall socket.",
+      "required_dimensions": "2m wall socket",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-15",
+      "name_vi": "Cổng vòm",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "gate silhouette, traversable aperture",
+      "source_brief_en": "Standalone 2m-wide stone arch/gate, squared straight feet and exact 2m internal clear path; no freeform environment.",
+      "required_dimensions": "2m passage opening",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-16",
+      "name_vi": "Cửa kim loại",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "future gated passage, hold gameplay closure logic",
+      "source_brief_en": "Single 2m wide heavy industrial gate panel with framed hinge/socket, squared straight edges; no entire building.",
+      "required_dimensions": "2m gate opening",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-17",
+      "name_vi": "Trụ đá vuông",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "solid stone collision column",
+      "source_brief_en": "Author exact procedural/Blender geometry for Trụ đá vuông; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "0.5x0.5m footprint x 2.6m high",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-18",
+      "name_vi": "Cầu thang đá",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Module xây bản đồ: Cầu thang đá. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Cầu thang đá; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m width / not gameplay usable V1",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-19",
+      "name_vi": "Dốc đá",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Module xây bản đồ: Dốc đá. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Dốc đá; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m width / not gameplay usable V1",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-20",
+      "name_vi": "Cầu gỗ thẳng",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Module xây bản đồ: Cầu gỗ thẳng. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Cầu gỗ thẳng; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m width / not gameplay usable V1",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-21",
+      "name_vi": "Đầu cầu gỗ",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Module xây bản đồ: Đầu cầu gỗ. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Đầu cầu gỗ; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m end / not gameplay usable V1",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-22",
+      "name_vi": "Bệ cao",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Module xây bản đồ: Bệ cao. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Bệ cao; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2x2m raised plane / visual only",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-23",
+      "name_vi": "Lan can thẳng",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Module xây bản đồ: Lan can thẳng. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Lan can thẳng; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m length / decorative",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "MAP-24",
+      "name_vi": "Lan can góc",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Module xây bản đồ: Lan can góc. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Lan can góc; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "2m corner / decorative",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-01",
+      "name_vi": "Thùng gỗ lớn",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "Vật cản và thực vật: Thùng gỗ lớn. V1 role visual or physical identity.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Thùng gỗ lớn; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-02",
+      "name_vi": "Thùng gỗ nhỏ",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "Vật cản và thực vật: Thùng gỗ nhỏ. V1 role visual or physical identity.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Thùng gỗ nhỏ; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-03",
+      "name_vi": "Thùng kim loại",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "Vật cản và thực vật: Thùng kim loại. V1 role visual or physical identity.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Thùng kim loại; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-04",
+      "name_vi": "Thùng nhiên liệu nổ",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "destructible explosive barrel, 25HP, blast 2.3m and 22 damage after warning",
+      "source_brief_en": "Single upright red explosive drum with physical black metal rim and subtle warning geometry; no explosion VFX and no spill terrain.",
+      "required_dimensions": "cylinder radius .5m, height 1.0m",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-05",
+      "name_vi": "Thùng phuy thường",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật cản và thực vật: Thùng phuy thường. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Thùng phuy thường; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-06",
+      "name_vi": "Rào bê tông",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "Vật cản và thực vật: Rào bê tông. V1 role visual or physical identity.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Rào bê tông; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-07",
+      "name_vi": "Rào công trường",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật cản và thực vật: Rào công trường. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Rào công trường; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-08",
+      "name_vi": "Bao cát chắn đạn",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Vật cản và thực vật: Bao cát chắn đạn. Optional illustration / extended set.",
+      "source_brief_en": "Low sandbag cover unit in single neat pile; height ~1m, level flat footprint, no giant ground plane.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-09",
+      "name_vi": "Khối chắn kim loại",
+      "method": "CODE",
+      "scope": "CORE_CODE",
+      "usage": "Vật cản và thực vật: Khối chắn kim loại. V1 role visual or physical identity.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Khối chắn kim loại; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-10",
+      "name_vi": "Chồng thùng thấp",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật cản và thực vật: Chồng thùng thấp. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Chồng thùng thấp; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-11",
+      "name_vi": "Đá nhỏ",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Vật cản và thực vật: Đá nhỏ. Optional illustration / extended set.",
+      "source_brief_en": "One standalone small faceted warm-orange rock, no green plants or rubble scatter.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-12",
+      "name_vi": "Cụm đá lớn",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "large solid cover; combat collision manually authored",
+      "source_brief_en": "One large angular sandstone rock cluster forming obvious gameplay cover shape; rocks may touch within this *single intentional cluster*; no cactus.",
+      "required_dimensions": "cover footprint ≤2x2m, height ≤2m",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-13",
+      "name_vi": "Bụi cây thấp",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "concealment brush, not bullet blocker",
+      "source_brief_en": "ONE low dense rounded bright-green bush as concealment prop, foliage volume compact; no separate rocks, no ground patch.",
+      "required_dimensions": "concealment footprint ≤2x2m",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-14",
+      "name_vi": "Bụi cây cao",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "concealment brush, not bullet blocker",
+      "source_brief_en": "ONE tall bush with slightly higher top and narrower footprint than OBJ-13; recognizable but collision gameplay comes from authored conceal zone, not leaves.",
+      "required_dimensions": "concealment footprint ≤2x2m",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-15",
+      "name_vi": "Cụm cỏ",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Vật cản và thực vật: Cụm cỏ. Optional illustration / extended set.",
+      "source_brief_en": "One tufty grass clump, three-to-five broad blades, no terrain square base.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-16",
+      "name_vi": "Cây nhiệt đới nhỏ",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Vật cản và thực vật: Cây nhiệt đới nhỏ. Optional illustration / extended set.",
+      "source_brief_en": "One small tropical broadleaf tree with one trunk and compact stylized leaves, no coconut props or free rocks.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-17",
+      "name_vi": "Cụm ống thép",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Vật cản và thực vật: Cụm ống thép. Optional illustration / extended set.",
+      "source_brief_en": "One bolted L-cluster of industrial steel pipes on a single mounting rack; no floating detached pipe and no floor slab.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "OBJ-18",
+      "name_vi": "Cửa thông gió",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Vật cản và thực vật: Cửa thông gió. Optional illustration / extended set.",
+      "source_brief_en": "One industrial floor/wall vent machine housing with grating, square silhouette, standalone.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-01",
+      "name_vi": "Bệ chiếm điểm",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "shared 3v3 objective pedestal, score only with uncontested hero inside zone",
+      "source_brief_en": "Capture point small circular stone-metal pedestal, outer 2m grid-fit footprint; neutral unlit center and socket for runtime blue/red ring, NO blue team light baked in.",
+      "required_dimensions": "floor center pedestal ≤2x2m",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-02",
+      "name_vi": "Bệ hồi sinh",
+      "method": "GEN",
+      "scope": "CORE_AI",
+      "usage": "3v3 respawn marker, no cover advantage",
+      "source_brief_en": "Spawn pedestal, independent simple circular platform with team-colored socket not baked, low cover-free height; no hero standing atop it.",
+      "required_dimensions": "floor center spawn pad ≤2x2m",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-03",
+      "name_vi": "Bệ hồi máu",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Bệ hồi máu. Not included in V1 gameplay.",
+      "source_brief_en": "Healing fixture pedestal with simple circular footprint, green material insert not glow plume; no floating medical symbol.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-04",
+      "name_vi": "Bệ tăng tốc",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Bệ tăng tốc. Not included in V1 gameplay.",
+      "source_brief_en": "Speed boost fixture with orange arrow-shaped solid housing, no motion trail, one pedestal only.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-05",
+      "name_vi": "Trạm nạp năng lượng",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Trạm nạp năng lượng. Not included in V1 gameplay.",
+      "source_brief_en": "Energy station with chunky cylindrical console, empty power-cell mount; no lightning particles.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-06",
+      "name_vi": "Máy tạo khiên",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Máy tạo khiên. Not included in V1 gameplay.",
+      "source_brief_en": "Shield generator device with four sturdy feet and central core; protective bubble MUST be created at runtime, NOT part of 3D asset.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-07",
+      "name_vi": "Tháp súng tự động",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Tháp súng tự động. Not included in V1 gameplay.",
+      "source_brief_en": "Single automated turret with chunky swiveling base and stubby gun barrel; no glowing shot, avoid robot characters attached.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-08",
+      "name_vi": "Trụ quét phát hiện",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Trụ quét phát hiện. Not included in V1 gameplay.",
+      "source_brief_en": "Single upright scanner pylon with ring-shaped sensor plate; no floating scan cone or beam.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-09",
+      "name_vi": "Máy phát điện phá hủy được",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Máy phát điện phá hủy được. Not included in V1 gameplay.",
+      "source_brief_en": "Single smashable industrial generator with vents and orange warning plates; no exploding state in source.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-10",
+      "name_vi": "Công tắc cơ khí",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Công tắc cơ khí. Not included in V1 gameplay.",
+      "source_brief_en": "Single mechanical lever switch on low stand; lever separate movable part in final model.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-11",
+      "name_vi": "Bảng điều khiển cổng",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Bảng điều khiển cổng. Not included in V1 gameplay.",
+      "source_brief_en": "Single chunky wall-mount gate control panel; no wall section included.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "INT-12",
+      "name_vi": "Bộ phát vùng nguy hiểm",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Công trình tương tác: Bộ phát vùng nguy hiểm. Not included in V1 gameplay.",
+      "source_brief_en": "Single floor hazard emitter disc with readable frame; NO danger circle decal emitted in concept geometry.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-01",
+      "name_vi": "Đèn đường thấp",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Đạo cụ môi trường: Đèn đường thấp. Optional illustration / extended set.",
+      "source_brief_en": "Single short chunky streetlamp with stable base, neutral off lamp, no surrounding pathway.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-02",
+      "name_vi": "Đèn gắn tường",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Đạo cụ môi trường: Đèn gắn tường. Optional illustration / extended set.",
+      "source_brief_en": "One wall-mounted compact lamp with bolt plate; no wall chunk and no light beam.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-03",
+      "name_vi": "Bàn thờ đá giả tưởng nhỏ",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Đạo cụ môi trường: Bàn thờ đá giả tưởng nhỏ. Not included in V1 gameplay.",
+      "source_brief_en": "Standalone tiny fictional stone shrine with simple relief, not based on any religious monument, no floor.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-04",
+      "name_vi": "Cổng đá trang trí",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Đạo cụ môi trường: Cổng đá trang trí. Not included in V1 gameplay.",
+      "source_brief_en": "Standalone short decorative stone ceremonial gate, new fictional motifs, no environmental diorama.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-05",
+      "name_vi": "Tượng đá nhỏ",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Đạo cụ môi trường: Tượng đá nhỏ. Not included in V1 gameplay.",
+      "source_brief_en": "Single compact weathered stone statue of abstract guardian figure, original silhouette, no altar.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-06",
+      "name_vi": "Cột cờ vải",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Đạo cụ môi trường: Cột cờ vải. Optional illustration / extended set.",
+      "source_brief_en": "One banner pole with ONE short rectangular fabric flag, no slogans or text, minimal hanging cloth.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-07",
+      "name_vi": "Biển chỉ hướng",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Đạo cụ môi trường: Biển chỉ hướng. Optional illustration / extended set.",
+      "source_brief_en": "One short wayfinding post with blank directional boards, no painted readable text.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-08",
+      "name_vi": "Hàng rào dây",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Đạo cụ môi trường: Hàng rào dây. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Hàng rào dây; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-09",
+      "name_vi": "Ống thép chữ L",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Đạo cụ môi trường: Ống thép chữ L. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Ống thép chữ L; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-10",
+      "name_vi": "Hộp điện",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Đạo cụ môi trường: Hộp điện. Optional illustration / extended set.",
+      "source_brief_en": "One electric switch cabinet with simple hinges and warning motif, neutral off state.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-11",
+      "name_vi": "Máy bơm nước",
+      "method": "GEN",
+      "scope": "SECONDARY_AI",
+      "usage": "Đạo cụ môi trường: Máy bơm nước. Optional illustration / extended set.",
+      "source_brief_en": "One small water pump with steel rotor and simple inlet/outlet, no pipe bundle attached.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "ENV-12",
+      "name_vi": "Cây cọ thấp",
+      "method": "GEN",
+      "scope": "HOLD_AI",
+      "usage": "Đạo cụ môi trường: Cây cọ thấp. Not included in V1 gameplay.",
+      "source_brief_en": "One short compact tropical palm, solid readable fronds, no floating coconuts.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "single isolated orthographic 3/4 product view, no labels or other props",
+      "margin_ratio": 0.2,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-01",
+      "name_vi": "Viên hồi máu",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Viên hồi máu. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Viên hồi máu; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-02",
+      "name_vi": "Pin năng lượng",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Pin năng lượng. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Pin năng lượng; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-03",
+      "name_vi": "Biểu tượng tăng tốc",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Biểu tượng tăng tốc. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Biểu tượng tăng tốc; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-04",
+      "name_vi": "Hộp đạn",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Hộp đạn. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Hộp đạn; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-05",
+      "name_vi": "Viên tạo khiên",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Viên tạo khiên. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Viên tạo khiên; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-06",
+      "name_vi": "Ngọc hồi kỹ năng",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Ngọc hồi kỹ năng. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Ngọc hồi kỹ năng; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-07",
+      "name_vi": "Thiết bị quét phát hiện",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Thiết bị quét phát hiện. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Thiết bị quét phát hiện; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "PKU-08",
+      "name_vi": "Vật phẩm mục tiêu trung lập",
+      "method": "CODE",
+      "scope": "SECONDARY_CODE",
+      "usage": "Vật phẩm nhặt: Vật phẩm mục tiêu trung lập. Optional illustration / extended set.",
+      "source_brief_en": "Author exact procedural/Blender geometry for Vật phẩm mục tiêu trung lập; conform to MAP_SPEC grid/scale and collision rules. Do not use AI mesh generation.",
+      "required_dimensions": "gameplay footprint must be authored explicitly before placement",
+      "source_view": "exact grid aligned 3D model / material, no image-to-3D",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-01",
+      "name_vi": "Đạn thường",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Đạn thường. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Đạn thường after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-02",
+      "name_vi": "Đạn năng lượng",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Đạn năng lượng. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Đạn năng lượng after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-03",
+      "name_vi": "Vệt chém đỏ",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Vệt chém đỏ. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Vệt chém đỏ after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-04",
+      "name_vi": "Vệt lướt tím",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Vệt lướt tím. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Vệt lướt tím after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-05",
+      "name_vi": "Xung tạo khiên",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Xung tạo khiên. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Xung tạo khiên after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-06",
+      "name_vi": "Vòng hồi máu",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Vòng hồi máu. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Vòng hồi máu after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-07",
+      "name_vi": "Vụ nổ",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Vụ nổ. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Vụ nổ after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    },
+    {
+      "id": "VFX-08",
+      "name_vi": "Tia lửa khi trúng đòn",
+      "method": "VFX",
+      "scope": "VFX_RUNTIME",
+      "usage": "Hiệu ứng 2D: Tia lửa khi trúng đòn. V1 role visual or physical identity.",
+      "source_brief_en": "Create deterministic runtime sprite/particle/shader for Tia lửa khi trúng đòn after hitbox/time values exist. Not a 3D model.",
+      "required_dimensions": "not a 3D mesh",
+      "source_view": "transparent particle/sprite asset; no baked background",
+      "margin_ratio": null,
+      "original_design_check": true,
+      "review_status": "NOT_REVIEWED",
+      "design_doc": [
+        "docs/PRODUCTION_DESIGN_V1.md",
+        "docs/MAP_SPEC_V1.md"
+      ]
+    }
+  ]
+}
