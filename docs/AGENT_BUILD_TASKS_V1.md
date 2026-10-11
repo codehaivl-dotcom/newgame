@@ -2,11 +2,11 @@
 **Critical:** This is a task map, **NOT permission to automatically start code or spend credits**. The immediate user collaboration is producing and reviewing isolated source asset images.
 
 ## Phase A — selected image session (do this first upon user authorizing IDs)
-1. Read `AGENTS.md`, `VISUAL_BIBLE_V1.md`, `IMAGE_RENDER_SPEC_V1.md`, `asset_build_specs_v1.json`, core prompt deck.
+1. Read `AGENTS.md`, `VISUAL_BIBLE_V1.md`, `IMAGE_RENDER_SPEC_V1.md`, `docs/ASSET_AUDIT_V2_TPOSE.md`, `assets/asset_build_specs_v1.json`, core prompt deck.
 2. Review ID → prompt → generate isolated original source PNG (one complex asset per image), record generator job ID and measured credits.
 3. Inspect source full-resolution, confirm 20% crop margins and no hidden prop; user reviews PASS/FAIL. If rejected, record reason and version; only two retries before escalating.
 4. Verify source file and optional crop accessible in GitHub or explicit managed artifact storage, then update manifest path, status and ledger with SHA. No verified binary = no `APPROVED` state.
-5. For characters: A-pose no weapons, shared rig candidate. For map kit: 2m CODE geometry, not Image-to-3D. Do not build unrelated gameplay during credit-expiry production wave.
+5. For characters: **STRICT frontal T-pose** (both arms horizontal 90° ±5°, hands absolutely empty, no body-attached removable props or VFX); no A-pose, shared rig candidate. For map kit: 2m CODE geometry, not Image-to-3D. Do not build unrelated gameplay during credit-expiry production wave.
 
 ## Phase B — after source image batches pass
 1. Test import ONE approved character and detached weapon, rig once, socket once, 4 basic animations. Measure asset file/texture/tris and screenshot 96px readability.
