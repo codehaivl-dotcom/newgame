@@ -19,6 +19,8 @@
 - [06 — Level factories and QA](docs/06_LEVEL_FACTORY_AND_QA.md)
 - [07 — Agent build order](docs/07_AGENT_BUILD_ORDER.md)
 - [08 — Visual asset direction](docs/08_ASSET_AND_BRAND_DIRECTION.md)
+- [09 — UX screens and online Top presentation](docs/09_SCREENS_TOP_AND_PROGRESS.md)
+- [10 — Differentiation ideas and human playtests](docs/10_DIFFERENTIATION_AND_PLAYTESTS.md)
 - [Agent rules](AGENTS.md)
 
 ## What is NOT complete
