@@ -17,6 +17,7 @@
 - [15 — Agent production runbook](docs/15_PRODUCTION_RUNBOOK.md)
 - [Production structural validator](scripts/validate_production.mjs)
 - [Production V1 audit and actual status](docs/16_PRODUCTION_STATUS_V1.md)
+- [Indie Studio Greenlight Audit — 20 concrete gaps, prototype GO / bulk production NO-GO](docs/17_INDIE_STUDIO_GREENLIGHT_AUDIT.md)
 - [Checksum/ingestion instructions for 3 approved visual references](assets/references/README.md)
 
 Run locally after checkout: node scripts/validate_production.mjs. Passing this structural validator does not mean playable games or rendered assets pass QA.
@@ -37,6 +38,9 @@ Run locally after checkout: node scripts/validate_production.mjs. Passing this s
 
 ## Scope decision
 **APPROVED CONCEPT DIRECTION:** Link Garden, Bubble Orchard, Jewel Garden. **REJECTED:** Color Atelier (pouring/sorting colors). Do not build or render Color Atelier. Concept approval does NOT imply final game assets or implementation.
+
+## Studio greenlight (audit 2026-10-12)
+**GO for one playable Link vertical slice. NO-GO for autonomous full-game production, 64-image bulk render, mass level publishing, online Top launch or app-store release.** The independent [studio audit](docs/17_INDIE_STUDIO_GREENLIGHT_AUDIT.md) identifies 8 P0 engine/production blockers, 8 pre-beta gaps and 4 launch/operations gaps; it is a review, not a silent gameplay rule change.
 
 ## What is NOT complete
 No released application, ranked backend, saved playable browser preview, approved art pack or 1,000 verified levels exists at this stage. Docs and image prompts are **production contracts / tunable starting values**, not playtesting proof. Render catalog: 44 CORE + 20 OPTIONAL, no actual completed image job/approved sprite. Three approved poster visuals currently in this conversation, not yet GitHub-committed as binary reference files.
