@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "project": "newgame-mini-arena-moba",
   "date": "2026-10-11",
   "budget_note": "~8535 credits expiring soon; no credits consumed by creating this catalog. Actual cost must be measured; do not assume 100 items = 100 3D generations.",
@@ -15,7 +15,16 @@
       "ARCHIVED"
     ],
     "pass_before_3d": true,
-    "render_authorization": "Only generate images for explicitly selected IDs after joint approval of composition; no automatic batch generation."
+    "render_authorization": "Only generate images for explicitly selected IDs after joint approval of composition; no automatic batch generation.",
+    "render_policy": "An immutable approved ID can only be rendered after explicit user selection; CORE_AI is priority, NOT permission.",
+    "design_authority": [
+      "docs/PRODUCTION_DESIGN_V1.md",
+      "docs/GAMEPLAY_SPEC_V1.md",
+      "docs/HERO_BALANCE_V1.md",
+      "docs/MAP_SPEC_V1.md",
+      "docs/ASSET_PRODUCTION_PLAN_V1.md",
+      "docs/QA_GATES_V1.md"
+    ]
   },
   "counts": {
     "CHR": 6,
@@ -42,7 +51,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "CHR-02",
@@ -58,7 +70,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "CHR-03",
@@ -74,7 +89,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "CHR-04",
@@ -90,7 +108,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "CHR-05",
@@ -106,7 +127,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "CHR-06",
@@ -122,7 +146,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-01",
@@ -138,7 +165,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-02",
@@ -154,7 +184,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-03",
@@ -170,7 +203,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-04",
@@ -186,7 +222,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-05",
@@ -202,7 +241,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-06",
@@ -218,7 +260,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-07",
@@ -234,7 +279,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-08",
@@ -250,7 +298,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-09",
@@ -266,7 +317,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-10",
@@ -282,7 +336,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-11",
@@ -298,7 +355,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "WPN-12",
@@ -314,7 +374,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-01",
@@ -330,7 +393,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-02",
@@ -346,7 +412,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-03",
@@ -362,7 +431,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-04",
@@ -378,7 +450,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-05",
@@ -394,7 +469,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-06",
@@ -410,7 +488,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-07",
@@ -426,7 +507,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-08",
@@ -442,7 +526,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-09",
@@ -458,7 +545,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-10",
@@ -474,7 +564,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-11",
@@ -490,7 +583,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-12",
@@ -506,7 +602,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-13",
@@ -522,7 +621,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-14",
@@ -538,7 +640,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-15",
@@ -554,7 +659,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-16",
@@ -570,7 +678,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-17",
@@ -586,7 +697,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-18",
@@ -602,7 +716,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-19",
@@ -618,7 +735,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-20",
@@ -634,7 +754,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-21",
@@ -650,7 +773,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-22",
@@ -666,7 +792,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-23",
@@ -682,7 +811,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "MAP-24",
@@ -698,7 +830,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-01",
@@ -714,7 +849,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-02",
@@ -730,7 +868,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-03",
@@ -746,7 +887,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-04",
@@ -762,7 +906,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-05",
@@ -778,7 +925,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-06",
@@ -794,7 +944,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-07",
@@ -810,7 +963,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-08",
@@ -826,7 +982,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-09",
@@ -842,7 +1001,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-10",
@@ -858,7 +1020,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-11",
@@ -874,7 +1039,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-12",
@@ -890,7 +1058,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-13",
@@ -906,7 +1077,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-14",
@@ -922,7 +1096,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-15",
@@ -938,7 +1115,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-16",
@@ -954,7 +1134,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-17",
@@ -970,7 +1153,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "OBJ-18",
@@ -986,7 +1172,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-01",
@@ -1002,7 +1191,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-02",
@@ -1018,7 +1210,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "CORE_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-03",
@@ -1034,7 +1229,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-04",
@@ -1050,7 +1248,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-05",
@@ -1066,7 +1267,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-06",
@@ -1082,7 +1286,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-07",
@@ -1098,7 +1305,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-08",
@@ -1114,7 +1324,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-09",
@@ -1130,7 +1343,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-10",
@@ -1146,7 +1362,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-11",
@@ -1162,7 +1381,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "INT-12",
@@ -1178,7 +1400,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-01",
@@ -1194,7 +1419,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-02",
@@ -1210,7 +1438,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-03",
@@ -1226,7 +1457,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-04",
@@ -1242,7 +1476,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-05",
@@ -1258,7 +1495,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-06",
@@ -1274,7 +1514,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-07",
@@ -1290,7 +1533,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-08",
@@ -1306,7 +1552,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-09",
@@ -1322,7 +1571,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-10",
@@ -1338,7 +1590,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-11",
@@ -1354,7 +1609,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "ENV-12",
@@ -1370,7 +1628,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "HOLD_AI",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-01",
@@ -1386,7 +1647,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-02",
@@ -1402,7 +1666,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-03",
@@ -1418,7 +1685,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-04",
@@ -1434,7 +1704,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-05",
@@ -1450,7 +1723,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-06",
@@ -1466,7 +1742,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-07",
@@ -1482,7 +1761,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "PKU-08",
@@ -1498,7 +1780,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "SECONDARY_CODE",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-01",
@@ -1514,7 +1799,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-02",
@@ -1530,7 +1818,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-03",
@@ -1546,7 +1837,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-04",
@@ -1562,7 +1856,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-05",
@@ -1578,7 +1875,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-06",
@@ -1594,7 +1894,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-07",
@@ -1610,7 +1913,10 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     },
     {
       "id": "VFX-08",
@@ -1626,7 +1932,19 @@
       "crop_image": null,
       "model_3d": null,
       "revision": 0,
-      "comments": ""
+      "comments": "",
+      "production_scope": "VFX_RUNTIME",
+      "production_spec_path": "assets/asset_build_specs_v1.json",
+      "render_authorized": false
     }
-  ]
+  ],
+  "production_design_version": "V1.0",
+  "counts_by_scope": {
+    "CORE_AI": 18,
+    "HOLD_AI": 19,
+    "SECONDARY_AI": 16,
+    "CORE_CODE": 16,
+    "SECONDARY_CODE": 23,
+    "VFX_RUNTIME": 8
+  }
 }
