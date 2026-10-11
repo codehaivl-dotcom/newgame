@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "active_project": "QUIET_PUZZLE_CLUB",
   "pivotted_on": "2026-10-12",
   "legacy_archive_branch": "archive/arena-moba-2026-10-12",
@@ -81,5 +81,22 @@
       "no_asset_production": true,
       "removed_from_active_docs": true
     }
-  ]
+  ],
+  "production": {
+    "version": "V1",
+    "authority": "docs/12_PRODUCTION_LOCK_V1.md",
+    "asset_manifest": "assets/render_manifest_v1.json",
+    "render_prompt_deck": "assets/RENDER_PROMPT_DECK_V1.md",
+    "asset_pipeline": "docs/13_ASSET_PIPELINE_AND_QA.md",
+    "playable_gates": "docs/14_PLAYABLE_SPEC_AND_TEST_GATES.md",
+    "agent_runbook": "docs/15_PRODUCTION_RUNBOOK.md",
+    "validator": "scripts/validate_production.mjs",
+    "render_candidates": 64,
+    "render_core": 44,
+    "render_optional": 20,
+    "art_approved_runtime_count": 0,
+    "gameplay_gate": "NOT_TESTED",
+    "online_gate": "NOT_IMPLEMENTED",
+    "render_authorized": false
+  }
 }
