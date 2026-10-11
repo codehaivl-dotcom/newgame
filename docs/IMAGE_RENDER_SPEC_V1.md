@@ -17,10 +17,12 @@
 
 ## Character-specific production
 - One character per image, centered full body with generous empty surrounding space.
-- A-pose, arms 25–35° clear from the torso, fingers simplified, two legs separated; neutral expression, facing front with slight 3/4 turn **only when the image-to-3D model needs it**.
-- No equipped weapon, no trailing long scarves intersecting body/arms, no attached spell trails or particles. Weapon slots/attachment points documented separately.
-- Keep one shared stylized human/chibi rig where practical. Simplify hard-surface armour so shoulder, elbow, hip and knee can actually articulate.
+- **MANDATORY STRICT T-POSE, NOT A-POSE:** arms straight out horizontally at shoulder height, left-right symmetric (90° ±5° from relaxed downward arm); elbows and wrists straight, palms downward, both hands EMPTY; legs separated hip-width, feet parallel. Neutral expression, front orthographic first (an extra 3/4 reference is optional, not a replacement).
+- **No item attached to character whatsoever:** no handheld weapons, shields, staves, tools, mines or detachable packs, no attached VFX. No trailing long scarves, cables, weapon slings or cloth intersecting body/arms. Weapon and backpack slots/attachment points are documented separately as runtime sockets.
+- Target one shared stylized human/chibi rig. Simplify hard-surface armor so shoulder, elbow, hip and knee articulate. An empty-handed T-pose source with visible axilla/armpit clearance is a hard D1 requirement; rig import/retarget remains a separate D3 gate.
 - The six prototypes are visual placeholders; each requires individual silhouette/rig review before final asset approval.
+
+**Reject instantly:** any character source with arms sloping down into A-pose, asymmetric pose, a weapon/item held or welded to body, dangling cables connecting limbs, integrated removable backpack, clipped fingers/boots, blocked shoulder or elbow topology.
 
 ## Modular environment
 - Tiles, walls and rails must be manufactured on an explicit grid: stable units, shared edge dimensions, pivot/origin, walkability, cover height and projectile collision.
@@ -31,6 +33,10 @@
 ## VFX-specific
 - VFX-01..08 are **not Image-to-3D models**. Generate 2D sprite sheets or shaders/particles separately after the gameplay effect timing and hitbox are defined.
 - Gameplay VFX may be used only after action anticipation and team readability QA.
+
+## Source-crop dimension rule
+- For characters **always 1 asset / 1 full image**; never assemble a crowded character sheet for 3D generation.
+- For environment 2x2 small props only if the 15–20% separation margin survives crop. Extract crops only after visually checking full-res source.
 
 ## Review and acceptance per asset
 1. Select ID(s) from `assets/asset_manifest.json`; do not render IDs not requested.
