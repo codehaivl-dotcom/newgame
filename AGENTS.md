@@ -14,14 +14,22 @@
 2. **Do not expand V1** with a classical 3-lane MOBA, loot/extraction, levelling, crafting, 24 heroes, complex ragdoll physics, unrequested game systems or web-scale multiplayer services.
 3. Gameplay numeric values are design **baselines**, not proven balance. Engine/runtime unknown until validated. Never claim online PvP works merely because 3v3 bots work.
 4. Manifest is authority for immutable ID, status, scope and source paths. Per-ID build spec is authority for prompt/geometry. Master list is a readable catalog, not render authorization.
-5. Inventory has **100 IDs, not 100 mandated model generations**: 18 CORE_AI, 16 SECONDARY_AI, 19 HOLD_AI, 16 CORE_CODE, 23 SECONDARY_CODE, 8 VFX_RUNTIME. No render jobs for HOLD without explicit user authorization and scope change.
+5. Read `docs/ASSET_AUDIT_V2_TPOSE.md` for 100 per-ID PASS_SPEC/REVISE/HOLD results; PASS_SPEC means written asset spec is adequate, NEVER that an image/model is approved. Inventory has **100 IDs, not 100 mandated model generations**: 18 CORE_AI, 16 SECONDARY_AI, 19 HOLD_AI, 16 CORE_CODE, 23 SECONDARY_CODE, 8 VFX_RUNTIME. No render jobs for HOLD without explicit user authorization and scope change.
 6. Never render without user-selected IDs. For an image, **one character or complex asset per source**; 2x2 only when simple separated props; minimum generous crop margins. Image-to-3D source: no weapon glued to CHR, no baked VFX, labels, UI, scenery or multiple different objects.
-7. CHR sources use clear A-pose for shared rig; detached weapon sockets, clear arm/leg joints and role silhouettes. Refuse designs with fused anatomy, extra props, unreadable shape or similarities to existing famous heroes.
+7. **CHR HARD GATE:** exact full-body neutral frontal **T-POSE** only: both arms straight, horizontal at shoulders (90° ±5°), hands empty, legs hip-width, clean underarm/shoulder/elbow/hip/knee clearance. **NO A-pose**, no held items, weapons, shields, wearable detachable backpacks, tools, VFX, or long fabric crossing limbs. Separate weapon sockets and equipment models. Reject any violation before 3D.
 8. MAP CODE items use exact 2m grid, pivots, line-of-sight and collision rules. Do not turn an artistic concept image into geometry authority. VFX are sprites/particles; CODE items built procedurally.
 9. Progress states: PLANNED→PROMPT_READY→RENDERED→REVIEW→APPROVED or REJECTED; downstream model/rig gate is independent. **No status APPROVED without user approval AND verified image path.** No credit number without provider measurement.
 10. Preserve original approved revisions; record new `v02` etc. Update manifest and ledger per accepted/rejected ID, keeping real commit SHA/path evidence. Never fill imaginary URLs or paths. If binary upload is unsupported, report limitation and keep status NOT_COMMITTED.
 11. Credit expiry makes short image calibration essential but **does not require multi-day gameplay prototype before rendering**. Follow production plan and cutoff safety.
 12. No self-grading "playable" or "shippable" without QA evidence, actual match tests and (if online) network tests.
+
+## Audit gates for other asset groups
+- WPN: one isolated item, no hand/body/muzzle flash; socket/handle accessible.
+- MAP: geometry-first exact 2m grid, pivot and collision. An AI model is at most style reference for joining pieces.
+- OBJ: bushes, rocks, crates must not merge with unrelated ground/plant props; authored gameplay collider and reveal zone.
+- INT: only INT-01/02 core; healing/speed/turrets/gates in HOLD until separately approved.
+- ENV/PKU: hold non-core decoration and pickups; no new systems for the sake of using art.
+- VFX: runtime effect, not GLB; timing and hitbox data first.
 
 ## Immediate order
 Production design docs now exist. Do not invent more asset IDs. Start only after selected image IDs and follow the core prompt deck, review, crop/3D checks and repository ledger, as authorized by user.
