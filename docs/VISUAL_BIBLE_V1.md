@@ -13,18 +13,18 @@
 
 ## Readability requirements
 At actual gameplay size and without text, a reviewer should distinguish CHR-01 vs CHR-06 (currently highest confusion risk) and CHR-04 vs CHR-05 (both goggles/tech). For this reason:
-- CHR-01 = broad red-scarfed left-forward silhouette, single sword pose.
-- CHR-06 = masked violet small sleek silhouette, twin knives, NO matching white hair/scarf; may use hard-surface hood-like helmet.
-- CHR-04 = green round helmet and healing equipment, less armor.
-- CHR-05 = orange rectangular tool helmet and trap-pack, not green medic head shape.
-- CHR-02 broad shield/body > all; CHR-03 long horizontal rifle > all.
+- CHR-01 = broad angular red duelist armor, short fitted collar, distinct facial/torso design. Gameplay animation can hold a separate sword; **source T-pose holds nothing**.
+- CHR-06 = masked violet smaller sleek silhouette, NO matching duelist hair/scarf. Twin knives are independent WPN assets; **source T-pose empty-handed**.
+- CHR-04 = green round medic helmet and clean fitted costume with no integrated healing equipment or backpack in source.
+- CHR-05 = orange rectangular tool helmet and distinctive torso pattern, **no worn trap-pack/tools in source**.
+- CHR-02 broad chest/shoulder armor > all; CHR-03 long slim torso/helmet > all. Shield/rifle are separate 3D meshes attached in gameplay, never in CHR source.
 
 ## Asset single-image master prompt (append per-ID brief)
 ```text
 ONE SINGLE [ASSET NAME / ID], original design for a small 3D isometric arena MOBA game.
 Stylized hand-painted 3D game asset, compact readable silhouette, rounded beveled hard-surface details,
 warm matte shading, clean solid geometry, subdued stone/industrial palette with controlled role accent.
-Orthographic three-quarter product view unless CHR A-pose front specification applies.
+Orthographic three-quarter product view for props; CHR MUST use full-body frontal STRICT T-POSE.
 Isolated on neutral dark slate solid background, complete silhouette centered,
 at least 20 percent empty margins all around.
 No floor diorama, no UI, no text, no border, no adjacent models, no props, no VFX,
@@ -35,15 +35,17 @@ no motion blur, no bright baked bloom, no duplicate, no watermark, no copyrighte
 ## Character variant master prompt
 ```text
 ONE full body standalone chibi humanoid 3D character [ID], original arena game hero design.
-Neutral A-pose, arms separated 25-35 degrees from torso, legs visibly separated, fingers simplified,
-clear shoulder/elbow/hip/knee joints, front-facing or very slight 3/4 suitable for Image-to-3D,
+STRICT SYMMETRIC T-POSE, both arms exactly horizontal at shoulder height 90 degrees (plus/minus 5), hands completely empty, elbows/wrists straight, legs hip-width apart, fingers simplified,
+clear underarm/shoulder/elbow/hip/knee joints, direct frontal orthographic neutral view for Image-to-3D,
 character centered with >=20 percent blank margin, neutral studio illumination,
-no weapon, no spell effect, no cape crossing legs, no floor pedestal, no second person, no text.
+no weapon, shield, staff, tool, backpack, handheld/worn item, spell effect, loose dangling cape, floor pedestal, second person, text or labels.
 [PER-CHARACTER SILHOUETTE BRIEF FROM assets/asset_build_specs_v1.json]
 ```
 
 ## In-game preview art ≠ asset source
 A splash image, six-hero lineup, gameplay scene or infographic may be generated for marketing and creative review; these are **NEVER** passed directly to Image-to-3D as a single isolated 3D asset.
+
+**Image-source pose authority:** `docs/ASSET_AUDIT_V2_TPOSE.md`. All earlier chat images are inspiration only; a splash/combat pose is never a character production source.
 
 ## Review scale
 Test silhouettes at approximately 96px tall in a mock-up with 6 heroes and wall cover. If two roles become indistinguishable, reject before 3D. Hero heads can be expressive but oversized bangs must not cover weapon sockets or obscure aiming.
