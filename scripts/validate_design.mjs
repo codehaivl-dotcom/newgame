@@ -40,4 +40,19 @@ const deckIds=[...promptDeck.matchAll(/^## ([A-Z]{3}-\d{2}) —/gm)].map(m=>m[1]
 const coreIds=manifest.assets.filter(a=>a.production_scope==='CORE_AI').map(a=>a.id);
 check(deckIds.length===18&&new Set(deckIds).size===18,'Prompt card count or duplicate');
 check(coreIds.every(id=>deckIds.includes(id)),'Core prompt missing');
+// Asset Audit V2, separate from actual user image QA.
+const verdictCounts=counts(manifest.assets.map(a=>({audit:a.design_audit_v2?.status})),'audit');
+check(equal(verdictCounts)===equal({REVISE:11,PASS_SPEC:27,HOLD:62}),'Asset audit V2 counts changed');
+check(manifest.production_audit_version==='V2-TPOSE-2026-10-11','Missing audit authority');
+for(const a of manifest.assets.filter(a=>a.group==='CHR')){
+  const spec=builds.assets.find(x=>x.id===a.id);
+  check(a.character_source_pose==='STRICT_T_POSE','CHR source not T-pose: '+a.id);
+  check(a.item_in_hands_allowed===false,'CHR incorrectly allows held items: '+a.id);
+  check(spec.rig_prep?.pose==='STRICT_T_POSE' && spec.rig_prep.hand_items==='NONE','CHR rig prep invalid: '+a.id);
+  check(/T.POSE/i.test(spec.source_view) && /empty/i.test(spec.source_view),'CHR source text not strict T-pose empty-handed: '+a.id);
+  const block=promptDeck.split('## '+a.id+' — ')[1]?.split('\n## ')[0];
+  check(block && /T.POSE/.test(block) && /EMPTY/.test(block),'CHR prompt is not strict T-pose: '+a.id);
+  check(!/neutral front A-pose|Neutral A-pose, arms separated 25/i.test(block),'Outdated A-pose CHR prompt: '+a.id);
+}
+console.log('PASS audit V2: 100 verdicts (27 PASS_SPEC / 11 REVISE / 62 HOLD); all 6 heroes strict T-pose, hands empty, 6 prompt cards updated.');
 console.log('PASS 100 IDs / 100 specs / 18 core prompts / scopes stable / verified file refs / approved entries '+accepted);
