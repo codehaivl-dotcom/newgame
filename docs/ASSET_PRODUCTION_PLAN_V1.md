@@ -19,12 +19,13 @@
 - VFX-01..08 runtime shader/particles/sprites; create only when timing/hitboxes are known.
 - PKU-01..08 are **optional future gameplay objects**; do not create new gameplay pickup rules solely to use the catalog.
 
-## Secondary image generation (only after first-wave art QA)
-GEN candidates beyond first wave split:
-- **SECONDARY**: MAP-14..16, OBJ-08,11,15..18, INT-03..06, ENV-01..02,06..07,10..11, WPN-02,04,06,08,10,12 — aesthetics or already known supporting mechanics. Evaluate value versus 3D quality each.
-- **HOLD**: INT-07..12, ENV-03..05,ENV-12, plus other P2 entries, because they imply new mechanics or do not impact gameplay in the first two arenas.
-- P2/HOLD not render-authorized. Game design does not depend on them.
-- Cap experimental spend and log it; if credit expiry is immediate, prefer batch production of preapproved **SECONDARY** before extras rather than unused unplanned assets.
+## All inventory scope groups (counts validated against manifest)
+- **CORE_AI 18**: six CHR, six primary WPN, OBJ-04/12/13/14, INT-01/02. First wave as above.
+- **SECONDARY_AI 16**: MAP-14..16; WPN-10; OBJ-08/11/15/16/17/18; ENV-01/02/06/07/10/11. These are optional visual enhancements, not core gameplay requirements; WPN-10 temporary mine can be procedurally drawn until visual asset approval.
+- **HOLD_AI 19**: WPN-02/04/06/08/12 (alternate/non-core weapons), INT-03..12 (extra fixtures/turrets/gates/hazards), ENV-03/04/05/12 (nonessential decoration). No rendering without user re-scoping.
+- **CORE_CODE 16, SECONDARY_CODE 23**: dimensional mesh/material work, not Gen3D.
+- **VFX_RUNTIME 8**: 2D/particle/shader production. 
+- Game design only enables built-in control points and spawn; **do not introduce pickups, heal pedestals or buildable turrets to justify unused assets**.
 
 ## Decision ladder, hours not days
 **Hour 0: lock:** Copy/inspect source manifest, review model-generation provider balance, expiry timestamp, per-asset generation cost and export rights (unknown until provided).
