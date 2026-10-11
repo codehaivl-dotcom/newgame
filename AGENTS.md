@@ -3,7 +3,7 @@
 
 ## Order
 1. Read docs/00_PRODUCT_AND_RULES.md and 01_SHARED_ONLINE_RANKINGS.md.
-2. Read mode docs 02..05; 06_LEVEL_FACTORY_AND_QA.md for generator/solver; 07_AGENT_BUILD_ORDER.md for phases.
+2. Read mode docs 02..05; 06_LEVEL_FACTORY_AND_QA.md for generator/solver; 07_AGENT_BUILD_ORDER.md for phases. Then 09_SCREENS_TOP_AND_PROGRESS.md for touch UX and 10_DIFFERENTIATION_AND_PLAYTESTS.md for optional variant experiments.
 3. Build one end-to-end PLAYABLE game at a time; start Link Garden + shared save. NO game engine/3D assets required to begin.
 4. No actual release, leaderboard service, render or QA completion claim without verified evidence.
 5. No 100-asset cap, no requirement to use 3D credit. If 2D image credit availability is unconfirmed, do not burn unrelated 3D credits.
