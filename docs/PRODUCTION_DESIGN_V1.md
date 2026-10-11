@@ -36,5 +36,8 @@
 5. At least 30 automated full-match simulations + 10 human test sessions have documented observations; meaningful skill tests required before asserting fair balance.
 6. Art and 3D assets saved from approved images only, logged by immutable ID/version; 3D production is independent of game programming completion.
 
+## CHR source production correction (2026-10-11)
+Character model source = **strict frontal T-pose**, arms horizontal and symmetrical (90° ±5°), empty hands, no detachable item or special effects, no fused limbs. WPN meshes separate; shared skeleton/retarget test independently required. **A-pose sources are not accepted.** This correction supersedes any previous narrative or illustration and is detailed in `ASSET_AUDIT_V2_TPOSE.md`.
+
 ## Asset production authority
 100 IDs describe an **inventory**, not 100 mandated 3D credits. Current source inventory counts: 53 GEN candidates, 39 CODE geometry, 8 VFX. Approved source count = 0. Use `asset_manifest.json` status as truth, not this document. The credit deadline means design rapidly, batch render with immediate QA; **do not wait days for gameplay prototype** before creating assets. However, never fabricate approval, model output or credits.
