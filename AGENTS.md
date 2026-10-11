@@ -1,3 +1,12 @@
+# PRIORITY OVERRIDE — 2026-10-12: NO ASSET COUNT CEILING
+The existing 100-item asset manifest is a **historical planning snapshot**, NOT a game design cap, content budget, mandatory roster, or permission to generate all 100 models. Newgame may use 80, 300, 400, or more assets **after gameplay needs are proven**. Do not invent content merely to hit a number. A future V2 manifest may add IDs with explicit versioning and traceable provenance; preserve existing IDs and approved artifacts, never silently overwrite or repurpose IDs. Avoid expensive image/3D rendering without selected and approved scope.
+
+**Primary goal order:** fun/meaningful decisions → feasible shared gameplay systems → easy modular map and simple shared rig → visual production. Evaluate cost in new animation rigs, network synchronization, custom physics, behavior logic, testing and integration, not only number of meshes.
+
+**Design status:** The 3v3 two-point control and two-lane siege concepts are hypotheses, **not locked genre/product choices**. Do not code them or generate gameplay-specific assets as a locked game until a viable prototype direction is selected. Reference `docs/GAME_DIRECTION_RESEARCH_V3.md`.
+
+---
+
 # AGENTS.md — NEWGAME AUTHORITATIVE INSTRUCTIONS
 
 ## Mandatory read order
@@ -14,7 +23,7 @@
 2. **Do not expand V1** with a classical 3-lane MOBA, loot/extraction, levelling, crafting, 24 heroes, complex ragdoll physics, unrequested game systems or web-scale multiplayer services.
 3. Gameplay numeric values are design **baselines**, not proven balance. Engine/runtime unknown until validated. Never claim online PvP works merely because 3v3 bots work.
 4. Manifest is authority for immutable ID, status, scope and source paths. Per-ID build spec is authority for prompt/geometry. Master list is a readable catalog, not render authorization.
-5. Read `docs/ASSET_AUDIT_V2_TPOSE.md` for 100 per-ID PASS_SPEC/REVISE/HOLD results; PASS_SPEC means written asset spec is adequate, NEVER that an image/model is approved. Inventory has **100 IDs, not 100 mandated model generations**: 18 CORE_AI, 16 SECONDARY_AI, 19 HOLD_AI, 16 CORE_CODE, 23 SECONDARY_CODE, 8 VFX_RUNTIME. No render jobs for HOLD without explicit user authorization and scope change.
+5. Read `docs/ASSET_AUDIT_V2_TPOSE.md` for historical 100 per-ID PASS_SPEC/REVISE/HOLD results; PASS_SPEC means written asset spec is adequate, NEVER that an image/model is approved. **The 100 items are NOT a total content limit.** Current snapshot classification: 18 CORE_AI, 16 SECONDARY_AI, 19 HOLD_AI, 16 CORE_CODE, 23 SECONDARY_CODE, 8 VFX_RUNTIME. No render jobs for HOLD without explicit user authorization and scope change.
 6. Never render without user-selected IDs. For an image, **one character or complex asset per source**; 2x2 only when simple separated props; minimum generous crop margins. Image-to-3D source: no weapon glued to CHR, no baked VFX, labels, UI, scenery or multiple different objects.
 7. **CHR HARD GATE:** exact full-body neutral frontal **T-POSE** only: both arms straight, horizontal at shoulders (90° ±5°), hands empty, legs hip-width, clean underarm/shoulder/elbow/hip/knee clearance. **NO A-pose**, no held items, weapons, shields, wearable detachable backpacks, tools, VFX, or long fabric crossing limbs. Separate weapon sockets and equipment models. Reject any violation before 3D.
 8. MAP CODE items use exact 2m grid, pivots, line-of-sight and collision rules. Do not turn an artistic concept image into geometry authority. VFX are sprites/particles; CODE items built procedurally.
@@ -32,4 +41,4 @@
 - VFX: runtime effect, not GLB; timing and hitbox data first.
 
 ## Immediate order
-Production design docs now exist. Do not invent more asset IDs. Start only after selected image IDs and follow the core prompt deck, review, crop/3D checks and repository ledger, as authorized by user.
+Production design docs now exist. Do not generate new asset IDs without an approved gameplay use; the number of allowed IDs is not capped at 100. Start only after selected image IDs and follow the core prompt deck, review, crop/3D checks and repository ledger, as authorized by user.
