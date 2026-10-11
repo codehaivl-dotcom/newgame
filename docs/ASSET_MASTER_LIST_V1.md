@@ -1,10 +1,23 @@
 # ASSET MASTER LIST V1 — Mini Arena MOBA
 
-**Status:** Approved as a *planning inventory*, **NOT** approved image results or a locked gameplay implementation. **Total: 100 entries**. All start `PLANNED` with no image, crop or 3D model.
+**Status:** 100-ID immutable planning inventory, NOT 100 jobs. All source images are `PLANNED` / unapproved. **Production Design V1.0** is documented separately in [PRODUCTION DESIGN](PRODUCTION_DESIGN_V1.md); this catalog was created before the gameplay design and its old P0/P1/P2 ranking is now **superseded for actual generation order** by `production_scope` in [the manifest](../assets/asset_manifest.json) and the detailed [build specs](../assets/asset_build_specs_v1.json).
 
 **Gameplay direction:** original top-down/isometric 1v1/3v3, melee/ranged/support, skill-focused, low rigs, modular environment. No remake of Boom, BangBang, Battlerite or other titles.
 
 **Budget:** ~8,535 expiring generation credits; first spend should favor high-value organic/complex models. See `production_method` below. This inventory does not mandate 100 generated 3D models.
+
+## Production scope overlay (2026-10-11)
+
+| Scope | Number | Treatment |
+|---|---:|---|
+| CORE_AI | 18 | Highest-value asset source candidates; individual review before generation |
+| SECONDARY_AI | 16 | Optional after first-wave image QA |
+| HOLD_AI | 19 | Not V1 gameplay; do not render without separate authorization |
+| CORE_CODE | 16 | Exact procedural geometry, no 3D credits |
+| SECONDARY_CODE | 23 | Procedural/decorative or later V1 |
+| VFX_RUNTIME | 8 | Sprite/particle/shader, not a GLB render job |
+
+No row here claiming `P0` is approval to render; actual scope is authoritative in the JSON manifest.
 
 ## Meaning of fields
 
