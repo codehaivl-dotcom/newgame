@@ -12,16 +12,20 @@
 
 **Any failed gate prevents status promotion past that gate.** Passing D0 does not imply D1/D2/D5. A generated image is not a 3D model, a GLB is not a rig-ready model, a code test isn't proof of fun.
 
+## Design audit vs QA
+A written `PASS_SPEC` audit is **NOT** an approved image. D1 requires explicit user visual approval + verified source file; D2 and D3 require real model and rig tests. Source images that do not meet T-pose/empty-hand rule cannot pass D1 even if artistically attractive.
+
 ## Artwork acceptance
 - One isolated object per CHR or complex item, no offscreen cuts; empty margin at least 15–20% of target cell along critical silhouette axes.
 - 2x2 crops only for small props when objects+shadow do not overlap (minimum 15% cell-width free separation), not characters.
 - PNG sufficiently large for image-to-3D: reviewer judges actual detail at 1:1 crop, not enlarged display. No text, logo, design copy or figure references in image.
-- CHR front and 3/4 view may need extra sheet for rig; still **do not place multiple different heroes into one image**.
+- **CHR REQUIRED STRICT T-POSE** in full frontal view: straight arms horizontal (90° ±5°), wrists/elbows aligned, empty hands and gap under both arms, legs separated, no handheld/worn equipment or VFX. A-pose/casual stance/combat pose is a D1 FAIL.
+- Extra side/3/4 views may be captured only for the **same** character ID to improve depth inference; never combine multiple heroes in a 3D source image.
 - Manual rejection reasons: intertwined weapons, cape/hair fusing hands, body hidden, wrong perspective, missing back geometry assumptions, messy silhouette, model resembling a known game hero.
 
 ## 3D functional acceptance
 - Native file opens; unit scaling validated against 1.65m CHR and modular 2m map grid. Mesh meshes remain watertight where relevant, no disconnected floating unintended shell; texture paths available.
-- For characters: obvious hand/foot separation, arms can raise for attack and legs can move with 4 standard actions; shared humanoid rig test on one model before acceptance of all six as rig-ready.
+- For characters: strict T-pose source, hands free from items, no integral rigid attachments spanning joints; hand/foot separation and straight horizontal arms; after import arms can lower/raise and legs move through 4 standard actions. Retarget shared rig on ONE model before calling any six-character set rig-ready.
 - No fixed universal triangle budget set without target device/engine; report actual tris, materials and draw calls, flag scene performance regressions and define budget once platform is settled.
 - Colliders and nav are simplified authored primitives, not raw million-polygon source geometry.
 
