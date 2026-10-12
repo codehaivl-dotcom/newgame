@@ -5,7 +5,7 @@
   "legacy_archive_branch": "archive/arena-moba-2026-10-12",
   "product_rules": "docs/00_PRODUCT_AND_RULES.md",
   "platform_rules": "docs/01_SHARED_ONLINE_RANKINGS.md",
-  "status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+  "status": "THREE_GAME_OFFLINE_ALPHA_SOURCE_COMMITTED",
   "modes": [
     {
       "id": "LINK",
@@ -13,12 +13,14 @@
       "display_en": "Link Garden",
       "doc": "docs/02_LINK_GARDEN.md",
       "difficulty": "solver-generated",
-      "gameplay_implemented": false,
+      "gameplay_implemented": true,
       "online_ranked_implemented": false,
       "approved_levels": 0,
       "approved_assets": 0,
       "concept_visual_approved": true,
-      "prototype_status": "PLAYABLE_ALPHA"
+      "prototype_status": "PLAYABLE_ALPHA",
+      "implementation_stage": "OFFLINE_ALPHA_ONLY",
+      "production_certified": false
     },
     {
       "id": "BUBBLE",
@@ -26,12 +28,14 @@
       "display_en": "Bubble Orchard",
       "doc": "docs/03_BUBBLE_ORCHARD.md",
       "difficulty": "shot-sequence-seeded",
-      "gameplay_implemented": false,
+      "gameplay_implemented": true,
       "online_ranked_implemented": false,
       "approved_levels": 0,
       "approved_assets": 0,
       "concept_visual_approved": true,
-      "prototype_status": "PLAYABLE_ALPHA"
+      "prototype_status": "PLAYABLE_ALPHA",
+      "implementation_stage": "OFFLINE_ALPHA_ONLY",
+      "production_certified": false
     },
     {
       "id": "JEWEL",
@@ -39,12 +43,14 @@
       "display_en": "Jewel Garden",
       "doc": "docs/04_JEWEL_GARDEN.md",
       "difficulty": "seeded-match3",
-      "gameplay_implemented": false,
+      "gameplay_implemented": true,
       "online_ranked_implemented": false,
       "approved_levels": 0,
       "approved_assets": 0,
       "concept_visual_approved": true,
-      "prototype_status": "PLAYABLE_ALPHA"
+      "prototype_status": "PLAYABLE_ALPHA",
+      "implementation_stage": "OFFLINE_ALPHA_ONLY",
+      "production_certified": false
     }
   ],
   "common_policies": {
@@ -98,9 +104,15 @@
     "render_core": 44,
     "render_optional": 20,
     "art_approved_runtime_count": 0,
-    "gameplay_gate": "ALPHA_ONLY_NOT_PRODUCTION_TESTED",
+    "gameplay_gate": "PLAYABLE_ALPHA_SOURCE_COMMITTED_NOT_PRODUCTION_QA",
     "online_gate": "NOT_IMPLEMENTED",
-    "render_authorized": false
+    "render_authorized": false,
+    "prototype_entry": "prototype/index.html",
+    "prototype_engine": "prototype/engines.mjs",
+    "persistence_status": "INDEXEDDB_MIRROR_LOCALSTORAGE_FALLBACK_BACKUP_EXPORT_IMPORT_UNCERTIFIED",
+    "undo_history_persisted": "LINK_AND_JEWEL_ALPHA_ONLY",
+    "qa_evidence": "docs/24_ALPHA_QA_2026-10-12.md",
+    "latest_work": "PROTOTYPE_PERSISTENCE_AND_REGRESSION"
   },
   "prototype": {
     "status": "PLAYABLE_ALPHA_IN_REPO",
