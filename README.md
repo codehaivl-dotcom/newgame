@@ -8,6 +8,16 @@
 
 **No real-time clock.** Pause or close anytime, resume same board/action, large touch targets, offline Free Play. Optional weekly/daily **same-seed, no-speed** Top online, plus Family rankings. Endless casual progress, finite standardized actions/boards in official ranked comparisons. No forced ads or rig/3D required.
 
+## STUDIO AUDIT REMEDIATION V2 — 2026-10-12
+- [18 — Deterministic engine rules and action ordering](docs/18_ENGINE_DETERMINISM_LOCK_V2.md)
+- [19 — Top Online / family rivalry / attempt policy](docs/19_TOP_SOCIAL_PRODUCT_LOCK_V2.md)
+- [20 — Playable UX, sound and 50+ accessibility](docs/20_UX_GAME_FEEL_AND_ACCESSIBILITY.md)
+- [21 — Technology, CI, persistence, release and operations](docs/21_TECH_STACK_RELEASE_AND_OPS_LOCK.md)
+- [22 — Studio greenlight metrics, backlog and evidence gates](docs/22_STUDIO_DECISION_METRICS_AND_BACKLOG.md)
+- [23 — Audit remediation status and externally delivered Link prototype evidence](docs/23_STUDIO_AUDIT_REMEDIATION_STATUS.md)
+
+**Studio status:** written P0/P1/P2 work contracts improved. A standalone offline Link Garden HTML prototype and Node logic checks were produced as conversation attachments; **not committed to this repository**. No complete three-game implementation, certified difficulty factory, real Top online or user-tested release. Agent must not mark them PASS.
+
 ## PRODUCTION V1 — REQUIRED
 - [12 — LOCKED production scope + art and screen contract](docs/12_PRODUCTION_LOCK_V1.md)
 - [64 asset catalog / full standalone prompts / render waves](assets/render_manifest_v1.json)
