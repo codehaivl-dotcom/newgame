@@ -7,7 +7,8 @@ const port=Number(process.env.PORT||5173);
 http.createServer(async(req,res)=>{
  try{
   const url=new URL(req.url,"http://127.0.0.1");
-  const input=decodeURIComponent(url.pathname==="/"?"/prototype/index.html":url.pathname);
+  if(url.pathname==="/"){res.writeHead(302,{"Location":"/prototype/index.html","Cache-Control":"no-store"});res.end();return}
+  const input=decodeURIComponent(url.pathname);
   const filename=resolve(root,"."+input);
   const rel=relative(root,filename);
   if(rel.startsWith(".."+sep)||rel==="..")throw Error("forbidden");
