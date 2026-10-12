@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {linkStart,linkRoute,linkAvailable,linkMatch,linkRearrange,linkNext,bubbleStart,bubbleShoot,bubbleNeighbors,jewelStart,jewelLegal,jewelMatches,jewelSwap,next32} from "../prototype/engines.mjs";
+import {linkStart,linkVariedBoard,linkRoute,linkAvailable,linkMatch,linkRearrange,linkNext,bubbleStart,bubbleShoot,bubbleNeighbors,jewelStart,jewelLegal,jewelMatches,jewelSwap,next32} from "../prototype/engines.mjs";
 
 test("LINK: 250 seeded boards complete without time-based input",()=>{
  for(let seed=1;seed<=250;seed++){
@@ -26,6 +26,34 @@ test("LINK: 250 shuffled boards remain solvable and preserve counts",()=>{
 test("LINK: no matching a tile with itself and invalid match does not modify state",()=>{
  const s=linkStart(77);assert.equal(linkRoute(s.board,0,0),null);
  const x=linkMatch(s,0,2);assert.ok(x.error);assert.deepEqual(x.state,s);
+});
+test("LINK: 400 varied levels have a complete witness and nonadjacent matching",()=>{
+ let remote=0;
+ for(let seed=1;seed<=400;seed++){
+  const puzzle=linkVariedBoard(seed);
+  const b=puzzle.board.slice();assert.equal(puzzle.witness.length,24);
+  assert.equal(new Set(puzzle.witness.flat()).size,48);
+  for(const [a,z] of puzzle.witness){
+   assert.ok(linkRoute(b,a,z),`invalid witness for seed ${seed}`);
+   if(Math.abs(Math.floor(a/6)-Math.floor(z/6))+Math.abs(a%6-z%6)>1)remote++;
+   b[a]=b[z]=-1;
+  }
+  assert.equal(b.every(v=>v===-1),true);
+ }
+ assert.ok(remote>1000,`too many trivial pairs: ${remote}`);
+});
+test("LINK: after three introductory boards, endless mode creates varied level 4",()=>{
+ let s=linkStart(9);
+ for(let round=1;round<=3;round++){
+  for(let i=0;i<24;i++){
+   const p=linkAvailable(s.board);
+   assert.ok(p);
+   s=linkMatch(s,p.a,p.b).state;
+  }
+  assert.equal(s.done,true);
+  s=linkNext(s).state;
+ }
+ assert.equal(s.round,4);assert.ok(Array.isArray(s.witness));
 });
 test("BUBBLE: 250 seeds have stable 7-column hex geometry, shoot deterministic",()=>{
  for(let seed=1;seed<=250;seed++){
