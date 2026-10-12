@@ -3,13 +3,13 @@
 ## UX
 Free Play available offline without an account. Ranked Top opt-in with default pseudonym (no age/birthdate required). Friends/family groups by invitation code; no real-time chat needed. Big tabs: My Best / Today's Top / Weekly Top / Family. Each mode has a separate leaderboard; cross-game scores NOT comparable. Players tied on score SHARE a rank, never break ties by speed.
 
-Official challenge packs are immutable by mode + seed + ruleset_version + challenge_id. Server clock determines daily and weekly boundaries. Every player gets the same starting board, shot/jewel refill queues and scoring version. Three official attempts per pack, best verified result counts; practice is unlimited. An active run auto-saves and never expires IN GAME. If its ranking window closes, it remains available as personal/practice, with the ranking finalized per announced grace policy. Explain period start/end, e.g. Europe/Paris UI date and backend UTC reference, no surprise timezone shifts.
+Official challenge packs are immutable by mode + seed + ruleset_version + challenge_id. Server clock determines daily and weekly boundaries. Every player gets the same starting board, shot/jewel refill queues and scoring version. Three official attempts per pack; practice uses different seeds of equivalent difficulty. See docs/19_TOP_SOCIAL_PRODUCT_LOCK_V2.md. An active run auto-saves and never expires IN GAME. If its ranking window closes, it remains available as personal/practice, with the ranking finalized per announced grace policy. Explain period start/end, e.g. Europe/Paris UI date and backend UTC reference, no surprise timezone shifts.
 
 ## Example competitive score rules (prototype proposals)
 | Mode | Official fixed pack | Ranked metric | Casual endless |
-| Link Garden | 5 boards of 6x8 | 100 per matched pair +20/10/0 for 0/1/2-turn connection -50/hint -150/reshuffle -100/undo | boards cleared + best no-assist streak |
-| Bubble Orchard | 3 fixed boards, up to 60 shots per board | 10 per bubble popped, +30 detached bubble, +20 per unused shot if completely cleared; no time score | best score until bubbles reach danger line after shots |
-| Jewel Garden | deterministic start, 40 valid swaps | 10 per cleared gem +10 bonus per extra cascade depth/gem, 4+ combo bonuses; no paid items | best 40-action window and accumulated milestones |
+| Link Garden | 1 daily board or 5 weekly boards of 6x8 | 100 per matched pair +20/10/0 for 0/1/2-turn connection -50/hint -150/reshuffle -100/undo | boards cleared + best no-assist streak |
+| Bubble Orchard | 1 daily board or 3 weekly boards, up to 60 shots per board | 10 per bubble popped, +30 detached bubble, +20 per unused shot if completely cleared; no time score | best score until bubbles reach danger line after shots |
+| Jewel Garden | deterministic start, 20 valid swaps daily or 40 weekly | 10 per cleared gem +10 bonus per extra cascade depth/gem, 4+ combo bonuses; no paid items | best 40-action window and accumulated milestones |
 
 Above are tunable starting formulas, not balanced or tested. Never rank total lifetime points directly across different games, as it rewards time played. Fixed ACTIONS or FIXED BOARDS (not seconds) make challenges comparable.
 
