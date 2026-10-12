@@ -36,7 +36,7 @@ dialog{border:0;border-radius:18px;padding:22px;background:#fffbef;color:#304936
 <div class="status" id="status" role="status">Chọn một hình để bắt đầu.</div>
 <div class="controls"><button id="undo" class="control">↶ Đi lại</button><button id="hint" class="control">✦ Gợi ý</button><button id="action" class="control primary">☕ Tạm dừng</button></div>
 </section>
-<footer><span id="saved">◉ Lưu sau mỗi lượt</span> · Hoàn toàn offline · Chưa có Top online</footer>
+<footer><span id="saved">◉ Lưu sau mỗi lượt</span> · Offline sau lần tải đầu · Chưa có Top online</footer>
 </main>
 <dialog id="dlg"><h2 id="dt"></h2><p id="dd"></p><button id="accept" class="pill primary"></button><button id="cancel" class="pill"></button></dialog>
 <script type="module">
@@ -87,6 +87,6 @@ function hintAction(){const mode=save.current,s=get();if(mode==="link"){const p=
  let p=jewelLegal(s.board.slice());if(p){hint=p;draw();msg("Hai viên sáng tạo được hàng ghép.");}else msg("Bàn sẽ tự đảo khi hết nước đi.");
 }
 $("home").onclick=showHome;document.querySelectorAll("[data-mode]").forEach(x=>x.onclick=()=>enter(x.dataset.mode));$("action").onclick=action;$("undo").onclick=undoAction;$("hint").onclick=hintAction;$("aim").oninput=(e)=>{aim=Number(e.target.value);$("aimvalue").textContent=aim===0?"Thẳng":(aim<0?"Trái ":"Phải ")+Math.abs(aim)};
-window.addEventListener("pagehide",persist);document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persist()});
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}window.addEventListener("pagehide",persist);document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persist()});
 if(save.current&&save.games[save.current])enter(save.current);
 </script></body></html>
