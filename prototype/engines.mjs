@@ -5,7 +5,20 @@ function drawNum(state,n){const x=next32(state);return {state:x,n:x%n}}
 
 function shuffled(items,seed){let s=seed>>>0,a=items.slice();for(let i=a.length-1;i>0;i--){const d=drawNum(s,i+1);s=d.state;[a[i],a[d.n]]=[a[d.n],a[i]]}return {items:a,seed:s}}
 
-function linkStart(seed=12345){const symbols=Array.from({length:24},(_,i)=>i%12);const d=shuffled(symbols,seed),board=Array(48).fill(-1);for(let i=0;i<24;i++){const pos=Math.floor(i/3)*6+(i%3)*2;board[pos]=board[pos+1]=d.items[i]}return {kind:"link",board,score:0,moves:0,round:1,seed:d.seed,done:false}}
+function linkVariedBoard(seed){
+ let rng=seed>>>0;const groups=[],idx=(r,c)=>r*6+c;
+ for(const r of [0,7]){let a=shuffled([0,1,2,3,4,5],rng);rng=a.seed;for(let k=0;k<6;k+=2)groups.push([idx(r,a.items[k]),idx(r,a.items[k+1])]);}
+ for(const c of [0,5]){let a=shuffled([1,2,3,4,5,6],rng);rng=a.seed;for(let k=0;k<6;k+=2)groups.push([idx(a.items[k],c),idx(a.items[k+1],c)]);}
+ for(let r=1;r<=5;r+=2)for(let c=1;c<=3;c+=2){const pick=drawNum(rng,2);rng=pick.state;
+  if(pick.n===0){groups.push([idx(r,c),idx(r,c+1)],[idx(r+1,c),idx(r+1,c+1)])}
+  else {groups.push([idx(r,c),idx(r+1,c)],[idx(r,c+1),idx(r+1,c+1)])}}
+ let palette=shuffled(Array.from({length:24},(_,i)=>i%12),rng);rng=palette.seed;
+ const board=Array(48).fill(-1);for(let i=0;i<24;i++){board[groups[i][0]]=palette.items[i];board[groups[i][1]]=palette.items[i]}
+ return {board,seed:rng,witness:groups};
+}
+
+function linkStart(seed=12345,level=1){if(level>=4){const v=linkVariedBoard(seed);return {kind:'link',board:v.board,score:0,moves:0,round:level,seed:v.seed,done:false,witness:v.witness}}
+const symbols=Array.from({length:24},(_,i)=>i%12);const d=shuffled(symbols,seed),board=Array(48).fill(-1);for(let i=0;i<24;i++){const pos=Math.floor(i/3)*6+(i%3)*2;board[pos]=board[pos+1]=d.items[i]}return {kind:"link",board,score:0,moves:0,round:1,seed:d.seed,done:false}}
 
 function linkRoute(board,a,b){if(a===b||a<0||b<0||a>=48||b>=48||board[a]<0||board[a]!==board[b])return null;const H=8,W=6,dirs=[[-1,0],[0,-1],[0,1],[1,0]],tr=Math.floor(b/W),tc=b%W;
  let q=[{r:Math.floor(a/W),c:a%W,dir:-1,bends:0,length:0,trail:[[Math.floor(a/W),a%W]]}],seen=new Map(),bound=0;
@@ -19,7 +32,7 @@ function linkMatch(s,a,b){const route=linkRoute(s.board,a,b);if(!route)return {s
 
 function linkRearrange(s){const rest=s.board.filter(v=>v>=0),count=new Map();for(const v of rest)count.set(v,(count.get(v)||0)+1);if([...count.values()].some(n=>n%2))return {state:s,error:"ODD_PAIR"};const pool=[];for(const [v,n] of count)for(let i=0;i<n/2;i++)pool.push(v);const z=shuffled(pool,s.seed);const board=Array(48).fill(-1);for(let i=0;i<z.items.length;i++){const p=Math.floor(i/3)*6+(i%3)*2;board[p]=board[p+1]=z.items[i]}return{state:{...s,board,seed:z.seed,moves:s.moves+1,done:pool.length===0}}}
 
-function linkNext(s){if(!s.done)return {state:s,error:"NOT_DONE"};const n=linkStart(s.seed);return{state:{...n,score:s.score,round:s.round+1}}}
+function linkNext(s){if(!s.done)return {state:s,error:"NOT_DONE"};const n=linkStart(s.seed,s.round+1);return{state:{...n,score:s.score,round:s.round+1}}}
 
 function bubbleStart(seed=125){let board=Array(77).fill(-1),rng=seed>>>0||1;for(let row=0;row<4;row++)for(let c=0;c<7;c++){const d=drawNum(rng,5);rng=d.state;board[row*7+c]=d.n}let queue=[];for(let k=0;k<3;k++){const d=drawNum(rng,5);rng=d.state;queue.push(d.n)}return{kind:"bubble",seed:rng,board,queue,score:0,moves:0,round:1,done:false,lost:false}}
 
@@ -64,4 +77,4 @@ function jewelSwap(old,a,z){if(!Number.isInteger(a)||!Number.isInteger(z)||a<0||
  if(depth===70)return{state:old,error:"CASCADE_BOUND"};
  if(!jewelLegal(b)){const next=jewelMake(rng);b=next.board;rng=next.seed}
  const moves=old.moves+1,round=Math.floor(moves/40)+1,windowScore=round===old.round?old.windowScore+add:0,bestWindow=Math.max(old.bestWindow,old.windowScore+(round===old.round?add:0));return{state:{...old,board:b,seed:rng,score:old.score+add,moves,round,windowScore,bestWindow},event:"MATCH",cleared:add,depth}}
-export {next32,drawNum,shuffled,linkStart,linkRoute,linkAvailable,linkMatch,linkRearrange,linkNext,bubbleStart,bubbleNeighbors,bubbleShoot,jewelMatches,jewelLegal,jewelMake,jewelStart,jewelSwap};
+export {linkVariedBoard,next32,drawNum,shuffled,linkStart,linkRoute,linkAvailable,linkMatch,linkRearrange,linkNext,bubbleStart,bubbleNeighbors,bubbleShoot,jewelMatches,jewelLegal,jewelMake,jewelStart,jewelSwap};
