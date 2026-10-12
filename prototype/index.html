@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Quiet Puzzle Club — playable alpha</title>
+<style>
+:root{color-scheme:light;--ink:#304936;--bg:#f4f7ed;--green:#4c8261;--cream:#fffaf0}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at top left,#e1f0cd,transparent 45%),radial-gradient(circle at bottom right,#f5dfcf,transparent 55%),var(--bg)}
+main{max-width:560px;min-height:100dvh;margin:auto;padding:env(safe-area-inset-top) 8px env(safe-area-inset-bottom);display:flex;flex-direction:column;gap:9px}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 5px 2px}h1{font:700 25px Georgia,serif;color:#3c7050;margin:0}.tiny{font-size:12px;color:#66796a}.hidden{display:none!important}
+button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible{outline:3px solid #2786a6;outline-offset:2px}
+.pill,.control{border:1px solid #c4d2b9;background:#fff9eb;border-radius:12px;min-height:48px;padding:9px 12px;font-weight:650;color:#3b6946}
+.modecards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 2px}.modecard{background:#fffdf7;border:1px solid #d6d8bc;border-radius:17px;padding:15px 3px;min-height:110px;text-align:center}.modecard .emoji{font-size:40px;display:block}.modecard strong{font-size:13px}.intro{font-size:15px;line-height:1.5;margin:4px 10px}
+.notice{background:#fdf9e8;border:1px solid #e9dcc7;border-radius:13px;padding:10px;font-size:13px;line-height:1.45}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.stat{background:#ffffffb8;border:1px solid #e2dec9;border-radius:10px;text-align:center;padding:8px 1px}.stat b{font-size:21px;display:block}.stat small{font-size:11px}
+.boardwrap{background:#ab7955;padding:7px;border-radius:14px;box-shadow:inset 0 0 0 2px #d0a682;position:relative;margin:auto 0;width:100%}
+.board{display:grid;gap:2px;touch-action:manipulation}.board.link{grid-template-columns:repeat(6,minmax(0,1fr))}.board.bubble,.board.jewel{grid-template-columns:repeat(7,minmax(0,1fr));gap:1px}
+.cell{min-width:0;border-radius:8px;border:1px solid #e8ddc0;background:#fffdf3;aspect-ratio:1;display:grid;place-items:center;font-size:clamp(20px,6vw,33px);padding:0;line-height:1}.cell.selected{outline:3px solid #2ca5bd;outline-offset:-3px;background:#dafff3}.cell.empty{opacity:.3;pointer-events:none}.cell.bubble{border-radius:50%;box-shadow:inset -3px -5px #0002,inset 3px 4px #fff8}.cell.bubble.empty{visibility:hidden}.cell.jewel{font-size:clamp(20px,5vw,29px);background:linear-gradient(160deg,#fffcfa,#f2e4d6)}.cell:disabled{cursor:default}
+.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.control{font-size:13px}.primary{color:white;background:var(--green);border-color:var(--green)}.status{min-height:28px;text-align:center;font-weight:600;font-size:13px;padding:6px}
+.aim{padding:8px 10px;background:#fffbef;border:1px solid #d3c6a6;border-radius:12px}.aim input{width:100%;height:33px;accent-color:#4c8261}.aimrow{display:flex;justify-content:space-between;font-size:12px;color:#687766}
+footer{font-size:11px;color:#63756a;text-align:center;padding:4px 0 9px}
+dialog{border:0;border-radius:18px;padding:22px;background:#fffbef;color:#304936;width:min(94vw,370px);box-shadow:0 20px 70px #0004}dialog::backdrop{background:#213d2b8c}dialog h2{margin:3px 0 10px;font:700 25px Georgia,serif}dialog p{font-size:15px;line-height:1.5}dialog button{width:100%;margin-top:10px}
+@media(min-width:500px){main{padding-inline:24px}.cell{font-size:34px}}
+@media(max-height:740px){header{padding-top:3px}.intro{margin:0 5px}.boardwrap{padding:5px}.stats .stat{padding:4px 0}.status{padding:2px}}
+</style></head><body>
+<main>
+<header><div><h1>Quiet Puzzle Club 🌿</h1><div class="tiny">Ba trò chơi, không giới hạn thời gian</div></div><button class="pill" id="home">⌂ Trang chủ</button></header>
+<section id="homeview"><p class="intro">Chơi thong thả. Rời điện thoại bất cứ lúc nào, lần sau mở lại bàn đang dở.</p><div class="modecards">
+<button class="modecard" data-mode="link"><span class="emoji">🌷</span><strong>Nối thú</strong></button>
+<button class="modecard" data-mode="bubble"><span class="emoji">🫧</span><strong>Bắn bóng</strong></button>
+<button class="modecard" data-mode="jewel"><span class="emoji">💎</span><strong>Kim cương</strong></button>
+</div><div class="notice">Bản alpha chơi thử với hình tạm. Chưa có Top online thật hoặc asset render được duyệt. Ba trò đều lưu điểm và bàn cờ trên trình duyệt này.</div></section>
+<section id="gameview" class="hidden" aria-live="polite">
+<div class="stats"><div class="stat"><b id="stage">1</b><small>Nấc / Chặng</small></div><div class="stat"><b id="score">0</b><small>Điểm của bạn</small></div><div class="stat"><b id="left">24</b><small id="leftlabel">Cặp còn</small></div></div>
+<p class="intro" id="rules" style="text-align:center"></p>
+<div class="boardwrap"><div class="board link" id="board" role="group"></div></div>
+<div class="aim hidden" id="aimbox"><div class="aimrow"><span>↖ Đổi hướng bắn</span><strong id="aimvalue">Thẳng</strong><span>Đổi hướng ↗</span></div><input id="aim" type="range" min="-16" max="16" value="0" step="1" aria-label="Hướng bắn bóng"><div style="text-align:center;font-size:12px" id="queue"></div></div>
+<div class="status" id="status" role="status">Chọn một hình để bắt đầu.</div>
+<div class="controls"><button id="undo" class="control">↶ Đi lại</button><button id="hint" class="control">✦ Gợi ý</button><button id="action" class="control primary">☕ Tạm dừng</button></div>
+</section>
+<footer><span id="saved">◉ Lưu sau mỗi lượt</span> · Hoàn toàn offline · Chưa có Top online</footer>
+</main>
+<dialog id="dlg"><h2 id="dt"></h2><p id="dd"></p><button id="accept" class="pill primary"></button><button id="cancel" class="pill"></button></dialog>
+<script type="module">
+import {linkStart,linkRoute,linkAvailable,linkMatch,linkRearrange,linkNext,bubbleStart,bubbleShoot,jewelStart,jewelLegal,jewelSwap} from "./engines.mjs";
+const ICONS=["🌷","🍋","🍓","🦋","🐞","🍄","🌻","🍎","🍐","🐝","🍀","🌸"];
+const BUBBLES=["🍎","💧","☀️","🍃","🌸"],BCOLORS=["#f56b72","#69abe5","#efd85c","#77b879","#b78bdb"],GEMS=["💗","💎","🟢","🔶","🌺"];
+const STORE="quiet-puzzle-club-alpha-v1";const $=(id)=>document.getElementById(id);
+let save={version:1,current:null,games:{}},chosen=-1,hint=[],aim=0,undo=[];
+try{const x=JSON.parse(localStorage.getItem(STORE));if(x&&x.version===1&&x.games&&typeof x.games==="object")save=x}catch{}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(save));$("saved").textContent="◉ Đã lưu trên thiết bị"}catch{$("saved").textContent="⚠ Không lưu được: kiểm tra bộ nhớ"}}
+function fresh(mode){const seed=(Math.floor(Date.now()/60000)>>>0)||84255;return mode==="link"?linkStart(seed):mode==="bubble"?bubbleStart(seed):jewelStart(seed)}
+function get(){return save.games[save.current]}
+function set(next){save.games[save.current]=next;persist()}
+function msg(s){$("status").textContent=s}
+function modal(title,description,yes="Tiếp tục",onYes=()=>{},no="Ở lại",onNo=()=>{}){$("dt").textContent=title;$("dd").textContent=description;$("accept").textContent=yes;$("cancel").textContent=no;const d=$("dlg");$("accept").onclick=()=>{d.close();onYes()};$("cancel").onclick=()=>{d.close();onNo()};d.showModal()}
+function enter(mode){if(!save.games[mode])save.games[mode]=fresh(mode);save.current=mode;chosen=-1;hint=[];undo=[];$("homeview").classList.add("hidden");$("gameview").classList.remove("hidden");persist();draw();msg(mode==="link"?"Chọn hai hình giống nhau.":mode==="bubble"?"Chọn hướng rồi bấm BẮN.":"Chọn hai viên kề nhau để ghép ba.");}
+function showHome(){save.current=null;persist();$("homeview").classList.remove("hidden");$("gameview").classList.add("hidden");}
+function updateBoard(mode,s){const b=$("board");b.replaceChildren();b.className="board "+mode;
+ for(let i=0;i<s.board.length;i++){const val=s.board[i];const el=document.createElement("button");el.className="cell "+mode+(val<0?" empty":"")+(chosen===i?" selected":"")+(hint.includes(i)?" selected":"");
+ el.type="button";el.disabled=val<0;el.setAttribute("aria-label",(mode==="link"?"Hình ":mode==="bubble"?"Bóng ":"Ngọc ")+(val>=0?val+1:"trống")+" ô "+(i+1));
+ if(mode==="link")el.textContent=val<0?"":ICONS[val%ICONS.length];else if(mode==="bubble"){el.textContent=val<0?"":BUBBLES[val];if(val>=0)el.style.background=BCOLORS[val]}else el.textContent=GEMS[val];
+ el.onclick=()=>tap(i);b.appendChild(el)}
+}
+function draw(){const mode=save.current,s=get();if(!s)return;
+ $("stage").textContent=s.round;$("score").textContent=s.score.toLocaleString("vi-VN");
+ $("left").textContent=mode==="link"?s.board.filter(v=>v>=0).length/2:s.moves;
+ $("leftlabel").textContent=mode==="link"?"Cặp còn":"Lượt đã chơi";
+ $("rules").textContent=mode==="link"?"Nối 2 hình giống nhau qua đường không quá 2 góc rẽ.":mode==="bubble"?"Bắn ba bóng cùng màu để làm chúng biến mất.":"Đổi 2 viên cạnh nhau để tạo hàng 3+ viên cùng loại.";
+ $("aimbox").classList.toggle("hidden",mode!=="bubble");
+ $("undo").textContent=mode==="link"||mode==="jewel"?"↶ Đi lại":"↶ Chơi lại";
+ $("hint").textContent=mode==="link"?"✦ Gợi ý":mode==="bubble"?"⟲ Đặt hướng":"✦ Nước tốt";
+ $("action").textContent=mode==="bubble"?"🎯 BẮN":"☕ Tạm dừng";
+ $("queue").textContent=mode==="bubble"?"Bóng hiện tại: "+BUBBLES[s.queue[0]]+"  ·  Tiếp: "+s.queue.slice(1).map(v=>BUBBLES[v]).join(" "):"";
+ $("undo").disabled=undo.length===0&&mode!=="bubble";updateBoard(mode,s)}
+function snapshot(){undo.push(JSON.parse(JSON.stringify(get())));if(undo.length>20)undo.shift()}
+function tap(i){const mode=save.current,s=get();if(mode==="bubble"){msg("Bạn chọn hướng bằng thanh trượt, rồi bấm nút BẮN.");return}
+ if(chosen===-1){chosen=i;draw();msg("Chọn ô thứ hai.");return}
+ const a=chosen;chosen=-1;hint=[];
+ if(mode==="link"){const p=linkRoute(s.board,a,i);if(!p){draw();msg("Hai hình chưa nối được, hãy chọn cặp khác.");return}snapshot();const r=linkMatch(s,a,i);set(r.state);draw();if(r.state.done)modal("Hoàn thành! 🌷","Bạn đã dọn hết bàn. Nghỉ lúc nào cũng được.","Nấc tiếp theo",()=>{set(linkNext(get()).state);undo=[];draw()}, "Nghỉ ở đây");else msg("Ghép đúng! +"+(100+(2-p.bends)*10)+" điểm");return}
+ if(mode==="jewel"){const r=jewelSwap(s,a,i);if(r.error){draw();msg("Chọn hai viên kề nhau để tạo hàng 3+ viên cùng loại.");return}snapshot();set(r.state);draw();msg("Đổi đúng! +"+r.cleared+" điểm");}
+}
+function action(){const mode=save.current;if(mode==="bubble"){const s=get(),r=bubbleShoot(s,aim);if(r.error){msg("Không bắn được: "+r.error);return}set(r.state);draw();msg(r.state.lost?"Bóng đã chạm vạch nguy hiểm. Bạn có thể chơi lại.":r.popped?"Đã phá "+r.popped+" bóng!":"Đã bắn một quả.");if(r.state.lost)modal("Kết thúc ván","Bạn đạt "+r.state.score+" điểm. Không có giới hạn thời gian chơi.","Chơi lại",()=>{set(bubbleStart(s.seed));draw()},"Giữ kết quả");return}
+ modal("Nghỉ một chút ☕","Bàn của bạn đã được lưu. Bạn có thể quay lại sau.","Chơi tiếp",()=>{},"Trang chủ",showHome)}
+function undoAction(){const mode=save.current;if(mode==="bubble"){modal("Chơi lại ván Bắn bóng?","Thao tác này sẽ bắt đầu một ván mới. Ván cũ không tự mất vì nghỉ.","Chơi lại",()=>{set(bubbleStart(get().seed));draw();msg("Đã bắt đầu ván mới.")},"Hủy");return}
+ if(!undo.length){msg("Chưa có nước đi để quay lại.");return}set(undo.pop());draw();msg("Đã quay lại nước vừa rồi.")}
+function hintAction(){const mode=save.current,s=get();if(mode==="link"){const p=linkAvailable(s.board);hint=p?[p.a,p.b]:[];draw();msg(p?"Hai hình sáng có thể nối nhau.":"Không còn cặp nối. Chọn Đảo hình ở đây.");if(!p)modal("Không còn cặp nối","Bàn này có thể được đảo để tiếp tục.","Đảo hình",()=>{snapshot();const x=linkRearrange(get());if(!x.error){set(x.state);hint=[];draw();msg("Bàn đã đảo và vẫn có thể giải.")}},"Đóng");return}
+ if(mode==="bubble"){aim=0;$("aim").value=0;$("aimvalue").textContent="Thẳng";msg("Đã đưa hướng bắn về giữa.");return}
+ let p=jewelLegal(s.board.slice());if(p){hint=p;draw();msg("Hai viên sáng tạo được hàng ghép.");}else msg("Bàn sẽ tự đảo khi hết nước đi.");
+}
+$("home").onclick=showHome;document.querySelectorAll("[data-mode]").forEach(x=>x.onclick=()=>enter(x.dataset.mode));$("action").onclick=action;$("undo").onclick=undoAction;$("hint").onclick=hintAction;$("aim").oninput=(e)=>{aim=Number(e.target.value);$("aimvalue").textContent=aim===0?"Thẳng":(aim<0?"Trái ":"Phải ")+Math.abs(aim)};
+window.addEventListener("pagehide",persist);document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persist()});
+if(save.current&&save.games[save.current])enter(save.current);
+</script></body></html>
