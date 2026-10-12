@@ -1,0 +1,16 @@
+{
+  "name": "newgame-quiet-puzzle-club",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node scripts/validate_production.mjs",
+    "check": "npm run validate && npm test"
+  }
+}
