@@ -47,7 +47,7 @@ const BUBBLES=["🍎","💧","☀️","🍃","🌸"],BCOLORS=["#f56b72","#69abe5
 const STORE="quiet-puzzle-club-alpha-v1";const $=(id)=>document.getElementById(id);
 let save={version:1,current:null,games:{},best:{}},chosen=-1,hint=[],aim=0,undo=[];
 try{const x=JSON.parse(localStorage.getItem(STORE));if(x&&x.version===1&&x.games&&typeof x.games==="object")save=x}catch{}
-save.best??={};
+save.best??={};save.undoHist??={};
 const IDB_NAME="quiet-puzzle-club-v2-backup";
 function openIDB(){return new Promise((resolve,reject)=>{if(!("indexedDB" in window))return reject(Error("IDB unavailable"));const r=indexedDB.open(IDB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore("progress");r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
 async function writeIDB(value){const db=await openIDB();return new Promise((resolve,reject)=>{const tx=db.transaction("progress","readwrite");tx.objectStore("progress").put(value,"game");tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();reject(tx.error)}})}
@@ -59,8 +59,8 @@ function persist(){save.updatedAt=Date.now();try{localStorage.setItem(STORE,JSON
 writeIDB(structuredClone(save)).then(()=>$("saved").textContent="◉ Đã lưu trên thiết bị").catch(()=>{if($("saved").textContent.startsWith("⚠"))$("saved").textContent="⚠ Không lưu được: hãy xuất tiến độ"})}
 function exportBackup(){const data=JSON.stringify(save,null,2),blob=new Blob([data],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="newgame-tien-do.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}
 async function importBackup(file){if(!file||file.size>1000000)throw Error("Tệp lớn hoặc trống");const data=JSON.parse(await file.text());if(!validBackup(data))throw Error("Tệp không đúng định dạng tiến độ NEWGAME");if(!confirm("Thay toàn bộ tiến độ hiện tại bằng bản sao này?"))return;
-save=data;save.best??={};await writeIDB(structuredClone(save));persist();drawHome();if(save.current&&save.games[save.current])enter(save.current);else showHome()}
-async function restoreBackup(){try{const data=await readIDB();if(validBackup(data)&&((data.updatedAt||0)>(save.updatedAt||0))){save=data;save.best??={}}}catch{}
+save=data;save.best??={};save.undoHist??={};await writeIDB(structuredClone(save));persist();drawHome();if(save.current&&save.games[save.current])enter(save.current);else showHome()}
+async function restoreBackup(){try{const data=await readIDB();if(validBackup(data)&&((data.updatedAt||0)>(save.updatedAt||0))){save=data;save.best??={};save.undoHist??={}}}catch{}
 drawHome();if(save.current&&save.games[save.current])enter(save.current);}
 
 function fresh(mode){const seed=(Math.floor(Date.now()/60000)>>>0)||84255;return mode==="link"?linkStart(seed):mode==="bubble"?bubbleStart(seed):jewelStart(seed)}
@@ -68,7 +68,7 @@ function get(){return save.games[save.current]}
 function set(next){save.games[save.current]=next;save.best[save.current]=Math.max(save.best[save.current]||0,next.score||0);persist()}
 function msg(s){$("status").textContent=s}
 function modal(title,description,yes="Tiếp tục",onYes=()=>{},no="Ở lại",onNo=()=>{}){$("dt").textContent=title;$("dd").textContent=description;$("accept").textContent=yes;$("cancel").textContent=no;const d=$("dlg");$("accept").onclick=()=>{d.close();onYes()};$("cancel").onclick=()=>{d.close();onNo()};d.showModal()}
-function enter(mode){if(!save.games[mode])save.games[mode]=fresh(mode);save.current=mode;chosen=-1;hint=[];aim=0;$("aim").value=0;undo=[];if(mode==="bubble"){const predicted=bubbleShoot(get(),aim);if(Number.isInteger(predicted.pos))hint=[predicted.pos]}$("homeview").classList.add("hidden");$("gameview").classList.remove("hidden");persist();draw();msg(mode==="link"?"Chọn hai hình giống nhau.":mode==="bubble"?"Chọn hướng rồi bấm BẮN.":"Chọn hai viên kề nhau để ghép ba.");}
+function enter(mode){if(!save.games[mode])save.games[mode]=fresh(mode);save.current=mode;chosen=-1;hint=[];aim=0;$("aim").value=0;undo=(save.undoHist?.[mode]||[]).map(v=>structuredClone(v));if(mode==="bubble"){const predicted=bubbleShoot(get(),aim);if(Number.isInteger(predicted.pos))hint=[predicted.pos]}$("homeview").classList.add("hidden");$("gameview").classList.remove("hidden");persist();draw();msg(mode==="link"?"Chọn hai hình giống nhau.":mode==="bubble"?"Chọn hướng rồi bấm BẮN.":"Chọn hai viên kề nhau để ghép ba.");}
 function drawHome(){document.querySelectorAll("[data-mode]").forEach(x=>{let small=x.querySelector("small");if(!small){small=document.createElement("small");small.style.display="block";small.style.marginTop="5px";x.appendChild(small)}small.textContent="Kỷ lục: "+(save.best[x.dataset.mode]||0).toLocaleString("vi-VN")})}function showHome(){save.current=null;persist();$("homeview").classList.remove("hidden");$("gameview").classList.add("hidden");drawHome();}
 function updateBoard(mode,s){const b=$("board");b.replaceChildren();b.className="board "+mode;
  for(let i=0;i<s.board.length;i++){const val=s.board[i];const el=document.createElement("button");el.className="cell "+mode+(val<0?" empty":"")+(chosen===i?" selected":"")+(hint.includes(i)?(mode==="bubble"?" predicted":" selected"):"");
@@ -87,17 +87,17 @@ function draw(){const mode=save.current,s=get();if(!s)return;
  $("action").textContent=mode==="link"&&s.done?"▶ Màn mới":mode==="bubble"&&s.lost?"↻ Ván mới":mode==="bubble"?"🎯 BẮN":"☕ Tạm dừng";
  $("queue").textContent=mode==="bubble"?"Bóng hiện tại: "+BUBBLES[s.queue[0]]+"  ·  Tiếp: "+s.queue.slice(1).map(v=>BUBBLES[v]).join(" "):"";
  $("undo").disabled=undo.length===0&&mode!=="bubble";updateBoard(mode,s)}
-function snapshot(){undo.push(JSON.parse(JSON.stringify(get())));if(undo.length>20)undo.shift()}
+function snapshot(){undo.push(structuredClone(get()));if(undo.length>20)undo.shift();save.undoHist[save.current]=undo.map(v=>structuredClone(v))}
 function tap(i){const mode=save.current,s=get();if(mode==="bubble"){msg("Bạn chọn hướng bằng thanh trượt, rồi bấm nút BẮN.");return}
  if(chosen===-1){chosen=i;draw();msg("Chọn ô thứ hai.");return}
  const a=chosen;chosen=-1;hint=[];
  if(mode==="link"){const p=linkRoute(s.board,a,i);if(!p){draw();msg("Hai hình chưa nối được, hãy chọn cặp khác.");return}snapshot();const r=linkMatch(s,a,i);set(r.state);draw();if(r.state.done)modal("Hoàn thành! 🌷","Bạn đã dọn hết bàn. Nghỉ lúc nào cũng được.","Nấc tiếp theo",()=>{set(linkNext(get()).state);undo=[];draw()}, "Nghỉ ở đây");else msg("Ghép đúng! +"+(100+(2-p.bends)*10)+" điểm");return}
  if(mode==="jewel"){const r=jewelSwap(s,a,i);if(r.error){draw();msg("Chọn hai viên kề nhau để tạo hàng 3+ viên cùng loại.");return}snapshot();set(r.state);draw();msg("Đổi đúng! +"+r.cleared+" điểm");}
 }
-function action(){const mode=save.current;if(mode==="link"&&get().done){set(linkNext(get()).state);undo=[];draw();msg("Đã sang nấc mới.");return}if(mode==="bubble"&&get().lost){set(bubbleStart(get().seed));draw();msg("Ván mới bắt đầu. Chơi thong thả nhé.");return}if(mode==="bubble"){const s=get(),r=bubbleShoot(s,aim);if(r.error){msg("Không bắn được: "+r.error);return}set(r.state);draw();msg(r.state.lost?"Bóng đã chạm vạch nguy hiểm. Bạn có thể chơi lại.":r.popped?"Đã phá "+r.popped+" bóng!":"Đã bắn một quả.");if(r.state.lost)modal("Kết thúc ván","Bạn đạt "+r.state.score+" điểm. Không có giới hạn thời gian chơi.","Chơi lại",()=>{set(bubbleStart(s.seed));draw()},"Giữ kết quả");return}
+function action(){const mode=save.current;if(mode==="link"&&get().done){undo=[];save.undoHist[mode]=[];set(linkNext(get()).state);draw();msg("Đã sang nấc mới.");return}if(mode==="bubble"&&get().lost){set(bubbleStart(get().seed));draw();msg("Ván mới bắt đầu. Chơi thong thả nhé.");return}if(mode==="bubble"){const s=get(),r=bubbleShoot(s,aim);if(r.error){msg("Không bắn được: "+r.error);return}set(r.state);draw();msg(r.state.lost?"Bóng đã chạm vạch nguy hiểm. Bạn có thể chơi lại.":r.popped?"Đã phá "+r.popped+" bóng!":"Đã bắn một quả.");if(r.state.lost)modal("Kết thúc ván","Bạn đạt "+r.state.score+" điểm. Không có giới hạn thời gian chơi.","Chơi lại",()=>{set(bubbleStart(s.seed));draw()},"Giữ kết quả");return}
  modal("Nghỉ một chút ☕","Bàn của bạn đã được lưu. Bạn có thể quay lại sau.","Chơi tiếp",()=>{},"Trang chủ",showHome)}
 function undoAction(){const mode=save.current;if(mode==="bubble"){modal("Chơi lại ván Bắn bóng?","Thao tác này sẽ bắt đầu một ván mới. Ván cũ không tự mất vì nghỉ.","Chơi lại",()=>{set(bubbleStart(get().seed));draw();msg("Đã bắt đầu ván mới.")},"Hủy");return}
- if(!undo.length){msg("Chưa có nước đi để quay lại.");return}set(undo.pop());draw();msg("Đã quay lại nước vừa rồi.")}
+ if(!undo.length){msg("Chưa có nước đi để quay lại.");return}const prev=undo.pop();save.undoHist[mode]=undo.map(v=>structuredClone(v));set(prev);draw();msg("Đã quay lại nước vừa rồi.")}
 function hintAction(){const mode=save.current,s=get();if(mode==="link"){const p=linkAvailable(s.board);hint=p?[p.a,p.b]:[];draw();msg(p?"Hai hình sáng có thể nối nhau.":"Không còn cặp nối. Chọn Đảo hình ở đây.");if(!p)modal("Không còn cặp nối","Bàn này có thể được đảo để tiếp tục.","Đảo hình",()=>{snapshot();const x=linkRearrange(get());if(!x.error){set(x.state);hint=[];draw();msg("Bàn đã đảo và vẫn có thể giải.")}},"Đóng");return}
  if(mode==="bubble"){aim=0;$("aim").value=0;$("aimvalue").textContent="Thẳng";msg("Đã đưa hướng bắn về giữa.");return}
  let p=jewelLegal(s.board.slice());if(p){hint=p;draw();msg("Hai viên sáng tạo được hàng ghép.");}else msg("Bàn sẽ tự đảo khi hết nước đi.");
