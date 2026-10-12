@@ -69,6 +69,12 @@ Run locally after checkout: node scripts/validate_production.mjs. Passing this s
 ## Studio greenlight (audit 2026-10-12)
 **GO for one playable Link vertical slice. NO-GO for autonomous full-game production, 64-image bulk render, mass level publishing, online Top launch or app-store release.** The independent [studio audit](docs/17_INDIE_STUDIO_GREENLIGHT_AUDIT.md) identifies 8 P0 engine/production blockers, 8 pre-beta gaps and 4 launch/operations gaps; it is a review, not a silent gameplay rule change.
 
+## Current executable alpha (updated 2026-10-12)
+- [Playable three-game source and run instructions](prototype/README.md) — `npm start` serves `prototype/index.html` via the repository development server.
+- [Puzzle logic](prototype/engines.mjs), [Node gameplay checks](tests/engines.test.mjs), [backup validation checks](tests/backup.test.mjs), [HTTP server smoke test](tests/server.test.mjs).
+- GitHub alpha now includes IndexedDB mirror, browser export/import backup and per-mode saved Undo snapshots. Online Top remains explicitly unavailable. User-approved concept posters are not yet runtime sprites.
+- QA evidence and explicit open gates: [Alpha QA report](docs/24_ALPHA_QA_2026-10-12.md). GitHub Actions green status and mobile touch QA are **not yet independently confirmed**.
+
 ## What is NOT complete
 No released application, ranked backend, production artwork or 1,000 certified levels exists. A three-game browser ALPHA with basic local save does exist under prototype/; it is not a production app or finished QA. Docs and image prompts are **production contracts / tunable starting values**, not playtesting proof. Render catalog: 44 CORE + 20 OPTIONAL, no actual completed image job/approved sprite. Three approved poster visuals currently in this conversation, not yet GitHub-committed as binary reference files.
 
