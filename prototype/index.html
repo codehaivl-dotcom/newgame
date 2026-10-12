@@ -62,11 +62,14 @@ if(v.current!==null&&v.current!==undefined&&!["link","bubble","jewel"].includes(
 if(v.undoHist!==undefined){if(typeof v.undoHist!=="object"||v.undoHist===null)return false;
  for(const [k,items] of Object.entries(v.undoHist)){if(!["link","jewel","bubble"].includes(k)||!Array.isArray(items)||items.length>20)return false;}}
 return typeof v.best==="object"&&v.best!==null;}
+let idbWriteQueue=Promise.resolve();
 function persist(){save.updatedAt=Date.now();try{localStorage.setItem(STORE,JSON.stringify(save));$("saved").textContent="◉ Đã lưu (bản sao trên máy)"}catch{$("saved").textContent="⚠ Không lưu được bản sao dự phòng"}
-writeIDB(structuredClone(save)).then(()=>$("saved").textContent="◉ Đã lưu trên thiết bị").catch(()=>{if($("saved").textContent.startsWith("⚠"))$("saved").textContent="⚠ Không lưu được: hãy xuất tiến độ"})}
+const immutableSnapshot=structuredClone(save);
+idbWriteQueue=idbWriteQueue.catch(()=>{}).then(()=>writeIDB(immutableSnapshot));
+idbWriteQueue.then(()=>$("saved").textContent="◉ Đã lưu trên thiết bị").catch(()=>{if($("saved").textContent.startsWith("⚠"))$("saved").textContent="⚠ Không lưu được: hãy xuất tiến độ"})}
 function exportBackup(){const data=JSON.stringify(save,null,2),blob=new Blob([data],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="newgame-tien-do.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}
 async function importBackup(file){if(!file||file.size>1000000)throw Error("Tệp lớn hoặc trống");const data=JSON.parse(await file.text());if(!validBackup(data))throw Error("Tệp không đúng định dạng tiến độ NEWGAME");if(!confirm("Thay toàn bộ tiến độ hiện tại bằng bản sao này?"))return;
-save=data;save.best??={};save.undoHist??={};await writeIDB(structuredClone(save));persist();drawHome();if(save.current&&save.games[save.current])enter(save.current);else showHome()}
+save=data;save.best??={};save.undoHist??={};persist();drawHome();if(save.current&&save.games[save.current])enter(save.current);else showHome()}
 async function restoreBackup(){try{const data=await readIDB();if(validBackup(data)&&((data.updatedAt||0)>(save.updatedAt||0))){save=data;save.best??={};save.undoHist??={}}}catch{}
 drawHome();if(save.current&&save.games[save.current])enter(save.current);}
 
