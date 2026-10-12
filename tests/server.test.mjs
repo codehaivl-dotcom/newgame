@@ -23,5 +23,7 @@ test("static server redirects root and serves module + service worker from corre
   }
   const missing=await fetch("http://127.0.0.1:"+port+"/prototype/no-such-file.js");
   assert.equal(missing.status,404);
+  const blocked=await fetch("http://127.0.0.1:"+port+"/.git/config");
+  assert.equal(blocked.status,404,"local preview must never leak .git");
  }finally{proc.kill("SIGTERM");}
 });
