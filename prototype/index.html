@@ -13,7 +13,7 @@ button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visibl
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.stat{background:#ffffffb8;border:1px solid #e2dec9;border-radius:10px;text-align:center;padding:8px 1px}.stat b{font-size:21px;display:block}.stat small{font-size:11px}
 .boardwrap{background:#ab7955;padding:7px;border-radius:14px;box-shadow:inset 0 0 0 2px #d0a682;position:relative;margin:auto 0;width:100%}
 .board{display:grid;gap:2px;touch-action:manipulation}.board.link{grid-template-columns:repeat(6,minmax(0,1fr))}.board.bubble,.board.jewel{grid-template-columns:repeat(7,minmax(0,1fr));gap:1px}
-.cell{min-width:0;border-radius:8px;border:1px solid #e8ddc0;background:#fffdf3;aspect-ratio:1;display:grid;place-items:center;font-size:clamp(20px,6vw,33px);padding:0;line-height:1}.cell.selected{outline:3px solid #2ca5bd;outline-offset:-3px;background:#dafff3}.cell.empty{opacity:.3;pointer-events:none}.cell.bubble{border-radius:50%;box-shadow:inset -3px -5px #0002,inset 3px 4px #fff8}.cell.bubble.empty{visibility:hidden}.cell.jewel{font-size:clamp(20px,5vw,29px);background:linear-gradient(160deg,#fffcfa,#f2e4d6)}.cell:disabled{cursor:default}
+.cell{min-width:0;border-radius:8px;border:1px solid #e8ddc0;background:#fffdf3;aspect-ratio:1;display:grid;place-items:center;font-size:clamp(20px,6vw,33px);padding:0;line-height:1}.cell.selected{outline:3px solid #2ca5bd;outline-offset:-3px;background:#dafff3}.cell.empty{opacity:.3;pointer-events:none}.cell.bubble{border-radius:50%;box-shadow:inset -3px -5px #0002,inset 3px 4px #fff8}.cell.bubble.empty{visibility:hidden}.cell.bubble.predicted{visibility:visible;opacity:.55;outline:3px dashed #2f82ad;outline-offset:-3px}.cell.jewel{font-size:clamp(20px,5vw,29px);background:linear-gradient(160deg,#fffcfa,#f2e4d6)}.cell:disabled{cursor:default}
 .controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.control{font-size:13px}.primary{color:white;background:var(--green);border-color:var(--green)}.status{min-height:28px;text-align:center;font-weight:600;font-size:13px;padding:6px}
 .aim{padding:8px 10px;background:#fffbef;border:1px solid #d3c6a6;border-radius:12px}.aim input{width:100%;height:33px;accent-color:#4c8261}.aimrow{display:flex;justify-content:space-between;font-size:12px;color:#687766}
 footer{font-size:11px;color:#63756a;text-align:center;padding:4px 0 9px}
@@ -52,12 +52,12 @@ function get(){return save.games[save.current]}
 function set(next){save.games[save.current]=next;persist()}
 function msg(s){$("status").textContent=s}
 function modal(title,description,yes="Tiếp tục",onYes=()=>{},no="Ở lại",onNo=()=>{}){$("dt").textContent=title;$("dd").textContent=description;$("accept").textContent=yes;$("cancel").textContent=no;const d=$("dlg");$("accept").onclick=()=>{d.close();onYes()};$("cancel").onclick=()=>{d.close();onNo()};d.showModal()}
-function enter(mode){if(!save.games[mode])save.games[mode]=fresh(mode);save.current=mode;chosen=-1;hint=[];undo=[];$("homeview").classList.add("hidden");$("gameview").classList.remove("hidden");persist();draw();msg(mode==="link"?"Chọn hai hình giống nhau.":mode==="bubble"?"Chọn hướng rồi bấm BẮN.":"Chọn hai viên kề nhau để ghép ba.");}
+function enter(mode){if(!save.games[mode])save.games[mode]=fresh(mode);save.current=mode;chosen=-1;hint=[];aim=0;$("aim").value=0;undo=[];if(mode==="bubble"){const predicted=bubbleShoot(get(),aim);if(Number.isInteger(predicted.pos))hint=[predicted.pos]}$("homeview").classList.add("hidden");$("gameview").classList.remove("hidden");persist();draw();msg(mode==="link"?"Chọn hai hình giống nhau.":mode==="bubble"?"Chọn hướng rồi bấm BẮN.":"Chọn hai viên kề nhau để ghép ba.");}
 function showHome(){save.current=null;persist();$("homeview").classList.remove("hidden");$("gameview").classList.add("hidden");}
 function updateBoard(mode,s){const b=$("board");b.replaceChildren();b.className="board "+mode;
- for(let i=0;i<s.board.length;i++){const val=s.board[i];const el=document.createElement("button");el.className="cell "+mode+(val<0?" empty":"")+(chosen===i?" selected":"")+(hint.includes(i)?" selected":"");
+ for(let i=0;i<s.board.length;i++){const val=s.board[i];const el=document.createElement("button");el.className="cell "+mode+(val<0?" empty":"")+(chosen===i?" selected":"")+(hint.includes(i)?(mode==="bubble"?" predicted":" selected"):"");
  el.type="button";el.disabled=val<0;el.setAttribute("aria-label",(mode==="link"?"Hình ":mode==="bubble"?"Bóng ":"Ngọc ")+(val>=0?val+1:"trống")+" ô "+(i+1));
- if(mode==="link")el.textContent=val<0?"":ICONS[val%ICONS.length];else if(mode==="bubble"){el.textContent=val<0?"":BUBBLES[val];if(val>=0)el.style.background=BCOLORS[val]}else el.textContent=GEMS[val];
+ if(mode==="link")el.textContent=val<0?"":ICONS[val%ICONS.length];else if(mode==="bubble"){el.textContent=val<0?(hint.includes(i)?BUBBLES[s.queue[0]]:""):BUBBLES[val];if(val>=0||hint.includes(i))el.style.background=BCOLORS[val>=0?val:s.queue[0]]}else el.textContent=GEMS[val];
  el.onclick=()=>tap(i);b.appendChild(el)}
 }
 function draw(){const mode=save.current,s=get();if(!s)return;
@@ -86,7 +86,7 @@ function hintAction(){const mode=save.current,s=get();if(mode==="link"){const p=
  if(mode==="bubble"){aim=0;$("aim").value=0;$("aimvalue").textContent="Thẳng";msg("Đã đưa hướng bắn về giữa.");return}
  let p=jewelLegal(s.board.slice());if(p){hint=p;draw();msg("Hai viên sáng tạo được hàng ghép.");}else msg("Bàn sẽ tự đảo khi hết nước đi.");
 }
-$("home").onclick=showHome;document.querySelectorAll("[data-mode]").forEach(x=>x.onclick=()=>enter(x.dataset.mode));$("action").onclick=action;$("undo").onclick=undoAction;$("hint").onclick=hintAction;$("aim").oninput=(e)=>{aim=Number(e.target.value);$("aimvalue").textContent=aim===0?"Thẳng":(aim<0?"Trái ":"Phải ")+Math.abs(aim)};
+$("home").onclick=showHome;document.querySelectorAll("[data-mode]").forEach(x=>x.onclick=()=>enter(x.dataset.mode));$("action").onclick=action;$("undo").onclick=undoAction;$("hint").onclick=hintAction;$("aim").oninput=(e)=>{aim=Number(e.target.value);$("aimvalue").textContent=aim===0?"Thẳng":(aim<0?"Trái ":"Phải ")+Math.abs(aim);const predicted=bubbleShoot(get(),aim);hint=Number.isInteger(predicted.pos)?[predicted.pos]:[];draw()};
 if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}window.addEventListener("pagehide",persist);document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persist()});
 if(save.current&&save.games[save.current])enter(save.current);
 </script></body></html>
