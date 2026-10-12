@@ -1,3 +1,5 @@
+> **SUPERSEDED RUNTIME STATUS (2026-10-12):** Three-game offline alpha source and standalone Link preview are now COMMITTED at prototype/index.html, prototype/engines.mjs and prototype/link-garden.html. See docs/24_ALPHA_QA_2026-10-12.md for actual code, 11 evaluated test callbacks, 350 long-run sampled seeds, and remaining production gates. Older lines saying prototypes only existed outside GitHub describe the earlier snapshot and are no longer current. Public online Top, approved sprites, human-device QA and store release remain NOT DONE.
+
 # STUDIO AUDIT REMEDIATION — verified progress 2026-10-12
 This is an **evidence-based status**, not a claim of shipping completeness.
 
