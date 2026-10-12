@@ -44,16 +44,16 @@ import {linkStart,linkRoute,linkAvailable,linkMatch,linkRearrange,linkNext,bubbl
 const ICONS=["🌷","🍋","🍓","🦋","🐞","🍄","🌻","🍎","🍐","🐝","🍀","🌸"];
 const BUBBLES=["🍎","💧","☀️","🍃","🌸"],BCOLORS=["#f56b72","#69abe5","#efd85c","#77b879","#b78bdb"],GEMS=["💗","💎","🟢","🔶","🌺"];
 const STORE="quiet-puzzle-club-alpha-v1";const $=(id)=>document.getElementById(id);
-let save={version:1,current:null,games:{}},chosen=-1,hint=[],aim=0,undo=[];
+let save={version:1,current:null,games:{},best:{}},chosen=-1,hint=[],aim=0,undo=[];
 try{const x=JSON.parse(localStorage.getItem(STORE));if(x&&x.version===1&&x.games&&typeof x.games==="object")save=x}catch{}
-function persist(){try{localStorage.setItem(STORE,JSON.stringify(save));$("saved").textContent="◉ Đã lưu trên thiết bị"}catch{$("saved").textContent="⚠ Không lưu được: kiểm tra bộ nhớ"}}
+save.best??={};function persist(){try{localStorage.setItem(STORE,JSON.stringify(save));$("saved").textContent="◉ Đã lưu trên thiết bị"}catch{$("saved").textContent="⚠ Không lưu được: kiểm tra bộ nhớ"}}
 function fresh(mode){const seed=(Math.floor(Date.now()/60000)>>>0)||84255;return mode==="link"?linkStart(seed):mode==="bubble"?bubbleStart(seed):jewelStart(seed)}
 function get(){return save.games[save.current]}
-function set(next){save.games[save.current]=next;persist()}
+function set(next){save.games[save.current]=next;save.best[save.current]=Math.max(save.best[save.current]||0,next.score||0);persist()}
 function msg(s){$("status").textContent=s}
 function modal(title,description,yes="Tiếp tục",onYes=()=>{},no="Ở lại",onNo=()=>{}){$("dt").textContent=title;$("dd").textContent=description;$("accept").textContent=yes;$("cancel").textContent=no;const d=$("dlg");$("accept").onclick=()=>{d.close();onYes()};$("cancel").onclick=()=>{d.close();onNo()};d.showModal()}
 function enter(mode){if(!save.games[mode])save.games[mode]=fresh(mode);save.current=mode;chosen=-1;hint=[];aim=0;$("aim").value=0;undo=[];if(mode==="bubble"){const predicted=bubbleShoot(get(),aim);if(Number.isInteger(predicted.pos))hint=[predicted.pos]}$("homeview").classList.add("hidden");$("gameview").classList.remove("hidden");persist();draw();msg(mode==="link"?"Chọn hai hình giống nhau.":mode==="bubble"?"Chọn hướng rồi bấm BẮN.":"Chọn hai viên kề nhau để ghép ba.");}
-function showHome(){save.current=null;persist();$("homeview").classList.remove("hidden");$("gameview").classList.add("hidden");}
+function drawHome(){document.querySelectorAll("[data-mode]").forEach(x=>{let small=x.querySelector("small");if(!small){small=document.createElement("small");small.style.display="block";small.style.marginTop="5px";x.appendChild(small)}small.textContent="Kỷ lục: "+(save.best[x.dataset.mode]||0).toLocaleString("vi-VN")})}function showHome(){save.current=null;persist();$("homeview").classList.remove("hidden");$("gameview").classList.add("hidden");drawHome();}
 function updateBoard(mode,s){const b=$("board");b.replaceChildren();b.className="board "+mode;
  for(let i=0;i<s.board.length;i++){const val=s.board[i];const el=document.createElement("button");el.className="cell "+mode+(val<0?" empty":"")+(chosen===i?" selected":"")+(hint.includes(i)?(mode==="bubble"?" predicted":" selected"):"");
  el.type="button";el.disabled=val<0;el.setAttribute("aria-label",(mode==="link"?"Hình ":mode==="bubble"?"Bóng ":"Ngọc ")+(val>=0?val+1:"trống")+" ô "+(i+1));
@@ -88,5 +88,5 @@ function hintAction(){const mode=save.current,s=get();if(mode==="link"){const p=
 }
 $("home").onclick=showHome;document.querySelectorAll("[data-mode]").forEach(x=>x.onclick=()=>enter(x.dataset.mode));$("action").onclick=action;$("undo").onclick=undoAction;$("hint").onclick=hintAction;$("aim").oninput=(e)=>{aim=Number(e.target.value);$("aimvalue").textContent=aim===0?"Thẳng":(aim<0?"Trái ":"Phải ")+Math.abs(aim);const predicted=bubbleShoot(get(),aim);hint=Number.isInteger(predicted.pos)?[predicted.pos]:[];draw()};
 if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}window.addEventListener("pagehide",persist);document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persist()});
-if(save.current&&save.games[save.current])enter(save.current);
+drawHome();if(save.current&&save.games[save.current])enter(save.current);
 </script></body></html>
