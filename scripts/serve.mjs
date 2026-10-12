@@ -9,6 +9,7 @@ http.createServer(async(req,res)=>{
   const url=new URL(req.url,"http://127.0.0.1");
   if(url.pathname==="/"){res.writeHead(302,{"Location":"/prototype/index.html","Cache-Control":"no-store"});res.end();return}
   const input=decodeURIComponent(url.pathname);
+  if(!input.startsWith("/prototype/"))throw Error("path outside public prototype");
   const filename=resolve(root,"."+input);
   const rel=relative(root,filename);
   if(rel.startsWith(".."+sep)||rel==="..")throw Error("forbidden");
