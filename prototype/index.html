@@ -68,7 +68,7 @@ function draw(){const mode=save.current,s=get();if(!s)return;
  $("aimbox").classList.toggle("hidden",mode!=="bubble");
  $("undo").textContent=mode==="link"||mode==="jewel"?"↶ Đi lại":"↶ Chơi lại";
  $("hint").textContent=mode==="link"?"✦ Gợi ý":mode==="bubble"?"⟲ Đặt hướng":"✦ Nước tốt";
- $("action").textContent=mode==="bubble"?"🎯 BẮN":"☕ Tạm dừng";
+ $("action").textContent=mode==="link"&&s.done?"▶ Màn mới":mode==="bubble"&&s.lost?"↻ Ván mới":mode==="bubble"?"🎯 BẮN":"☕ Tạm dừng";
  $("queue").textContent=mode==="bubble"?"Bóng hiện tại: "+BUBBLES[s.queue[0]]+"  ·  Tiếp: "+s.queue.slice(1).map(v=>BUBBLES[v]).join(" "):"";
  $("undo").disabled=undo.length===0&&mode!=="bubble";updateBoard(mode,s)}
 function snapshot(){undo.push(JSON.parse(JSON.stringify(get())));if(undo.length>20)undo.shift()}
@@ -78,7 +78,7 @@ function tap(i){const mode=save.current,s=get();if(mode==="bubble"){msg("Bạn c
  if(mode==="link"){const p=linkRoute(s.board,a,i);if(!p){draw();msg("Hai hình chưa nối được, hãy chọn cặp khác.");return}snapshot();const r=linkMatch(s,a,i);set(r.state);draw();if(r.state.done)modal("Hoàn thành! 🌷","Bạn đã dọn hết bàn. Nghỉ lúc nào cũng được.","Nấc tiếp theo",()=>{set(linkNext(get()).state);undo=[];draw()}, "Nghỉ ở đây");else msg("Ghép đúng! +"+(100+(2-p.bends)*10)+" điểm");return}
  if(mode==="jewel"){const r=jewelSwap(s,a,i);if(r.error){draw();msg("Chọn hai viên kề nhau để tạo hàng 3+ viên cùng loại.");return}snapshot();set(r.state);draw();msg("Đổi đúng! +"+r.cleared+" điểm");}
 }
-function action(){const mode=save.current;if(mode==="bubble"){const s=get(),r=bubbleShoot(s,aim);if(r.error){msg("Không bắn được: "+r.error);return}set(r.state);draw();msg(r.state.lost?"Bóng đã chạm vạch nguy hiểm. Bạn có thể chơi lại.":r.popped?"Đã phá "+r.popped+" bóng!":"Đã bắn một quả.");if(r.state.lost)modal("Kết thúc ván","Bạn đạt "+r.state.score+" điểm. Không có giới hạn thời gian chơi.","Chơi lại",()=>{set(bubbleStart(s.seed));draw()},"Giữ kết quả");return}
+function action(){const mode=save.current;if(mode==="link"&&get().done){set(linkNext(get()).state);undo=[];draw();msg("Đã sang nấc mới.");return}if(mode==="bubble"&&get().lost){set(bubbleStart(get().seed));draw();msg("Ván mới bắt đầu. Chơi thong thả nhé.");return}if(mode==="bubble"){const s=get(),r=bubbleShoot(s,aim);if(r.error){msg("Không bắn được: "+r.error);return}set(r.state);draw();msg(r.state.lost?"Bóng đã chạm vạch nguy hiểm. Bạn có thể chơi lại.":r.popped?"Đã phá "+r.popped+" bóng!":"Đã bắn một quả.");if(r.state.lost)modal("Kết thúc ván","Bạn đạt "+r.state.score+" điểm. Không có giới hạn thời gian chơi.","Chơi lại",()=>{set(bubbleStart(s.seed));draw()},"Giữ kết quả");return}
  modal("Nghỉ một chút ☕","Bàn của bạn đã được lưu. Bạn có thể quay lại sau.","Chơi tiếp",()=>{},"Trang chủ",showHome)}
 function undoAction(){const mode=save.current;if(mode==="bubble"){modal("Chơi lại ván Bắn bóng?","Thao tác này sẽ bắt đầu một ván mới. Ván cũ không tự mất vì nghỉ.","Chơi lại",()=>{set(bubbleStart(get().seed));draw();msg("Đã bắt đầu ván mới.")},"Hủy");return}
  if(!undo.length){msg("Chưa có nước đi để quay lại.");return}set(undo.pop());draw();msg("Đã quay lại nước vừa rồi.")}
