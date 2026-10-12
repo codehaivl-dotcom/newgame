@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "active_project": "QUIET_PUZZLE_CLUB",
   "pivotted_on": "2026-10-12",
   "legacy_archive_branch": "archive/arena-moba-2026-10-12",
@@ -17,7 +17,8 @@
       "online_ranked_implemented": false,
       "approved_levels": 0,
       "approved_assets": 0,
-      "concept_visual_approved": true
+      "concept_visual_approved": true,
+      "prototype_status": "PLAYABLE_ALPHA"
     },
     {
       "id": "BUBBLE",
@@ -29,7 +30,8 @@
       "online_ranked_implemented": false,
       "approved_levels": 0,
       "approved_assets": 0,
-      "concept_visual_approved": true
+      "concept_visual_approved": true,
+      "prototype_status": "PLAYABLE_ALPHA"
     },
     {
       "id": "JEWEL",
@@ -41,7 +43,8 @@
       "online_ranked_implemented": false,
       "approved_levels": 0,
       "approved_assets": 0,
-      "concept_visual_approved": true
+      "concept_visual_approved": true,
+      "prototype_status": "PLAYABLE_ALPHA"
     }
   ],
   "common_policies": {
@@ -95,8 +98,27 @@
     "render_core": 44,
     "render_optional": 20,
     "art_approved_runtime_count": 0,
-    "gameplay_gate": "NOT_TESTED",
+    "gameplay_gate": "ALPHA_ONLY_NOT_PRODUCTION_TESTED",
     "online_gate": "NOT_IMPLEMENTED",
     "render_authorized": false
+  },
+  "prototype": {
+    "status": "PLAYABLE_ALPHA_IN_REPO",
+    "entrypoint": "prototype/index.html",
+    "run_command": "npm start",
+    "test_command": "npm run check",
+    "engine_file": "prototype/engines.mjs",
+    "tests_file": "tests/engines.test.mjs",
+    "github_ci_file": ".github/workflows/ci.yml",
+    "core_review": "350 extended seed/long-run tests in V8 on fetched GitHub code, no failures; CI workflow outcome not yet verified",
+    "known_limitations": [
+      "not finalized rules",
+      "no special gem power",
+      "no fixed-point bubble server parity",
+      "no IndexedDB",
+      "not production art",
+      "no online Top",
+      "not human tested"
+    ]
   }
 }
