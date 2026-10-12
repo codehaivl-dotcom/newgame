@@ -53,7 +53,14 @@ function openIDB(){return new Promise((resolve,reject)=>{if(!("indexedDB" in win
 async function writeIDB(value){const db=await openIDB();return new Promise((resolve,reject)=>{const tx=db.transaction("progress","readwrite");tx.objectStore("progress").put(value,"game");tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();reject(tx.error)}})}
 async function readIDB(){const db=await openIDB();return new Promise((resolve,reject)=>{const tx=db.transaction("progress","readonly");const q=tx.objectStore("progress").get("game");q.onsuccess=()=>resolve(q.result);q.onerror=()=>reject(q.error);tx.oncomplete=()=>db.close()})}
 function validBackup(v){if(!v||v.version!==1||!v.games||typeof v.games!=="object")return false;
-for(const [k,length] of [["link",48],["bubble",77],["jewel",49]]){const game=v.games[k];if(game&&(!Array.isArray(game.board)||game.board.length!==length||!Number.isFinite(game.score)||game.score<0))return false}
+for(const [k,length,max] of [["link",48,11],["bubble",77,4],["jewel",49,4]]){
+ const game=v.games[k];if(!game)continue;
+ if(!Array.isArray(game.board)||game.board.length!==length||!Number.isFinite(game.score)||game.score<0||!Number.isInteger(game.seed))return false;
+ if(!game.board.every(n=>Number.isInteger(n)&&n>=-1&&n<=max))return false;
+}
+if(v.current!==null&&v.current!==undefined&&!["link","bubble","jewel"].includes(v.current))return false;
+if(v.undoHist!==undefined){if(typeof v.undoHist!=="object"||v.undoHist===null)return false;
+ for(const [k,items] of Object.entries(v.undoHist)){if(!["link","jewel","bubble"].includes(k)||!Array.isArray(items)||items.length>20)return false;}}
 return typeof v.best==="object"&&v.best!==null;}
 function persist(){save.updatedAt=Date.now();try{localStorage.setItem(STORE,JSON.stringify(save));$("saved").textContent="◉ Đã lưu (bản sao trên máy)"}catch{$("saved").textContent="⚠ Không lưu được bản sao dự phòng"}
 writeIDB(structuredClone(save)).then(()=>$("saved").textContent="◉ Đã lưu trên thiết bị").catch(()=>{if($("saved").textContent.startsWith("⚠"))$("saved").textContent="⚠ Không lưu được: hãy xuất tiến độ"})}
