@@ -1,3 +1,9 @@
+# STUDIO AUDIT REMEDIATION V2 (2026-10-12)
+Before coding or bulk rendering, read docs/18_ENGINE_DETERMINISM_LOCK_V2.md, 19_TOP_SOCIAL_PRODUCT_LOCK_V2.md, 20_UX_GAME_FEEL_AND_ACCESSIBILITY.md, 21_TECH_STACK_RELEASE_AND_OPS_LOCK.md, 22_STUDIO_DECISION_METRICS_AND_BACKLOG.md and 23_STUDIO_AUDIT_REMEDIATION_STATUS.md.
+**Precedence for ambiguous gameplay details:** 18 over older 02/03/04; 19 over older 01 for daily/weekly and practice semantics; product scope stays 12 and 11. NO additional games. One daily board for Link and Bubble, 20-action daily Jewel; weekly packs longer, neither timed. 
+A standalone Link HTML slice was produced outside GitHub and logic smoke-tested with 100 seeded boards + 100 shuffles; it is NOT a committed production app. Obtain actual artifact from user/chat, verify SHA and integrate before claiming runtime source exists on main.
+Do not burn image credits, manufacture PASS results, invent source paths, treat localStorage as permanent cloud backup, or advertise real Top before backend replay tests.
+
 # PRODUCTION V1 AUTHORITY — 2026-10-12
 Read docs/12_PRODUCTION_LOCK_V1.md, assets/render_manifest_v1.json, assets/RENDER_PROMPT_DECK_V1.md, docs/13_ASSET_PIPELINE_AND_QA.md, docs/14_PLAYABLE_SPEC_AND_TEST_GATES.md, docs/15_PRODUCTION_RUNBOOK.md BEFORE initiating image batches or coding additional game systems.
 There are 64 first-wave render candidates (44 CORE, 20 OPTIONAL). This is NOT blanket render permission. First FOUR calibration items only when provider credits are verified and user authorizes generation: LNK-ICON-001, LNK-ICON-005, BUB-BALL-001, JWL-GEM-001. No fake art status, no text baked in sprites, no crowded asset collage. User-approved concept posters are NOT equivalent to approved isolated runtime sprites. All three games must function with code placeholders before images are approved.
