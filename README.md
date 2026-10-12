@@ -18,6 +18,23 @@
 
 **Studio status:** written P0/P1/P2 work contracts improved. A standalone offline Link Garden HTML prototype and Node logic checks were produced as conversation attachments; **not committed to this repository**. No complete three-game implementation, certified difficulty factory, real Top online or user-tested release. Agent must not mark them PASS.
 
+## ▶ PLAYABLE THREE-GAME ALPHA — START HERE
+**The repository now contains runnable prototype code**, not just production documentation:
+```bash
+git clone https://github.com/codehaivl-dotcom/newgame.git
+cd newgame
+npm start
+# Open http://127.0.0.1:5173
+```
+- [Open alpha source / entrypoint](prototype/index.html) · [Run/limitations guide](prototype/README.md)
+- [All three seeded game engines](prototype/engines.mjs) · [Automated unit/property tests](tests/engines.test.mjs)
+- `npm run check` = production asset manifest structural check + 3-engine tests; [GitHub CI definition](.github/workflows/ci.yml).
+- Link: 6x8 pair connection, hint/undo/shuffle, varied solvable-witness layouts from rung 4.
+- Bubble: 7-column launcher, touch-friendly aim slider, projected landing cell, 3+ pop and falling clusters.
+- Jewel: 7x7 match-3 swaps and deterministic gravity/cascades (special powers still unimplemented).
+- Three independent on-device browser saves and resumed mode; first visit needs network if remotely hosted, service worker caches core for subsequent use.
+**This is not online Top, not a production-secure save system, not certified ranked replay, and not approved production artwork.** Test results and open gaps: [Prototype QA report](docs/24_ALPHA_QA_2026-10-12.md).
+
 ## PRODUCTION V1 — REQUIRED
 - [12 — LOCKED production scope + art and screen contract](docs/12_PRODUCTION_LOCK_V1.md)
 - [64 asset catalog / full standalone prompts / render waves](assets/render_manifest_v1.json)
@@ -53,7 +70,7 @@ Run locally after checkout: node scripts/validate_production.mjs. Passing this s
 **GO for one playable Link vertical slice. NO-GO for autonomous full-game production, 64-image bulk render, mass level publishing, online Top launch or app-store release.** The independent [studio audit](docs/17_INDIE_STUDIO_GREENLIGHT_AUDIT.md) identifies 8 P0 engine/production blockers, 8 pre-beta gaps and 4 launch/operations gaps; it is a review, not a silent gameplay rule change.
 
 ## What is NOT complete
-No released application, ranked backend, saved playable browser preview, approved art pack or 1,000 verified levels exists at this stage. Docs and image prompts are **production contracts / tunable starting values**, not playtesting proof. Render catalog: 44 CORE + 20 OPTIONAL, no actual completed image job/approved sprite. Three approved poster visuals currently in this conversation, not yet GitHub-committed as binary reference files.
+No released application, ranked backend, production artwork or 1,000 certified levels exists. A three-game browser ALPHA with basic local save does exist under prototype/; it is not a production app or finished QA. Docs and image prompts are **production contracts / tunable starting values**, not playtesting proof. Render catalog: 44 CORE + 20 OPTIONAL, no actual completed image job/approved sprite. Three approved poster visuals currently in this conversation, not yet GitHub-committed as binary reference files.
 
 ## Game pivot / legacy
 Old arena-MOBA design is **cancelled** and kept only in Git history / branch [archive/arena-moba-2026-10-12](https://github.com/codehaivl-dotcom/newgame/tree/archive/arena-moba-2026-10-12). The former 100 asset list is retired. Do not implement MOBA characters, combat, maps, networking or old GLBs from the archive.
