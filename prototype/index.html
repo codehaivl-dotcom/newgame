@@ -27,7 +27,8 @@ dialog{border:0;border-radius:18px;padding:22px;background:#fffbef;color:#304936
 <button class="modecard" data-mode="link"><span class="emoji">🌷</span><strong>Nối thú</strong></button>
 <button class="modecard" data-mode="bubble"><span class="emoji">🫧</span><strong>Bắn bóng</strong></button>
 <button class="modecard" data-mode="jewel"><span class="emoji">💎</span><strong>Kim cương</strong></button>
-</div><div class="notice">Bản alpha chơi thử với hình tạm. Chưa có Top online thật hoặc asset render được duyệt. Ba trò đều lưu điểm và bàn cờ trên trình duyệt này.</div></section>
+</div><div class="notice">Bản alpha chơi thử với hình tạm. Chưa có Top online thật hoặc asset render được duyệt. Ba trò lưu điểm và bàn cờ trên thiết bị này. Dữ liệu có thể mất nếu trình duyệt tự xóa bộ nhớ.</div>
+<div class="controls" style="margin-top:12px"><button id="backup-export" class="control" type="button">⬇ Sao lưu ván</button><button id="backup-import" class="control" type="button">⬆ Khôi phục ván</button><input id="backup-file" type="file" accept=".json,application/json" hidden></div></section>
 <section id="gameview" class="hidden" aria-live="polite">
 <div class="stats"><div class="stat"><b id="stage">1</b><small>Nấc / Chặng</small></div><div class="stat"><b id="score">0</b><small>Điểm của bạn</small></div><div class="stat"><b id="left">24</b><small id="leftlabel">Cặp còn</small></div></div>
 <p class="intro" id="rules" style="text-align:center"></p>
@@ -46,7 +47,22 @@ const BUBBLES=["🍎","💧","☀️","🍃","🌸"],BCOLORS=["#f56b72","#69abe5
 const STORE="quiet-puzzle-club-alpha-v1";const $=(id)=>document.getElementById(id);
 let save={version:1,current:null,games:{},best:{}},chosen=-1,hint=[],aim=0,undo=[];
 try{const x=JSON.parse(localStorage.getItem(STORE));if(x&&x.version===1&&x.games&&typeof x.games==="object")save=x}catch{}
-save.best??={};function persist(){try{localStorage.setItem(STORE,JSON.stringify(save));$("saved").textContent="◉ Đã lưu trên thiết bị"}catch{$("saved").textContent="⚠ Không lưu được: kiểm tra bộ nhớ"}}
+save.best??={};
+const IDB_NAME="quiet-puzzle-club-v2-backup";
+function openIDB(){return new Promise((resolve,reject)=>{if(!("indexedDB" in window))return reject(Error("IDB unavailable"));const r=indexedDB.open(IDB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore("progress");r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+async function writeIDB(value){const db=await openIDB();return new Promise((resolve,reject)=>{const tx=db.transaction("progress","readwrite");tx.objectStore("progress").put(value,"game");tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();reject(tx.error)}})}
+async function readIDB(){const db=await openIDB();return new Promise((resolve,reject)=>{const tx=db.transaction("progress","readonly");const q=tx.objectStore("progress").get("game");q.onsuccess=()=>resolve(q.result);q.onerror=()=>reject(q.error);tx.oncomplete=()=>db.close()})}
+function validBackup(v){if(!v||v.version!==1||!v.games||typeof v.games!=="object")return false;
+for(const [k,length] of [["link",48],["bubble",77],["jewel",49]]){const game=v.games[k];if(game&&(!Array.isArray(game.board)||game.board.length!==length||!Number.isFinite(game.score)||game.score<0))return false}
+return typeof v.best==="object"&&v.best!==null;}
+function persist(){save.updatedAt=Date.now();try{localStorage.setItem(STORE,JSON.stringify(save));$("saved").textContent="◉ Đã lưu (bản sao trên máy)"}catch{$("saved").textContent="⚠ Không lưu được bản sao dự phòng"}
+writeIDB(structuredClone(save)).then(()=>$("saved").textContent="◉ Đã lưu trên thiết bị").catch(()=>{if($("saved").textContent.startsWith("⚠"))$("saved").textContent="⚠ Không lưu được: hãy xuất tiến độ"})}
+function exportBackup(){const data=JSON.stringify(save,null,2),blob=new Blob([data],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="newgame-tien-do.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}
+async function importBackup(file){if(!file||file.size>1000000)throw Error("Tệp lớn hoặc trống");const data=JSON.parse(await file.text());if(!validBackup(data))throw Error("Tệp không đúng định dạng tiến độ NEWGAME");if(!confirm("Thay toàn bộ tiến độ hiện tại bằng bản sao này?"))return;
+save=data;save.best??={};await writeIDB(structuredClone(save));persist();drawHome();if(save.current&&save.games[save.current])enter(save.current);else showHome()}
+async function restoreBackup(){try{const data=await readIDB();if(validBackup(data)&&((data.updatedAt||0)>(save.updatedAt||0))){save=data;save.best??={}}}catch{}
+drawHome();if(save.current&&save.games[save.current])enter(save.current);}
+
 function fresh(mode){const seed=(Math.floor(Date.now()/60000)>>>0)||84255;return mode==="link"?linkStart(seed):mode==="bubble"?bubbleStart(seed):jewelStart(seed)}
 function get(){return save.games[save.current]}
 function set(next){save.games[save.current]=next;save.best[save.current]=Math.max(save.best[save.current]||0,next.score||0);persist()}
@@ -88,5 +104,6 @@ function hintAction(){const mode=save.current,s=get();if(mode==="link"){const p=
 }
 $("home").onclick=showHome;document.querySelectorAll("[data-mode]").forEach(x=>x.onclick=()=>enter(x.dataset.mode));$("action").onclick=action;$("undo").onclick=undoAction;$("hint").onclick=hintAction;$("aim").oninput=(e)=>{aim=Number(e.target.value);$("aimvalue").textContent=aim===0?"Thẳng":(aim<0?"Trái ":"Phải ")+Math.abs(aim);const predicted=bubbleShoot(get(),aim);hint=Number.isInteger(predicted.pos)?[predicted.pos]:[];draw()};
 if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}window.addEventListener("pagehide",persist);document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persist()});
-drawHome();if(save.current&&save.games[save.current])enter(save.current);
+$("backup-export").onclick=exportBackup;$("backup-import").onclick=()=>$("backup-file").click();$("backup-file").onchange=async e=>{try{await importBackup(e.target.files[0])}catch(err){alert("Khôi phục thất bại: "+err.message)}};
+restoreBackup();
 </script></body></html>
